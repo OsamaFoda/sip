@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sip settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="options">
+  <h1>Sip settings</h1>
+
+  <section class="card">
+    <h2>Monthly data budget</h2>
+    <label class="field">
+      <span>Budget in GB <small>(0 for none)</small></span>
+      <input type="number" id="budgetGB" min="0" step="0.5">
+    </label>
+    <label class="field">
+      <span>Renews on day of month</span>
+      <input type="number" id="resetDay" min="1" max="31" step="1">
+    </label>
+    <label class="switch">
+      <span>Warn me at 75%, 90% and 100%</span>
+      <input type="checkbox" id="notify">
+    </label>
+    <p class="small">
+      Sip counts what this browser downloads. Your phone, other apps and other browsers use data
+      too, so your carrier's counter is the official number. Set the budget to the share you
+      want this browser to use.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Sites where nothing is blocked</h2>
+    <ul id="allow"></ul>
+    <p id="no-allow" class="small">None yet. Add one from the popup while you're on the site.</p>
+  </section>
+
+  <section class="card">
+    <h2>History</h2>
+    <p class="small">Sip keeps two months of daily totals, on this device only.</p>
+    <button id="clear" class="danger">Delete usage history</button>
+  </section>
+
+  <p id="saved" class="small" aria-live="polite"></p>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

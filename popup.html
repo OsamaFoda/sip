@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="popup">
+  <header>
+    <h1>Sip</h1>
+    <label class="switch" title="Turn all saving on or off">
+      <span>Saver</span>
+      <input type="checkbox" id="saver">
+    </label>
+  </header>
+
+  <section id="grant" class="banner" hidden>
+    <p>Sip needs access to all sites to measure your data.</p>
+    <button id="grant-btn">Allow access</button>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <span class="label">This period</span>
+      <span id="period-used" class="big"></span>
+    </div>
+    <div id="budget-box" hidden>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <div class="row small">
+        <span id="period-left"></span>
+        <span id="days-left"></span>
+      </div>
+      <div class="row">
+        <span class="label">Safe to use today</span>
+        <span id="pace"></span>
+      </div>
+    </div>
+    <p id="no-budget" class="small" hidden>
+      <a href="#" class="open-options">Set your monthly data budget</a> to see how much is left.
+    </p>
+    <div class="row">
+      <span class="label">Today</span>
+      <span id="today"></span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Top sites today</h2>
+    <ol id="sites"></ol>
+    <p id="no-sites" class="small" hidden>Nothing measured yet today.</p>
+  </section>
+
+  <section class="card" id="site-card" hidden>
+    <div class="row">
+      <span class="label" id="site-name"></span>
+      <span id="site-today"></span>
+    </div>
+    <label class="switch">
+      <span>Don't block anything on this site</span>
+      <input type="checkbox" id="site-allow">
+    </label>
+  </section>
+
+  <section class="card" id="savers">
+    <h2>Save data by</h2>
+    <label class="switch"><span>Stopping autoplay and video preloading</span><input type="checkbox" data-key="autoplay"></label>
+    <label class="switch"><span>Blocking ads and trackers</span><input type="checkbox" data-key="trackers"></label>
+    <label class="switch"><span>Blocking images</span><input type="checkbox" data-key="images"></label>
+    <label class="switch"><span>Blocking web fonts</span><input type="checkbox" data-key="fonts"></label>
+    <p class="small">Changes apply to pages you open or reload.</p>
+  </section>
+
+  <footer>
+    <a href="#" class="open-options">Settings</a>
+  </footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
