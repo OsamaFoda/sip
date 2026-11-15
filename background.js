@@ -49,6 +49,11 @@ api.webRequest.onErrorOccurred.addListener(
 
 api.tabs.onRemoved.addListener(tabId => tabSite.delete(tabId));
 
+// Clicking a budget warning opens Sip (its settings, where the browser won't open the popup).
+api.notifications.onClicked.addListener(() => {
+  Promise.resolve(api.action.openPopup?.()).catch(() => api.runtime.openOptionsPage());
+});
+
 api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.type === 'flush') {
     ready.then(flush).then(() => sendResponse(true));
