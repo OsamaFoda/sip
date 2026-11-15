@@ -3,7 +3,7 @@ import os
 import zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-FILES = ["manifest.json", "lib.js", "background.js", "content.js", "autoplay.js",
+FILES = ["manifest.json", "lib.js", "background.js", "content.js", "autoplay.js", "youtube-quality.js", "youtube-player.js",
          "popup.html", "popup.js", "options.html", "options.js", "style.css"]
 
 os.makedirs(os.path.join(ROOT, "dist"), exist_ok=True)

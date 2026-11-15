@@ -38,6 +38,7 @@ async function init() {
   $('budgetGB').value = settings.budgetGB;
   $('resetDay').value = settings.resetDay;
   $('notify').checked = settings.notify;
+  $('youtube').value = String(settings.youtube);
   renderAllow();
 
   $('budgetGB').addEventListener('change', e => {
@@ -54,6 +55,10 @@ async function init() {
   });
   $('notify').addEventListener('change', e => {
     settings.notify = e.target.checked;
+    save();
+  });
+  $('youtube').addEventListener('change', e => {
+    settings.youtube = Number(e.target.value);
     save();
   });
   $('clear').addEventListener('click', async () => {

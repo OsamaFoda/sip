@@ -17,6 +17,7 @@ export const DEFAULT_SETTINGS = {
   trackers: true,    // block third-party ad and tracker requests
   images: false,     // block images (big saving, but pages look broken)
   fonts: false,      // block web fonts (icon fonts disappear too)
+  youtube: 480,      // highest YouTube video quality, in lines (240 to 1080); 0 = no limit
   allow: [],         // sites where nothing is blocked
   budgetGB: 0,       // monthly quota in GB, 0 = no budget
   resetDay: 1,       // day of the month the quota renews

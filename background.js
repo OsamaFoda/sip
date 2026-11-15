@@ -149,15 +149,20 @@ function periodUsage(now = new Date()) {
 async function applyScripts() {
   const ids = (await api.scripting.getRegisteredContentScripts()).map(s => s.id);
   if (ids.length) await api.scripting.unregisterContentScripts({ ids });
-  if (!settings.saver || !settings.autoplay) return;
-  await api.scripting.registerContentScripts([{
-    id: 'autoplay',
-    js: ['autoplay.js'],
-    matches: ['<all_urls>'],
-    excludeMatches: allowPatterns(settings.allow),
-    runAt: 'document_start',
-    allFrames: true,
-  }]);
+  if (!settings.saver) return;
+  const excludeMatches = allowPatterns(settings.allow);
+  const scripts = [];
+  if (settings.autoplay) {
+    scripts.push({ id: 'autoplay', js: ['autoplay.js'], matches: ['<all_urls>'], excludeMatches, runAt: 'document_start', allFrames: true });
+  }
+  if (settings.youtube) {
+    const matches = ['*://youtube.com/*', '*://*.youtube.com/*'];
+    scripts.push(
+      { id: 'youtube-quality', js: ['youtube-quality.js'], matches, excludeMatches, runAt: 'document_start' },
+      { id: 'youtube-player', js: ['youtube-player.js'], matches, excludeMatches, runAt: 'document_start', world: 'MAIN' },
+    );
+  }
+  if (scripts.length) await api.scripting.registerContentScripts(scripts);
 }
 
 async function applyRules() {
