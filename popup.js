@@ -39,8 +39,11 @@ async function render() {
     $('period-left').textContent = `${formatBytes(left)} left of ${settings.budgetGB} GB`;
     $('days-left').textContent = `${period.daysLeft} day${period.daysLeft === 1 ? '' : 's'} left`;
     // What's left spread evenly over the remaining days, counting today's use as part of today.
-    const pace = Math.max(0, (left + today.total) / period.daysLeft - today.total);
-    $('pace').textContent = formatBytes(Math.round(pace));
+    // Past today's share, say by how much rather than a bare 0 B.
+    const pace = (left + today.total) / period.daysLeft - today.total;
+    $('pace-label').textContent = pace >= 0 ? 'Safe to use today' : "Over today's share by";
+    $('pace').textContent = formatBytes(Math.round(Math.abs(pace)));
+    $('pace').classList.toggle('over', pace < 0);
   }
 
   const top = Object.entries(today.sites).sort((a, b) => b[1] - a[1]).slice(0, 5);
