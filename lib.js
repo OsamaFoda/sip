@@ -152,16 +152,17 @@ export function warningLevel(used, budget) {
 // Switches unit at 1000 rather than 1024, so the text never reads "1024 MB".
 export function formatBytes(n) {
   if (n < 1000) return `${n} B`;
-  if (n < 1000 * KB) return `${(n / KB).toFixed(0)} KB`;
-  if (n < 1000 * MB) return `${(n / MB).toFixed(n < 10 * MB ? 1 : 0)} MB`;
+  // (Judged after rounding, so 999.6 KB reads 0.98 MB rather than 1000 KB.)
+  if (Math.round(n / KB) < 1000) return `${Math.round(n / KB)} KB`;
+  if (Math.round(n / MB) < 1000) return `${(n / MB).toFixed(n < 10 * MB ? 1 : 0)} MB`;
   return `${(n / GB).toFixed(n < 100 * GB ? 2 : 1)} GB`;
 }
 
 // Four characters or fewer, for the toolbar badge.
 export function compactBytes(n) {
-  if (n < GB) return `${Math.round(n / MB)}M`;
-  const g = n / GB;
-  return g < 10 ? `${g.toFixed(1)}G` : `${Math.round(g)}G`;
+  if (Math.round(n / MB) < 1000) return `${Math.round(n / MB)}M`;
+  const tenths = Math.round(n / GB * 10) / 10;
+  return tenths < 10 ? `${tenths.toFixed(1)}G` : `${Math.round(n / GB)}G`;
 }
 
 // Match patterns covering each allowed site and its subdomains. IP addresses have no subdomains.

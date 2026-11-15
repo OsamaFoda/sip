@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  DEFAULT_SETTINGS, GB, MB, addUsage, allowPatterns, billingPeriod, buildRules, compactBytes, dayKey,
+  DEFAULT_SETTINGS, GB, KB, MB, addUsage, allowPatterns, billingPeriod, buildRules, compactBytes, dayKey,
   exactBytes, formatBytes, hostOf, isAllowed, prune, responseBytes, sumRange, warningLevel,
 } from '../lib.js';
 
@@ -120,4 +120,11 @@ test('exactBytes uses what Firefox counted, sent and received', () => {
 test('exactBytes falls back where the browser gives no size, or a suspicious zero', () => {
   assert.equal(exactBytes({ statusCode: 200 }), null);                    // Chrome
   assert.equal(exactBytes({ responseSize: 0, statusCode: 200 }), null);   // old Firefox bug
+});
+
+test('sizes just under a unit read in the bigger unit, and the badge stays within four characters', () => {
+  assert.equal(formatBytes(Math.round(999.6 * KB)), '0.98 MB');
+  assert.equal(compactBytes(Math.round(999.6 * MB)), '1.0G');
+  assert.equal(compactBytes(Math.round(9.97 * GB)), '10G');
+  assert.equal(compactBytes(500 * MB), '500M');
 });
