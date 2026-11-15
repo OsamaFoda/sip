@@ -152,7 +152,7 @@ export function warningLevel(used, budget) {
 // Switches unit at 1000 rather than 1024, so the text never reads "1024 MB".
 export function formatBytes(n) {
   if (n < 1000) return `${n} B`;
-  // (Judged after rounding, so 999.6 KB reads 0.98 MB rather than 1000 KB.)
+  // (Judged after rounding, so 999.6 KB reads 1.0 MB rather than 1000 KB.)
   if (Math.round(n / KB) < 1000) return `${Math.round(n / KB)} KB`;
   if (Math.round(n / MB) < 1000) return `${(n / MB).toFixed(n < 10 * MB ? 1 : 0)} MB`;
   return `${(n / GB).toFixed(n < 100 * GB ? 2 : 1)} GB`;

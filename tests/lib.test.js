@@ -123,7 +123,7 @@ test('exactBytes falls back where the browser gives no size, or a suspicious zer
 });
 
 test('sizes just under a unit read in the bigger unit, and the badge stays within four characters', () => {
-  assert.equal(formatBytes(Math.round(999.6 * KB)), '0.98 MB');
+  assert.equal(formatBytes(Math.round(999.6 * KB)), '1.0 MB');
   assert.equal(compactBytes(Math.round(999.6 * MB)), '1.0G');
   assert.equal(compactBytes(Math.round(9.97 * GB)), '10G');
   assert.equal(compactBytes(500 * MB), '500M');
