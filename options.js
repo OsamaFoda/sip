@@ -31,15 +31,25 @@ function renderAllow() {
   $('no-allow').hidden = settings.allow.length > 0;
 }
 
-async function init() {
-  const stored = await api.storage.local.get('settings');
-  settings = { ...DEFAULT_SETTINGS, ...stored.settings };
-
+function show() {
   $('budgetGB').value = settings.budgetGB;
   $('resetDay').value = settings.resetDay;
   $('notify').checked = settings.notify;
   $('youtube').value = String(settings.youtube);
   renderAllow();
+}
+
+async function init() {
+  const stored = await api.storage.local.get('settings');
+  settings = { ...DEFAULT_SETTINGS, ...stored.settings };
+  show();
+  // A change made elsewhere (the popup, the browser's own settings) shows here at once, and isn't
+  // undone by this page saving its older copy.
+  api.storage.onChanged.addListener((changes, area) => {
+    if (area !== 'local' || !changes.settings) return;
+    settings = { ...DEFAULT_SETTINGS, ...changes.settings.newValue };
+    show();
+  });
 
   $('budgetGB').addEventListener('change', e => {
     const value = parseFloat(e.target.value);
