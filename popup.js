@@ -70,8 +70,10 @@ async function render() {
         ? [...settings.allow, host]
         : settings.allow.filter(d => !(host === d || host.endsWith('.' + d)));
       await saveSettings();
-      api.tabs.reload(tab.id);
+      // Reloading spends data, so it's offered rather than done.
+      $('site-reload').hidden = false;
     };
+    $('site-reload').onclick = () => { api.tabs.reload(tab.id); window.close(); };
   }
 
   $('saver').checked = settings.saver;
