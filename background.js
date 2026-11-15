@@ -51,7 +51,9 @@ api.tabs.onRemoved.addListener(tabId => tabSite.delete(tabId));
 
 // Clicking a budget warning opens Sip (its settings, where the browser won't open the popup).
 api.notifications.onClicked.addListener(() => {
-  Promise.resolve(api.action.openPopup?.()).catch(() => api.runtime.openOptionsPage());
+  const settings = () => api.runtime.openOptionsPage();
+  if (api.action.openPopup) api.action.openPopup().catch(settings);
+  else settings();
 });
 
 api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
