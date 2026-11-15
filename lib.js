@@ -84,6 +84,15 @@ export function responseBytes(details) {
   return { bytes: headerBytes + (body ?? 0), headerBytes, known: body !== null };
 }
 
+// What Firefox itself counted for a request: everything received and sent, headers included,
+// and what arrived before a transfer was stopped. null where the browser doesn't say (Chrome),
+// or says 0 for a response that wasn't cached (an old Firefox bug), so the estimate above is used.
+export function exactBytes(details) {
+  if (typeof details.responseSize !== 'number') return null;
+  if (!details.responseSize && !details.fromCache && details.statusCode !== 204 && details.statusCode !== 304) return null;
+  return details.responseSize + (details.requestSize || 0);
+}
+
 export function addUsage(days, key, site, bytes) {
   if (!bytes) return;
   const day = days[key] ??= { total: 0, sites: {} };

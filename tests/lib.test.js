@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   DEFAULT_SETTINGS, GB, MB, addUsage, allowPatterns, billingPeriod, buildRules, compactBytes, dayKey,
-  formatBytes, hostOf, isAllowed, prune, responseBytes, sumRange, warningLevel,
+  exactBytes, formatBytes, hostOf, isAllowed, prune, responseBytes, sumRange, warningLevel,
 } from '../lib.js';
 
 const headers = obj => Object.entries(obj).map(([name, value]) => ({ name, value }));
@@ -108,4 +108,16 @@ test('rules follow the settings', () => {
 
 test('allow patterns cover subdomains, and IP addresses exactly', () => {
   assert.deepEqual(allowPatterns(['youtube.com', '127.0.0.1']), ['*://*.youtube.com/*', '*://127.0.0.1/*']);
+});
+
+test('exactBytes uses what Firefox counted, sent and received', () => {
+  assert.equal(exactBytes({ responseSize: 5300, requestSize: 420, statusCode: 200 }), 5720);
+  assert.equal(exactBytes({ responseSize: 350143, requestSize: 400 }), 350543); // stopped partway
+  assert.equal(exactBytes({ responseSize: 0, requestSize: 0, fromCache: true, statusCode: 200 }), 0);
+  assert.equal(exactBytes({ responseSize: 0, requestSize: 300, statusCode: 304 }), 300);
+});
+
+test('exactBytes falls back where the browser gives no size, or a suspicious zero', () => {
+  assert.equal(exactBytes({ statusCode: 200 }), null);                    // Chrome
+  assert.equal(exactBytes({ responseSize: 0, statusCode: 200 }), null);   // old Firefox bug
 });

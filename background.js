@@ -3,7 +3,7 @@
 
 import {
   DEFAULT_SETTINGS, GB, addUsage, allowPatterns, billingPeriod, buildRules, compactBytes, dayKey,
-  formatBytes, hostOf, prune, responseBytes, sumRange, warningLevel,
+  exactBytes, formatBytes, hostOf, prune, responseBytes, sumRange, warningLevel,
 } from './lib.js';
 
 const api = globalThis.browser ?? globalThis.chrome;
@@ -39,6 +39,12 @@ api.webRequest.onCompleted.addListener(
   d => { ready.then(() => record(d)); },
   { urls: ['<all_urls>'] },
   ['responseHeaders'],
+);
+
+// A transfer stopped partway (a closed tab, a skipped video) still cost what arrived.
+api.webRequest.onErrorOccurred.addListener(
+  d => { ready.then(() => { if (exactBytes(d) !== null) record(d); }); },
+  { urls: ['<all_urls>'] },
 );
 
 api.tabs.onRemoved.addListener(tabId => tabSite.delete(tabId));
@@ -85,6 +91,12 @@ function siteFor(d) {
 function record(d) {
   const site = siteFor(d);
   if (!site) return;
+  const exact = exactBytes(d);
+  if (exact !== null) {
+    addUsage(days, dayKey(), site, exact);
+    scheduleFlush();
+    return;
+  }
   const { bytes, headerBytes, known } = responseBytes(d);
   const day = dayKey();
   addUsage(days, day, site, bytes);
