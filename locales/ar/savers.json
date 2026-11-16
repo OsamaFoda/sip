@@ -1,0 +1,174 @@
+{
+  "level_off": {
+    "message": "إيقاف",
+    "description": "Saving level: saving paused"
+  },
+  "level_light": {
+    "message": "خفيف",
+    "description": "Saving level"
+  },
+  "level_balanced": {
+    "message": "متوازن",
+    "description": "Saving level (the default)"
+  },
+  "level_max": {
+    "message": "أقصى",
+    "description": "Saving level"
+  },
+  "level_custom": {
+    "message": "مخصّص",
+    "description": "Your own mix of savers, not one of the levels"
+  },
+  "level_default": {
+    "message": "الافتراضي",
+    "description": "Marks the default level"
+  },
+  "level_off_desc": {
+    "message": "التوفير متوقف مؤقتًا، وحدّ جودة يوتيوب يبقى كما هو.",
+    "description": "What Off does"
+  },
+  "level_light_desc": {
+    "message": "يحجب المتتبّعات الثقيلة، وتظهر الصفحات وتعمل كالمعتاد.",
+    "description": "What Light does"
+  },
+  "level_balanced_desc": {
+    "message": "ويوقف أيضًا تشغيل الفيديو وتحميله من تلقاء نفسه.",
+    "description": "What Balanced does"
+  },
+  "level_max_desc": {
+    "message": "ويحجب الصور أيضًا. تبدو الصفحات ناقصة، فأعد الصور لأي موقع تحتاجه.",
+    "description": "What Max does"
+  },
+  "level_custom_desc": {
+    "message": "مزيج اختياراتك من أدوات التوفير.",
+    "description": "What Custom means"
+  },
+  "saver_autoplay_name": {
+    "message": "إيقاف التشغيل التلقائي",
+    "description": "Saver name"
+  },
+  "saver_autoplay_saves": {
+    "message": "لا يعمل الفيديو أو الصوت ولا يُحمَّل حتى تضغط تشغيل.",
+    "description": "What the autoplay saver saves"
+  },
+  "saver_autoplay_breaks": {
+    "message": "بعض المشغلات تحتاج نقرة ثانية. فيديوهات يوتيوب التي تفتحها تعمل كالمعتاد.",
+    "description": "What the autoplay saver may break"
+  },
+  "saver_trackers_name": {
+    "message": "حجب المتتبّعات الثقيلة",
+    "description": "Saver name"
+  },
+  "saver_trackers_saves": {
+    "message": "الإعلانات وسكربتات التتبّع التي تُحمَّل في صفحة بعد صفحة.",
+    "description": "What the trackers saver saves"
+  },
+  "saver_trackers_breaks": {
+    "message": "نادرًا ما يعطّل شيئًا، لكن أزرار «تسجيل الدخول بفيسبوك» قد لا تعمل. لحجب أكثر بكثير استخدم uBlock Origin.",
+    "description": "What the trackers saver may break"
+  },
+  "saver_images_name": {
+    "message": "حجب الصور",
+    "description": "Saver name"
+  },
+  "saver_images_saves": {
+    "message": "الصور، وهي غالبًا أكبر جزء من الصفحة.",
+    "description": "What the images saver saves"
+  },
+  "saver_images_breaks": {
+    "message": "تبدو الصفحات ناقصة. أعِد الصور لأي موقع بقاعدة خاصة به.",
+    "description": "What the images saver may break"
+  },
+  "saver_fonts_name": {
+    "message": "حجب خطوط الويب",
+    "description": "Saver name"
+  },
+  "saver_fonts_saves": {
+    "message": "ملفات الخطوط التي يحمّلها الموقع في أول زيارة له.",
+    "description": "What the fonts saver saves"
+  },
+  "saver_fonts_breaks": {
+    "message": "قد تتحول الأيقونات إلى كلمات مثل «menu»، ويظهر النص بخطوط جهازك.",
+    "description": "What the fonts saver may break"
+  },
+  "saver_saveData_name": {
+    "message": "اطلب صفحات أخف (Save-Data)",
+    "description": "Saver name"
+  },
+  "saver_saveData_saves": {
+    "message": "المواقع التي تدعمه ترسل صورًا وفيديو أصغر.",
+    "description": "What Save-Data saves"
+  },
+  "saver_saveData_breaks": {
+    "message": "قليل من المواقع يدعمه، ويجعل متصفحك أسهل تمييزًا عن غيره قليلًا.",
+    "description": "Save-Data's drawback (fingerprinting)"
+  },
+  "yt_choice_240": {
+    "message": "240p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_360": {
+    "message": "360p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_480": {
+    "message": "480p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_720": {
+    "message": "720p (HD)",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_1080": {
+    "message": "1080p (Full HD)",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_0": {
+    "message": "بلا حد",
+    "description": "YouTube quality choice"
+  },
+  "yt_cost_240": {
+    "message": "≈ 0.2 جيجا في الساعة",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_360": {
+    "message": "≈ 0.3–0.4 جيجا في الساعة",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_480": {
+    "message": "≈ 0.5–0.7 جيجا في الساعة",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_720": {
+    "message": "≈ 1–1.5 جيجا في الساعة",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_1080": {
+    "message": "≈ 1.5–3.3 جيجا في الساعة",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_0": {
+    "message": "حتى 3 جيجا في الساعة أو أكثر",
+    "description": "What an hour of YouTube costs with no limit"
+  },
+  "yt_title": {
+    "message": "جودة يوتيوب",
+    "description": "Heading"
+  },
+  "yt_your_choice": {
+    "message": "اختيارك",
+    "description": "Marks the person's YouTube choice"
+  },
+  "yt_applied_now": {
+    "message": "طُبّق الآن",
+    "description": "After lowering the limit: the playing video changes now"
+  },
+  "yt_from_next": {
+    "message": "من الفيديو التالي",
+    "description": "After raising the limit: it applies from the next video"
+  },
+  "yt_levels_note": {
+    "message": "مستويات التوفير لا تغيّر جودة يوتيوب أبدًا.",
+    "description": "Note under the YouTube choices"
+  }
+}

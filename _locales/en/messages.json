@@ -1,0 +1,382 @@
+{
+  "badge_paused": {
+    "message": " · saving paused",
+    "description": "Added to the tooltip while saving is paused"
+  },
+  "badge_title_budget": {
+    "message": "Sip: $1",
+    "description": "Toolbar tooltip: $1 the headline, e.g. 15.8 GB left · 17 days"
+  },
+  "badge_title_today": {
+    "message": "Sip: $1 today",
+    "description": "Toolbar tooltip without a budget: $1 used today"
+  },
+  "bucket_extensions": {
+    "message": "Extensions",
+    "description": "Usage by add-ons, such as filter list updates"
+  },
+  "bucket_other": {
+    "message": "Other",
+    "description": "Usage with no site"
+  },
+  "bucket_private": {
+    "message": "Private windows",
+    "description": "Usage from private windows, counted without site names"
+  },
+  "ext_action_title": {
+    "message": "Sip",
+    "description": "Toolbar button tooltip before Sip has started"
+  },
+  "ext_description": {
+    "message": "See how much data each site uses, keep to a monthly budget, and cut the waste: autoplay, trackers and more.",
+    "description": "Add-on description in the add-ons manager"
+  },
+  "ext_name": {
+    "message": "Sip — Data Saver",
+    "description": "Add-on name"
+  },
+  "ext_short": {
+    "message": "Sip",
+    "description": "Short add-on name"
+  },
+  "fmt_size": {
+    "message": "$1 $2",
+    "description": "A size: $1 number, $2 unit"
+  },
+  "level_balanced": {
+    "message": "Balanced",
+    "description": "Saving level (the default)"
+  },
+  "level_balanced_desc": {
+    "message": "Also stops videos from playing and downloading on their own.",
+    "description": "What Balanced does"
+  },
+  "level_custom": {
+    "message": "Custom",
+    "description": "Your own mix of savers, not one of the levels"
+  },
+  "level_custom_desc": {
+    "message": "Your own mix of savers.",
+    "description": "What Custom means"
+  },
+  "level_default": {
+    "message": "Default",
+    "description": "Marks the default level"
+  },
+  "level_light": {
+    "message": "Light",
+    "description": "Saving level"
+  },
+  "level_light_desc": {
+    "message": "Blocks heavy trackers. Pages look and play as usual.",
+    "description": "What Light does"
+  },
+  "level_max": {
+    "message": "Max",
+    "description": "Saving level"
+  },
+  "level_max_desc": {
+    "message": "Also blocks images. Pages look unfinished; turn images back on for a site you need.",
+    "description": "What Max does"
+  },
+  "level_off": {
+    "message": "Off",
+    "description": "Saving level: saving paused"
+  },
+  "level_off_desc": {
+    "message": "Saving is paused. Your YouTube limit stays on.",
+    "description": "What Off does"
+  },
+  "locale_code": {
+    "message": "en",
+    "description": "The language this file is: en or ar"
+  },
+  "notif_full_body": {
+    "message": "Your carrier may slow you down or charge extra until it renews on $1. Turn on Max saving in Sip.",
+    "description": "$1 the renewal date"
+  },
+  "notif_full_title": {
+    "message": "You've used all of your $1",
+    "description": "$1 the budget, e.g. 50 GB"
+  },
+  "notif_level_body": {
+    "message": "$1 left for $2. The most went to $3 ($4).",
+    "description": "$1 data left, $2 days left, $3 top site, $4 its use"
+  },
+  "notif_level_body_plain": {
+    "message": "$1 left for $2.",
+    "description": "$1 data left, $2 days left"
+  },
+  "notif_level_title": {
+    "message": "$1% of your data used",
+    "description": "Notification title: $1 percent used"
+  },
+  "notif_pace_body": {
+    "message": "At this rate it runs out around $1, $2 before it renews. The most this period went to $3.",
+    "description": "$1 run-out date, $2 days early, $3 top site"
+  },
+  "notif_pace_body_plain": {
+    "message": "At this rate it runs out around $1, $2 before it renews.",
+    "description": "$1 run-out date, $2 days early"
+  },
+  "notif_pace_title": {
+    "message": "You're on pace to run out early",
+    "description": "Weekly pace warning title"
+  },
+  "saver_autoplay_breaks": {
+    "message": "Some players need a second click. YouTube videos you open still play.",
+    "description": "What the autoplay saver may break"
+  },
+  "saver_autoplay_name": {
+    "message": "Stop autoplay",
+    "description": "Saver name"
+  },
+  "saver_autoplay_saves": {
+    "message": "Videos and sound don't play or download until you press play.",
+    "description": "What the autoplay saver saves"
+  },
+  "saver_fonts_breaks": {
+    "message": "Icons may turn into words like \"menu\", and text uses your system's fonts.",
+    "description": "What the fonts saver may break"
+  },
+  "saver_fonts_name": {
+    "message": "Block web fonts",
+    "description": "Saver name"
+  },
+  "saver_fonts_saves": {
+    "message": "Font files a site downloads the first time you visit it.",
+    "description": "What the fonts saver saves"
+  },
+  "saver_images_breaks": {
+    "message": "Pages look unfinished. Turn images back on for a site with a site rule.",
+    "description": "What the images saver may break"
+  },
+  "saver_images_name": {
+    "message": "Block images",
+    "description": "Saver name"
+  },
+  "saver_images_saves": {
+    "message": "Photos and pictures, often the largest part of a page.",
+    "description": "What the images saver saves"
+  },
+  "saver_saveData_breaks": {
+    "message": "Few sites honour it, and it makes your browser a little easier to tell apart from others.",
+    "description": "Save-Data's drawback (fingerprinting)"
+  },
+  "saver_saveData_name": {
+    "message": "Ask sites for lighter pages (Save-Data)",
+    "description": "Saver name"
+  },
+  "saver_saveData_saves": {
+    "message": "Sites that honour it send smaller images and video.",
+    "description": "What Save-Data saves"
+  },
+  "saver_trackers_breaks": {
+    "message": "Rarely breaks anything, though \"Log in with Facebook\" buttons may not work. For much more blocking, use uBlock Origin.",
+    "description": "What the trackers saver may break"
+  },
+  "saver_trackers_name": {
+    "message": "Block heavy trackers",
+    "description": "Saver name"
+  },
+  "saver_trackers_saves": {
+    "message": "Ads and tracking scripts that load on page after page.",
+    "description": "What the trackers saver saves"
+  },
+  "sum_days__one": {
+    "message": "1 day",
+    "description": "A number of days: $1"
+  },
+  "sum_days__other": {
+    "message": "$1 days",
+    "description": "A number of days: $1"
+  },
+  "sum_days_left__one": {
+    "message": "1 day left",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__other": {
+    "message": "$1 days left",
+    "description": "$1 days left in the period"
+  },
+  "sum_hero_left": {
+    "message": "$1 left · $2",
+    "description": "Popup headline: $1 data left, $2 days left (e.g. 17 days)"
+  },
+  "sum_hero_over": {
+    "message": "Over by $1 · $2",
+    "description": "Popup headline when over budget: $1 over, $2 days left"
+  },
+  "sum_hero_used": {
+    "message": "Used this period: $1",
+    "description": "Headline without a budget: $1 used"
+  },
+  "sum_join": {
+    "message": " · ",
+    "description": "Separator between parts of a line"
+  },
+  "sum_left": {
+    "message": "$1 left of $2",
+    "description": "$1 left of a $2 budget"
+  },
+  "sum_over_by": {
+    "message": "Over by $1",
+    "description": "$1 over the budget"
+  },
+  "sum_over_today": {
+    "message": "$1 over today's share",
+    "description": "$1 over today's share, on the last day"
+  },
+  "sum_over_tomorrow": {
+    "message": "$1 over · tomorrow ≈ $2",
+    "description": "$1 over today's share; $2 tomorrow's share if today ends here"
+  },
+  "sum_pace": {
+    "message": "At this pace you'll run out around $1 ($2 early)",
+    "description": "$1 a date; $2 days early, e.g. 5 days"
+  },
+  "sum_pace_fast": {
+    "message": "Too fast",
+    "description": "Pace pill: at this pace the data runs out before renewal"
+  },
+  "sum_pace_ok": {
+    "message": "On track",
+    "description": "Pace pill: the projection stays within the budget"
+  },
+  "sum_pace_over": {
+    "message": "Over budget",
+    "description": "Pace pill: the budget is used up"
+  },
+  "sum_projection": {
+    "message": "≈ $1 by $2 at this pace",
+    "description": "$1 projected use, $2 the renewal date"
+  },
+  "sum_renews": {
+    "message": "Renews $1",
+    "description": "$1 the date the data renews, e.g. 1 Dec"
+  },
+  "sum_saved_est": {
+    "message": "≈ $1 saved",
+    "description": "An estimate of the data saved, $1"
+  },
+  "sum_saved_media__one": {
+    "message": "1 video stopped",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__other": {
+    "message": "$1 videos stopped",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_req__one": {
+    "message": "Blocked 1 request",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__other": {
+    "message": "Blocked $1 requests",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_today": {
+    "message": "Today $1",
+    "description": "$1 used today (no budget)"
+  },
+  "sum_today_share": {
+    "message": "Today $1 of $2 share",
+    "description": "$1 used today, $2 today's fair share of what's left"
+  },
+  "sum_youtube": {
+    "message": "YouTube: up to $1p",
+    "description": "$1 the highest YouTube quality in lines, e.g. 480"
+  },
+  "sum_youtube_none": {
+    "message": "YouTube: no limit",
+    "description": "YouTube quality not limited"
+  },
+  "unit_B": {
+    "message": "B",
+    "description": "Bytes"
+  },
+  "unit_GB": {
+    "message": "GB",
+    "description": "Gigabytes (1,000,000,000 bytes)"
+  },
+  "unit_KB": {
+    "message": "KB",
+    "description": "Kilobytes (1,000 bytes)"
+  },
+  "unit_MB": {
+    "message": "MB",
+    "description": "Megabytes"
+  },
+  "unit_TB": {
+    "message": "TB",
+    "description": "Terabytes"
+  },
+  "yt_applied_now": {
+    "message": "Applied now",
+    "description": "After lowering the limit: the playing video changes now"
+  },
+  "yt_choice_0": {
+    "message": "No limit",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_1080": {
+    "message": "1080p (Full HD)",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_240": {
+    "message": "240p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_360": {
+    "message": "360p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_480": {
+    "message": "480p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_720": {
+    "message": "720p (HD)",
+    "description": "YouTube quality choice"
+  },
+  "yt_cost_0": {
+    "message": "up to 3 GB an hour or more",
+    "description": "What an hour of YouTube costs with no limit"
+  },
+  "yt_cost_1080": {
+    "message": "≈ 1.5–3.3 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_240": {
+    "message": "≈ 0.2 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_360": {
+    "message": "≈ 0.3–0.4 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_480": {
+    "message": "≈ 0.5–0.7 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_720": {
+    "message": "≈ 1–1.5 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_from_next": {
+    "message": "From the next video",
+    "description": "After raising the limit: it applies from the next video"
+  },
+  "yt_levels_note": {
+    "message": "Saving levels never change your YouTube quality.",
+    "description": "Note under the YouTube choices"
+  },
+  "yt_title": {
+    "message": "YouTube quality",
+    "description": "Heading"
+  },
+  "yt_your_choice": {
+    "message": "Your choice",
+    "description": "Marks the person's YouTube choice"
+  }
+}

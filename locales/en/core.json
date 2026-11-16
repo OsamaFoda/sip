@@ -1,0 +1,210 @@
+{
+  "ext_name": {
+    "message": "Sip — Data Saver",
+    "description": "Add-on name"
+  },
+  "ext_short": {
+    "message": "Sip",
+    "description": "Short add-on name"
+  },
+  "ext_description": {
+    "message": "See how much data each site uses, keep to a monthly budget, and cut the waste: autoplay, trackers and more.",
+    "description": "Add-on description in the add-ons manager"
+  },
+  "ext_action_title": {
+    "message": "Sip",
+    "description": "Toolbar button tooltip before Sip has started"
+  },
+  "locale_code": {
+    "message": "en",
+    "description": "The language this file is: en or ar"
+  },
+  "unit_B": {
+    "message": "B",
+    "description": "Bytes"
+  },
+  "unit_KB": {
+    "message": "KB",
+    "description": "Kilobytes (1,000 bytes)"
+  },
+  "unit_MB": {
+    "message": "MB",
+    "description": "Megabytes"
+  },
+  "unit_GB": {
+    "message": "GB",
+    "description": "Gigabytes (1,000,000,000 bytes)"
+  },
+  "unit_TB": {
+    "message": "TB",
+    "description": "Terabytes"
+  },
+  "fmt_size": {
+    "message": "$1 $2",
+    "description": "A size: $1 number, $2 unit"
+  },
+  "bucket_private": {
+    "message": "Private windows",
+    "description": "Usage from private windows, counted without site names"
+  },
+  "bucket_extensions": {
+    "message": "Extensions",
+    "description": "Usage by add-ons, such as filter list updates"
+  },
+  "bucket_other": {
+    "message": "Other",
+    "description": "Usage with no site"
+  },
+  "sum_days__one": {
+    "message": "1 day",
+    "description": "A number of days: $1"
+  },
+  "sum_days__other": {
+    "message": "$1 days",
+    "description": "A number of days: $1"
+  },
+  "sum_days_left__one": {
+    "message": "1 day left",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__other": {
+    "message": "$1 days left",
+    "description": "$1 days left in the period"
+  },
+  "sum_hero_left": {
+    "message": "$1 left · $2",
+    "description": "Popup headline: $1 data left, $2 days left (e.g. 17 days)"
+  },
+  "sum_hero_over": {
+    "message": "Over by $1 · $2",
+    "description": "Popup headline when over budget: $1 over, $2 days left"
+  },
+  "sum_hero_used": {
+    "message": "Used this period: $1",
+    "description": "Headline without a budget: $1 used"
+  },
+  "sum_left": {
+    "message": "$1 left of $2",
+    "description": "$1 left of a $2 budget"
+  },
+  "sum_over_by": {
+    "message": "Over by $1",
+    "description": "$1 over the budget"
+  },
+  "sum_today_share": {
+    "message": "Today $1 of $2 share",
+    "description": "$1 used today, $2 today's fair share of what's left"
+  },
+  "sum_today": {
+    "message": "Today $1",
+    "description": "$1 used today (no budget)"
+  },
+  "sum_over_tomorrow": {
+    "message": "$1 over · tomorrow ≈ $2",
+    "description": "$1 over today's share; $2 tomorrow's share if today ends here"
+  },
+  "sum_over_today": {
+    "message": "$1 over today's share",
+    "description": "$1 over today's share, on the last day"
+  },
+  "sum_renews": {
+    "message": "Renews $1",
+    "description": "$1 the date the data renews, e.g. 1 Dec"
+  },
+  "sum_pace": {
+    "message": "At this pace you'll run out around $1 ($2 early)",
+    "description": "$1 a date; $2 days early, e.g. 5 days"
+  },
+  "sum_pace_ok": {
+    "message": "On track",
+    "description": "Pace pill: the projection stays within the budget"
+  },
+  "sum_pace_fast": {
+    "message": "Too fast",
+    "description": "Pace pill: at this pace the data runs out before renewal"
+  },
+  "sum_pace_over": {
+    "message": "Over budget",
+    "description": "Pace pill: the budget is used up"
+  },
+  "sum_projection": {
+    "message": "≈ $1 by $2 at this pace",
+    "description": "$1 projected use, $2 the renewal date"
+  },
+  "sum_saved_req__one": {
+    "message": "Blocked 1 request",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__other": {
+    "message": "Blocked $1 requests",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_media__one": {
+    "message": "1 video stopped",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__other": {
+    "message": "$1 videos stopped",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_est": {
+    "message": "≈ $1 saved",
+    "description": "An estimate of the data saved, $1"
+  },
+  "sum_join": {
+    "message": " · ",
+    "description": "Separator between parts of a line"
+  },
+  "sum_youtube": {
+    "message": "YouTube: up to $1p",
+    "description": "$1 the highest YouTube quality in lines, e.g. 480"
+  },
+  "sum_youtube_none": {
+    "message": "YouTube: no limit",
+    "description": "YouTube quality not limited"
+  },
+  "notif_level_title": {
+    "message": "$1% of your data used",
+    "description": "Notification title: $1 percent used"
+  },
+  "notif_level_body": {
+    "message": "$1 left for $2. The most went to $3 ($4).",
+    "description": "$1 data left, $2 days left, $3 top site, $4 its use"
+  },
+  "notif_level_body_plain": {
+    "message": "$1 left for $2.",
+    "description": "$1 data left, $2 days left"
+  },
+  "notif_full_title": {
+    "message": "You've used all of your $1",
+    "description": "$1 the budget, e.g. 50 GB"
+  },
+  "notif_full_body": {
+    "message": "Your carrier may slow you down or charge extra until it renews on $1. Turn on Max saving in Sip.",
+    "description": "$1 the renewal date"
+  },
+  "notif_pace_title": {
+    "message": "You're on pace to run out early",
+    "description": "Weekly pace warning title"
+  },
+  "notif_pace_body": {
+    "message": "At this rate it runs out around $1, $2 before it renews. The most this period went to $3.",
+    "description": "$1 run-out date, $2 days early, $3 top site"
+  },
+  "notif_pace_body_plain": {
+    "message": "At this rate it runs out around $1, $2 before it renews.",
+    "description": "$1 run-out date, $2 days early"
+  },
+  "badge_title_budget": {
+    "message": "Sip: $1",
+    "description": "Toolbar tooltip: $1 the headline, e.g. 15.8 GB left · 17 days"
+  },
+  "badge_title_today": {
+    "message": "Sip: $1 today",
+    "description": "Toolbar tooltip without a budget: $1 used today"
+  },
+  "badge_paused": {
+    "message": " · saving paused",
+    "description": "Added to the tooltip while saving is paused"
+  }
+}

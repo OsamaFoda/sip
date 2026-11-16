@@ -1,0 +1,274 @@
+{
+  "ext_name": {
+    "message": "سِب — موفّر البيانات",
+    "description": "Add-on name"
+  },
+  "ext_short": {
+    "message": "سِب",
+    "description": "Short add-on name"
+  },
+  "ext_description": {
+    "message": "اعرف كم يستهلك كل موقع من بياناتك، والتزم بباقتك الشهرية، ووفّر الهدر: التشغيل التلقائي والمتتبّعات وغيرها.",
+    "description": "Add-on description in the add-ons manager"
+  },
+  "ext_action_title": {
+    "message": "سِب",
+    "description": "Toolbar button tooltip before Sip has started"
+  },
+  "locale_code": {
+    "message": "ar",
+    "description": "The language this file is: en or ar"
+  },
+  "unit_B": {
+    "message": "بايت",
+    "description": "Bytes"
+  },
+  "unit_KB": {
+    "message": "كيلوبايت",
+    "description": "Kilobytes (1,000 bytes)"
+  },
+  "unit_MB": {
+    "message": "ميجا",
+    "description": "Megabytes"
+  },
+  "unit_GB": {
+    "message": "جيجا",
+    "description": "Gigabytes (1,000,000,000 bytes)"
+  },
+  "unit_TB": {
+    "message": "تيرا",
+    "description": "Terabytes"
+  },
+  "fmt_size": {
+    "message": "$1 $2",
+    "description": "A size: $1 number, $2 unit"
+  },
+  "bucket_private": {
+    "message": "النوافذ الخاصة",
+    "description": "Usage from private windows, counted without site names"
+  },
+  "bucket_extensions": {
+    "message": "الإضافات",
+    "description": "Usage by add-ons, such as filter list updates"
+  },
+  "bucket_other": {
+    "message": "غير ذلك",
+    "description": "Usage with no site"
+  },
+  "sum_days__zero": {
+    "message": "$1 يوم",
+    "description": "A number of days: $1"
+  },
+  "sum_days__one": {
+    "message": "يوم واحد",
+    "description": "A number of days: $1"
+  },
+  "sum_days__two": {
+    "message": "يومان",
+    "description": "A number of days: $1"
+  },
+  "sum_days__few": {
+    "message": "$1 أيام",
+    "description": "A number of days: $1"
+  },
+  "sum_days__many": {
+    "message": "$1 يومًا",
+    "description": "A number of days: $1"
+  },
+  "sum_days__other": {
+    "message": "$1 يوم",
+    "description": "A number of days: $1"
+  },
+  "sum_days_left__zero": {
+    "message": "لا أيام متبقية",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__one": {
+    "message": "يوم واحد متبقٍ",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__two": {
+    "message": "يومان متبقيان",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__few": {
+    "message": "$1 أيام متبقية",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__many": {
+    "message": "$1 يومًا متبقيًا",
+    "description": "$1 days left in the period"
+  },
+  "sum_days_left__other": {
+    "message": "$1 يوم متبقٍ",
+    "description": "$1 days left in the period"
+  },
+  "sum_hero_left": {
+    "message": "متبقٍ $1 · $2",
+    "description": "Popup headline: $1 data left, $2 days left (e.g. 17 days)"
+  },
+  "sum_hero_over": {
+    "message": "تجاوزت بـ $1 · $2",
+    "description": "Popup headline when over budget: $1 over, $2 days left"
+  },
+  "sum_hero_used": {
+    "message": "استهلاك هذه الفترة: $1",
+    "description": "Headline without a budget: $1 used"
+  },
+  "sum_left": {
+    "message": "متبقٍ $1 من $2",
+    "description": "$1 left of a $2 budget"
+  },
+  "sum_over_by": {
+    "message": "تجاوزت الباقة بـ $1",
+    "description": "$1 over the budget"
+  },
+  "sum_today_share": {
+    "message": "اليوم $1 من حصة $2",
+    "description": "$1 used today, $2 today's fair share of what's left"
+  },
+  "sum_today": {
+    "message": "اليوم $1",
+    "description": "$1 used today (no budget)"
+  },
+  "sum_over_tomorrow": {
+    "message": "$1 فوق الحصة · غدًا ≈ $2",
+    "description": "$1 over today's share; $2 tomorrow's share if today ends here"
+  },
+  "sum_over_today": {
+    "message": "$1 فوق حصة اليوم",
+    "description": "$1 over today's share, on the last day"
+  },
+  "sum_renews": {
+    "message": "تتجدد في $1",
+    "description": "$1 the date the data renews, e.g. 1 Dec"
+  },
+  "sum_pace": {
+    "message": "بهذا المعدل ستنفد الباقة نحو $1 (قبل موعدها بـ $2)",
+    "description": "$1 a date; $2 days early, e.g. 5 days"
+  },
+  "sum_pace_ok": {
+    "message": "في الحدود",
+    "description": "Pace pill: the projection stays within the budget"
+  },
+  "sum_pace_fast": {
+    "message": "أسرع من اللازم",
+    "description": "Pace pill: at this pace the data runs out before renewal"
+  },
+  "sum_pace_over": {
+    "message": "تجاوزت الباقة",
+    "description": "Pace pill: the budget is used up"
+  },
+  "sum_projection": {
+    "message": "≈ $1 بحلول $2 بهذا المعدل",
+    "description": "$1 projected use, $2 the renewal date"
+  },
+  "sum_saved_req__zero": {
+    "message": "لم يُحجب أي طلب",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__one": {
+    "message": "حُجب طلب واحد",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__two": {
+    "message": "حُجب طلبان",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__few": {
+    "message": "حُجبت $1 طلبات",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__many": {
+    "message": "حُجب $1 طلبًا",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_req__other": {
+    "message": "حُجب $1 طلب",
+    "description": "What Sip saved: $1 blocked requests"
+  },
+  "sum_saved_media__zero": {
+    "message": "لم يُوقَف أي مقطع",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__one": {
+    "message": "أُوقف مقطع واحد",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__two": {
+    "message": "أُوقف مقطعان",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__few": {
+    "message": "أُوقفت $1 مقاطع",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__many": {
+    "message": "أُوقف $1 مقطعًا",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_media__other": {
+    "message": "أُوقف $1 مقطع",
+    "description": "What Sip saved: $1 videos stopped from playing on their own"
+  },
+  "sum_saved_est": {
+    "message": "وُفّر ≈ $1",
+    "description": "An estimate of the data saved, $1"
+  },
+  "sum_join": {
+    "message": " · ",
+    "description": "Separator between parts of a line"
+  },
+  "sum_youtube": {
+    "message": "يوتيوب: حتى $1p",
+    "description": "$1 the highest YouTube quality in lines, e.g. 480"
+  },
+  "sum_youtube_none": {
+    "message": "يوتيوب: بلا حد",
+    "description": "YouTube quality not limited"
+  },
+  "notif_level_title": {
+    "message": "استهلكت $1% من باقتك",
+    "description": "Notification title: $1 percent used"
+  },
+  "notif_level_body": {
+    "message": "متبقٍ $1 لمدة $2. أكثر ما استهلك: $3 ($4).",
+    "description": "$1 data left, $2 days left, $3 top site, $4 its use"
+  },
+  "notif_level_body_plain": {
+    "message": "متبقٍ $1 لمدة $2.",
+    "description": "$1 data left, $2 days left"
+  },
+  "notif_full_title": {
+    "message": "استهلكت باقتك كلها ($1)",
+    "description": "$1 the budget, e.g. 50 GB"
+  },
+  "notif_full_body": {
+    "message": "قد يبطئ مزوّد الخدمة سرعتك أو يحاسبك على الزيادة حتى التجديد في $1. شغّل التوفير الأقصى في سِب.",
+    "description": "$1 the renewal date"
+  },
+  "notif_pace_title": {
+    "message": "بهذا المعدل ستنفد باقتك مبكرًا",
+    "description": "Weekly pace warning title"
+  },
+  "notif_pace_body": {
+    "message": "بهذا المعدل تنفد نحو $1، قبل التجديد بـ $2. أكثر ما استهلك في هذه الفترة: $3.",
+    "description": "$1 run-out date, $2 days early, $3 top site"
+  },
+  "notif_pace_body_plain": {
+    "message": "بهذا المعدل تنفد نحو $1، قبل التجديد بـ $2.",
+    "description": "$1 run-out date, $2 days early"
+  },
+  "badge_title_budget": {
+    "message": "سِب: $1",
+    "description": "Toolbar tooltip: $1 the headline, e.g. 15.8 GB left · 17 days"
+  },
+  "badge_title_today": {
+    "message": "سِب: $1 اليوم",
+    "description": "Toolbar tooltip without a budget: $1 used today"
+  },
+  "badge_paused": {
+    "message": " · التوفير متوقف",
+    "description": "Added to the tooltip while saving is paused"
+  }
+}

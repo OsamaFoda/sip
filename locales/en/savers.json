@@ -1,0 +1,174 @@
+{
+  "level_off": {
+    "message": "Off",
+    "description": "Saving level: saving paused"
+  },
+  "level_light": {
+    "message": "Light",
+    "description": "Saving level"
+  },
+  "level_balanced": {
+    "message": "Balanced",
+    "description": "Saving level (the default)"
+  },
+  "level_max": {
+    "message": "Max",
+    "description": "Saving level"
+  },
+  "level_custom": {
+    "message": "Custom",
+    "description": "Your own mix of savers, not one of the levels"
+  },
+  "level_default": {
+    "message": "Default",
+    "description": "Marks the default level"
+  },
+  "level_off_desc": {
+    "message": "Saving is paused. Your YouTube limit stays on.",
+    "description": "What Off does"
+  },
+  "level_light_desc": {
+    "message": "Blocks heavy trackers. Pages look and play as usual.",
+    "description": "What Light does"
+  },
+  "level_balanced_desc": {
+    "message": "Also stops videos from playing and downloading on their own.",
+    "description": "What Balanced does"
+  },
+  "level_max_desc": {
+    "message": "Also blocks images. Pages look unfinished; turn images back on for a site you need.",
+    "description": "What Max does"
+  },
+  "level_custom_desc": {
+    "message": "Your own mix of savers.",
+    "description": "What Custom means"
+  },
+  "saver_autoplay_name": {
+    "message": "Stop autoplay",
+    "description": "Saver name"
+  },
+  "saver_autoplay_saves": {
+    "message": "Videos and sound don't play or download until you press play.",
+    "description": "What the autoplay saver saves"
+  },
+  "saver_autoplay_breaks": {
+    "message": "Some players need a second click. YouTube videos you open still play.",
+    "description": "What the autoplay saver may break"
+  },
+  "saver_trackers_name": {
+    "message": "Block heavy trackers",
+    "description": "Saver name"
+  },
+  "saver_trackers_saves": {
+    "message": "Ads and tracking scripts that load on page after page.",
+    "description": "What the trackers saver saves"
+  },
+  "saver_trackers_breaks": {
+    "message": "Rarely breaks anything, though \"Log in with Facebook\" buttons may not work. For much more blocking, use uBlock Origin.",
+    "description": "What the trackers saver may break"
+  },
+  "saver_images_name": {
+    "message": "Block images",
+    "description": "Saver name"
+  },
+  "saver_images_saves": {
+    "message": "Photos and pictures, often the largest part of a page.",
+    "description": "What the images saver saves"
+  },
+  "saver_images_breaks": {
+    "message": "Pages look unfinished. Turn images back on for a site with a site rule.",
+    "description": "What the images saver may break"
+  },
+  "saver_fonts_name": {
+    "message": "Block web fonts",
+    "description": "Saver name"
+  },
+  "saver_fonts_saves": {
+    "message": "Font files a site downloads the first time you visit it.",
+    "description": "What the fonts saver saves"
+  },
+  "saver_fonts_breaks": {
+    "message": "Icons may turn into words like \"menu\", and text uses your system's fonts.",
+    "description": "What the fonts saver may break"
+  },
+  "saver_saveData_name": {
+    "message": "Ask sites for lighter pages (Save-Data)",
+    "description": "Saver name"
+  },
+  "saver_saveData_saves": {
+    "message": "Sites that honour it send smaller images and video.",
+    "description": "What Save-Data saves"
+  },
+  "saver_saveData_breaks": {
+    "message": "Few sites honour it, and it makes your browser a little easier to tell apart from others.",
+    "description": "Save-Data's drawback (fingerprinting)"
+  },
+  "yt_choice_240": {
+    "message": "240p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_360": {
+    "message": "360p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_480": {
+    "message": "480p",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_720": {
+    "message": "720p (HD)",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_1080": {
+    "message": "1080p (Full HD)",
+    "description": "YouTube quality choice"
+  },
+  "yt_choice_0": {
+    "message": "No limit",
+    "description": "YouTube quality choice"
+  },
+  "yt_cost_240": {
+    "message": "≈ 0.2 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_360": {
+    "message": "≈ 0.3–0.4 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_480": {
+    "message": "≈ 0.5–0.7 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_720": {
+    "message": "≈ 1–1.5 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_1080": {
+    "message": "≈ 1.5–3.3 GB an hour",
+    "description": "What an hour of YouTube costs at this quality"
+  },
+  "yt_cost_0": {
+    "message": "up to 3 GB an hour or more",
+    "description": "What an hour of YouTube costs with no limit"
+  },
+  "yt_title": {
+    "message": "YouTube quality",
+    "description": "Heading"
+  },
+  "yt_your_choice": {
+    "message": "Your choice",
+    "description": "Marks the person's YouTube choice"
+  },
+  "yt_applied_now": {
+    "message": "Applied now",
+    "description": "After lowering the limit: the playing video changes now"
+  },
+  "yt_from_next": {
+    "message": "From the next video",
+    "description": "After raising the limit: it applies from the next video"
+  },
+  "yt_levels_note": {
+    "message": "Saving levels never change your YouTube quality.",
+    "description": "Note under the YouTube choices"
+  }
+}
