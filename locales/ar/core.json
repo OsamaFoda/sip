@@ -228,7 +228,7 @@
     "description": "YouTube quality not limited"
   },
   "notif_level_title": {
-    "message": "استهلكت $1% من باقتك",
+    "message": "استهلكت $1٪ من باقتك",
     "description": "Notification title: $1 percent used"
   },
   "notif_level_body": {

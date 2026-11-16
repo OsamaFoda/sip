@@ -64,6 +64,7 @@ async function act(message) {
   return reply;
 }
 const set = patch => act({ type: MSG.SETTINGS_SET, patch });
+const percent = n => `+${formatter().number(n, n % 1 ? 1 : 0)}${formatter().lang === 'ar' ? '٪' : '%'}`;
 
 // ----- Building the parts that repeat -----------------------------------------------------------
 
@@ -167,11 +168,11 @@ function renderRules() {
 function renderCounting() {
   const { settings } = view;
   show($('#overhead'), String(settings.overhead));
-  $('#overhead-value').textContent = `+${formatter().number(settings.overhead, settings.overhead % 1 ? 1 : 0)}%`;
+  $('#overhead-value').textContent = percent(settings.overhead);
   setSwitch($('#notify-switch'), settings.notify);
   setSwitch($('#pace-switch'), settings.notifyPace);
   const { summary } = view;
-  $('#sample-title').textContent = t('notif_level_title', ['75']);
+  $('#sample-title').textContent = t('notif_level_title', [formatter().number(75)]);
   const left = summary.hasBudget ? Math.max(0, summary.left) : 12.5e9;
   const days = plural('sum_days', summary.daysLeft, [isolate(formatter().number(summary.daysLeft))]);
   $('#sample-body').textContent = summary.topSite
@@ -288,7 +289,7 @@ function wire() {
 
   $('#overhead').addEventListener('input', () => {
     const value = Number($('#overhead').value);
-    $('#overhead-value').textContent = `+${formatter().number(value, value % 1 ? 1 : 0)}%`;
+    $('#overhead-value').textContent = percent(value);
   });
   commit($('#overhead'), value => send({ type: MSG.SETTINGS_SET, patch: { overhead: value } }));
   $('#notify-switch').addEventListener('click', () => set({ notify: !view.settings.notify }));

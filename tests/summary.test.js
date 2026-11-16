@@ -66,9 +66,9 @@ test('Arabic texts and plurals', () => {
   const s = buildSummary({ settings: settings({ budgetGB: 50, overhead: 5 }), days: month(), carrier: { period: '2026-11-01', other: 2e9 }, now, fmt });
   assert.equal(s.lang, 'ar');
   assert.equal(s.dir, 'rtl');
-  assert.equal(plain(s.text.hero), 'متبقٍ 15.24 جيجا · 18 يومًا');
+  assert.equal(plain(s.text.hero), 'متبقٍ ١٥٫٢٤ جيجا · ١٨ يومًا');
   assert.equal(plain(s.text.paceShort), 'أسرع من اللازم');
-  assert.equal(plain(s.text.renews).startsWith('تتجدد في 1 '), true);
+  assert.equal(plain(s.text.renews).startsWith('تتجدد في ١ '), true);
   const days = n => plain(plural('sum_days', n, [String(n)]));
   assert.deepEqual([0, 1, 2, 3, 11, 100].map(days), ['0 يوم', 'يوم واحد', 'يومان', '3 أيام', '11 يومًا', '100 يوم']);
   useLanguage('en');

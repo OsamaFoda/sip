@@ -128,27 +128,27 @@
     "description": "YouTube quality choice"
   },
   "yt_cost_240": {
-    "message": "≈ 0.2 جيجا في الساعة",
+    "message": "≈ ٠٫٢ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_360": {
-    "message": "≈ 0.3–0.4 جيجا في الساعة",
+    "message": "≈ ٠٫٣–٠٫٤ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_480": {
-    "message": "≈ 0.5–0.7 جيجا في الساعة",
+    "message": "≈ ٠٫٥–٠٫٧ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_720": {
-    "message": "≈ 1–1.5 جيجا في الساعة",
+    "message": "≈ ١–١٫٥ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_1080": {
-    "message": "≈ 1.5–3.3 جيجا في الساعة",
+    "message": "≈ ١٫٥–٣٫٣ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_0": {
-    "message": "حتى 3 جيجا في الساعة أو أكثر",
+    "message": "حتى ٣ جيجا في الساعة أو أكثر",
     "description": "What an hour of YouTube costs with no limit"
   },
   "yt_title": {

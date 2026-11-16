@@ -35,10 +35,10 @@ test('signed sizes, counts and dates', () => {
   assert.equal(formatDate('2026-12-01'), '1 Dec');
 });
 
-test('Arabic uses its own units and keeps Western digits', () => {
+test('Arabic uses its own units and Arabic-Indic digits', () => {
   const fmt = useLanguage('ar');
-  assert.equal(formatBytes(1.42e9, fmt), '1.42 جيجا');
-  assert.equal(formatBytes(512, fmt), '512 بايت');
-  assert.match(formatDate('2026-12-01', fmt), /^1 /);
-  assert.equal(makeFormatter('ar').locale, 'ar-u-nu-latn');
+  assert.equal(formatBytes(1.42e9, fmt), '١٫٤٢ جيجا');
+  assert.equal(formatBytes(512, fmt), '٥١٢ بايت');
+  assert.match(formatDate('2026-12-01', fmt), /^١ /);
+  assert.equal(makeFormatter('ar').locale, 'ar-u-nu-arab');
 });

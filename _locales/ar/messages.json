@@ -168,7 +168,7 @@
     "description": "$1 data left, $2 days left"
   },
   "notif_level_title": {
-    "message": "استهلكت $1% من باقتك",
+    "message": "استهلكت $1٪ من باقتك",
     "description": "Notification title: $1 percent used"
   },
   "notif_pace_body": {
@@ -376,7 +376,7 @@
     "description": "Section lead"
   },
   "opt_notify_levels": {
-    "message": "عند 75% و90% و100% من باقتك",
+    "message": "عند ٧٥٪ و٩٠٪ و١٠٠٪ من باقتك",
     "description": "Switch"
   },
   "opt_notify_pace": {
@@ -384,7 +384,7 @@
     "description": "Switch"
   },
   "opt_notify_pace_hint": {
-    "message": "قبل التجديد بأكثر من 3 أيام، ومرة في الأسبوع على الأكثر.",
+    "message": "قبل التجديد بأكثر من ٣ أيام، ومرة في الأسبوع على الأكثر.",
     "description": "Switch hint"
   },
   "opt_notify_sample": {
@@ -540,7 +540,7 @@
     "description": "Field"
   },
   "opt_units_line": {
-    "message": "1 جيجا = 1,000,000,000 بايت، كما يحسب مزوّدو الخدمة.",
+    "message": "١ جيجا = ١٬٠٠٠٬٠٠٠٬٠٠٠ بايت، كما يحسب مزوّدو الخدمة.",
     "description": "Read-only units line"
   },
   "opt_used_so_far": {
@@ -1032,27 +1032,27 @@
     "description": "YouTube quality choice"
   },
   "yt_cost_0": {
-    "message": "حتى 3 جيجا في الساعة أو أكثر",
+    "message": "حتى ٣ جيجا في الساعة أو أكثر",
     "description": "What an hour of YouTube costs with no limit"
   },
   "yt_cost_1080": {
-    "message": "≈ 1.5–3.3 جيجا في الساعة",
+    "message": "≈ ١٫٥–٣٫٣ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_240": {
-    "message": "≈ 0.2 جيجا في الساعة",
+    "message": "≈ ٠٫٢ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_360": {
-    "message": "≈ 0.3–0.4 جيجا في الساعة",
+    "message": "≈ ٠٫٣–٠٫٤ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_480": {
-    "message": "≈ 0.5–0.7 جيجا في الساعة",
+    "message": "≈ ٠٫٥–٠٫٧ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_cost_720": {
-    "message": "≈ 1–1.5 جيجا في الساعة",
+    "message": "≈ ١–١٫٥ جيجا في الساعة",
     "description": "What an hour of YouTube costs at this quality"
   },
   "yt_from_next": {

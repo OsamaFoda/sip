@@ -3,7 +3,7 @@
 td,th{border:1px solid #d5dde0;padding:6px 8px;vertical-align:top;text-align:start} th{background:#eaf0f6;position:sticky;top:0}
 td:nth-child(5){font-size:16px} small{color:#5b6b71;font-family:monospace} code{font-size:12px} .note{background:#fff6dd;padding:10px 14px;border-radius:8px}</style></head><body>
 <h1>Sip 1.0: strings to review</h1>
-<p class=note>Arabic digits: <b>latn</b> (Western digits, 1.42 جيجا).
+<p class=note>Arabic digits: <b>arab</b> (Arabic-Indic digits, ١٫٤٢ جيجا).
 Change <code>ARABIC_DIGITS</code> in <code>lib/format.js</code> to switch. Plural sets show each form Arabic needs:
 zero, one, two, few (3–10), many (11–99), other (100 and up). To change a string, edit <code>locales/ar/&lt;part&gt;.json</code> and run <code>python3 tools/build.py</code>.</p>
 <p>243 strings.</p>
@@ -45,7 +45,7 @@ zero, one, two, few (3–10), many (11–99), other (100 and up). To change a st
 <tr><td>core</td><td><code>sum_join</code></td><td>Separator between parts of a line</td><td> · </td><td lang=ar dir=rtl> · </td></tr>
 <tr><td>core</td><td><code>sum_youtube</code></td><td>$1 the highest YouTube quality in lines, e.g. 480</td><td>YouTube: up to $1p</td><td lang=ar dir=rtl>يوتيوب: حتى $1p</td></tr>
 <tr><td>core</td><td><code>sum_youtube_none</code></td><td>YouTube quality not limited</td><td>YouTube: no limit</td><td lang=ar dir=rtl>يوتيوب: بلا حد</td></tr>
-<tr><td>core</td><td><code>notif_level_title</code></td><td>Notification title: $1 percent used</td><td>$1% of your data used</td><td lang=ar dir=rtl>استهلكت $1% من باقتك</td></tr>
+<tr><td>core</td><td><code>notif_level_title</code></td><td>Notification title: $1 percent used</td><td>$1% of your data used</td><td lang=ar dir=rtl>استهلكت $1٪ من باقتك</td></tr>
 <tr><td>core</td><td><code>notif_level_body</code></td><td>$1 data left, $2 days left, $3 top site, $4 its use</td><td>$1 left for $2. The most went to $3 ($4).</td><td lang=ar dir=rtl>متبقٍ $1 لمدة $2. أكثر ما استهلك: $3 ($4).</td></tr>
 <tr><td>core</td><td><code>notif_level_body_plain</code></td><td>$1 data left, $2 days left</td><td>$1 left for $2.</td><td lang=ar dir=rtl>متبقٍ $1 لمدة $2.</td></tr>
 <tr><td>core</td><td><code>notif_full_title</code></td><td>$1 the budget, e.g. 50 GB</td><td>You&#x27;ve used all of your $1</td><td lang=ar dir=rtl>استهلكت باقتك كلها ($1)</td></tr>
@@ -88,12 +88,12 @@ zero, one, two, few (3–10), many (11–99), other (100 and up). To change a st
 <tr><td>savers</td><td><code>yt_choice_720</code></td><td>YouTube quality choice</td><td>720p (HD)</td><td lang=ar dir=rtl>720p (HD)</td></tr>
 <tr><td>savers</td><td><code>yt_choice_1080</code></td><td>YouTube quality choice</td><td>1080p (Full HD)</td><td lang=ar dir=rtl>1080p (Full HD)</td></tr>
 <tr><td>savers</td><td><code>yt_choice_0</code></td><td>YouTube quality choice</td><td>No limit</td><td lang=ar dir=rtl>بلا حد</td></tr>
-<tr><td>savers</td><td><code>yt_cost_240</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.2 GB an hour</td><td lang=ar dir=rtl>≈ 0.2 جيجا في الساعة</td></tr>
-<tr><td>savers</td><td><code>yt_cost_360</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.3–0.4 GB an hour</td><td lang=ar dir=rtl>≈ 0.3–0.4 جيجا في الساعة</td></tr>
-<tr><td>savers</td><td><code>yt_cost_480</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.5–0.7 GB an hour</td><td lang=ar dir=rtl>≈ 0.5–0.7 جيجا في الساعة</td></tr>
-<tr><td>savers</td><td><code>yt_cost_720</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 1–1.5 GB an hour</td><td lang=ar dir=rtl>≈ 1–1.5 جيجا في الساعة</td></tr>
-<tr><td>savers</td><td><code>yt_cost_1080</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 1.5–3.3 GB an hour</td><td lang=ar dir=rtl>≈ 1.5–3.3 جيجا في الساعة</td></tr>
-<tr><td>savers</td><td><code>yt_cost_0</code></td><td>What an hour of YouTube costs with no limit</td><td>up to 3 GB an hour or more</td><td lang=ar dir=rtl>حتى 3 جيجا في الساعة أو أكثر</td></tr>
+<tr><td>savers</td><td><code>yt_cost_240</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.2 GB an hour</td><td lang=ar dir=rtl>≈ ٠٫٢ جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_360</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.3–0.4 GB an hour</td><td lang=ar dir=rtl>≈ ٠٫٣–٠٫٤ جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_480</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.5–0.7 GB an hour</td><td lang=ar dir=rtl>≈ ٠٫٥–٠٫٧ جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_720</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 1–1.5 GB an hour</td><td lang=ar dir=rtl>≈ ١–١٫٥ جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_1080</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 1.5–3.3 GB an hour</td><td lang=ar dir=rtl>≈ ١٫٥–٣٫٣ جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_0</code></td><td>What an hour of YouTube costs with no limit</td><td>up to 3 GB an hour or more</td><td lang=ar dir=rtl>حتى ٣ جيجا في الساعة أو أكثر</td></tr>
 <tr><td>savers</td><td><code>yt_title</code></td><td>Heading</td><td>YouTube quality</td><td lang=ar dir=rtl>جودة يوتيوب</td></tr>
 <tr><td>savers</td><td><code>yt_your_choice</code></td><td>Marks the person&#x27;s YouTube choice</td><td>Your choice</td><td lang=ar dir=rtl>اختيارك</td></tr>
 <tr><td>savers</td><td><code>yt_applied_now</code></td><td>After lowering the limit: the playing video changes now</td><td>Applied now</td><td lang=ar dir=rtl>طُبّق الآن</td></tr>
@@ -210,11 +210,11 @@ zero, one, two, few (3–10), many (11–99), other (100 and up). To change a st
 <tr><td>ui</td><td><code>opt_overhead</code></td><td>Field</td><td>Network overhead (estimate)</td><td lang=ar dir=rtl>حمل الشبكة الإضافي (تقديري)</td></tr>
 <tr><td>ui</td><td><code>opt_overhead_hint</code></td><td>Field hint</td><td>Your carrier also counts encryption and packet headers that a browser never sees. Sip adds this much for the budget only; site figures stay as measured.</td><td lang=ar dir=rtl>يحسب مزوّد الخدمة أيضًا التشفير ورؤوس الحزم التي لا يراها المتصفح. يضيف سِب هذه النسبة لحساب الباقة فقط، وتبقى أرقام المواقع كما قيست.</td></tr>
 <tr><td>ui</td><td><code>opt_units</code></td><td>Field</td><td>Units</td><td lang=ar dir=rtl>الوحدات</td></tr>
-<tr><td>ui</td><td><code>opt_units_line</code></td><td>Read-only units line</td><td>1 GB = 1,000,000,000 bytes, the way carriers count.</td><td lang=ar dir=rtl>1 جيجا = 1,000,000,000 بايت، كما يحسب مزوّدو الخدمة.</td></tr>
+<tr><td>ui</td><td><code>opt_units_line</code></td><td>Read-only units line</td><td>1 GB = 1,000,000,000 bytes, the way carriers count.</td><td lang=ar dir=rtl>١ جيجا = ١٬٠٠٠٬٠٠٠٬٠٠٠ بايت، كما يحسب مزوّدو الخدمة.</td></tr>
 <tr><td>ui</td><td><code>opt_notify_lead</code></td><td>Section lead</td><td>Click one to open Sip.</td><td lang=ar dir=rtl>انقر على التنبيه لفتح سِب.</td></tr>
-<tr><td>ui</td><td><code>opt_notify_levels</code></td><td>Switch</td><td>At 75%, 90% and 100% of your plan</td><td lang=ar dir=rtl>عند 75% و90% و100% من باقتك</td></tr>
+<tr><td>ui</td><td><code>opt_notify_levels</code></td><td>Switch</td><td>At 75%, 90% and 100% of your plan</td><td lang=ar dir=rtl>عند ٧٥٪ و٩٠٪ و١٠٠٪ من باقتك</td></tr>
 <tr><td>ui</td><td><code>opt_notify_pace</code></td><td>Switch</td><td>When you&#x27;re on pace to run out early</td><td lang=ar dir=rtl>عندما يشير معدلك إلى نفاد الباقة مبكرًا</td></tr>
-<tr><td>ui</td><td><code>opt_notify_pace_hint</code></td><td>Switch hint</td><td>More than 3 days before renewal; at most once a week.</td><td lang=ar dir=rtl>قبل التجديد بأكثر من 3 أيام، ومرة في الأسبوع على الأكثر.</td></tr>
+<tr><td>ui</td><td><code>opt_notify_pace_hint</code></td><td>Switch hint</td><td>More than 3 days before renewal; at most once a week.</td><td lang=ar dir=rtl>قبل التجديد بأكثر من ٣ أيام، ومرة في الأسبوع على الأكثر.</td></tr>
 <tr><td>ui</td><td><code>opt_notify_sample</code></td><td>Above the sample</td><td>What one looks like</td><td lang=ar dir=rtl>مثال على تنبيه</td></tr>
 <tr><td>ui</td><td><code>opt_private_on</code></td><td>Private windows allowed</td><td>Counted, as one total with no site names.</td><td lang=ar dir=rtl>تُحسب كإجمالي واحد دون أسماء المواقع.</td></tr>
 <tr><td>ui</td><td><code>opt_private_off</code></td><td>Private windows not allowed</td><td>Not counted. To count them, open Add-ons and themes, choose Sip and allow it in private windows.</td><td lang=ar dir=rtl>لا تُحسب. لحسابها افتح صفحة الإضافات والسمات، واختر سِب، واسمح له بالعمل في النوافذ الخاصة.</td></tr>

@@ -424,7 +424,7 @@
     "description": "Field"
   },
   "opt_units_line": {
-    "message": "1 جيجا = 1,000,000,000 بايت، كما يحسب مزوّدو الخدمة.",
+    "message": "١ جيجا = ١٬٠٠٠٬٠٠٠٬٠٠٠ بايت، كما يحسب مزوّدو الخدمة.",
     "description": "Read-only units line"
   },
   "opt_notify_lead": {
@@ -432,7 +432,7 @@
     "description": "Section lead"
   },
   "opt_notify_levels": {
-    "message": "عند 75% و90% و100% من باقتك",
+    "message": "عند ٧٥٪ و٩٠٪ و١٠٠٪ من باقتك",
     "description": "Switch"
   },
   "opt_notify_pace": {
@@ -440,7 +440,7 @@
     "description": "Switch"
   },
   "opt_notify_pace_hint": {
-    "message": "قبل التجديد بأكثر من 3 أيام، ومرة في الأسبوع على الأكثر.",
+    "message": "قبل التجديد بأكثر من ٣ أيام، ومرة في الأسبوع على الأكثر.",
     "description": "Switch hint"
   },
   "opt_notify_sample": {
