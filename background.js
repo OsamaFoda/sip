@@ -173,7 +173,7 @@ function completed(d) {
 function failed(d) {
   const exact = exactBytes(d);
   if (exact) add(siteOf(d, fallbackSite(d)), exact);
-  if (d.error !== DNR_BLOCK_ERROR) return;
+  if (d.error !== DNR_BLOCK_ERROR || exact || d.statusCode) return;
   const saver = wouldBlock(d, settings);
   if (!saver) return;
   const [n, total] = stats[AVG_KIND[saver]] ?? [0, 0];
