@@ -39,6 +39,46 @@
     "message": "سِب",
     "description": "Short add-on name"
   },
+  "first_budget_hint": {
+    "message": "حجم باقتك، أو الجزء الذي يمكن أن يستهلكه هذا المتصفح. اتركه فارغًا إن لم تكن لديك باقة محددة.",
+    "description": "Field hint"
+  },
+  "first_button": {
+    "message": "زر سِب في شريط الأدوات: انقر عليه لترى ما تبقّى.",
+    "description": "Note"
+  },
+  "first_done": {
+    "message": "تم",
+    "description": "Button"
+  },
+  "first_lead": {
+    "message": "يحسب سِب البيانات التي يستهلكها هذا المتصفح ويوفّر حيث يستطيع. بضعة أسئلة وتكون جاهزًا.",
+    "description": "First-run lead"
+  },
+  "first_only_browser": {
+    "message": "يرى سِب هذا المتصفح فقط. هاتفك والتطبيقات الأخرى تستهلك أيضًا.",
+    "description": "Note"
+  },
+  "first_renews": {
+    "message": "تتجدد في يوم",
+    "description": "Field"
+  },
+  "first_renews_hint": {
+    "message": "يوم الشهر الذي تبدأ فيه باقتك من جديد.",
+    "description": "Field hint"
+  },
+  "first_title": {
+    "message": "مرحبًا بك في سِب",
+    "description": "First-run heading"
+  },
+  "first_used": {
+    "message": "المستهلك حتى الآن في هذه الفترة (اختياري)",
+    "description": "Field"
+  },
+  "first_used_hint": {
+    "message": "ما يقول مزوّد الخدمة إنك استهلكته، لتبدأ الحسبة صحيحة.",
+    "description": "Field hint"
+  },
   "fmt_size": {
     "message": "$1 $2",
     "description": "A size: $1 number, $2 unit"
@@ -46,6 +86,10 @@
   "level_balanced": {
     "message": "متوازن",
     "description": "Saving level (the default)"
+  },
+  "level_balanced_breaks": {
+    "message": "بعض المشغلات تحتاج نقرة ثانية",
+    "description": "What Balanced may break"
   },
   "level_balanced_desc": {
     "message": "ويوقف أيضًا تشغيل الفيديو وتحميله من تلقاء نفسه.",
@@ -63,9 +107,21 @@
     "message": "الافتراضي",
     "description": "Marks the default level"
   },
+  "level_everything_balanced": {
+    "message": "كل ما في المتوازن",
+    "description": "Max card: includes Balanced"
+  },
+  "level_everything_light": {
+    "message": "كل ما في الخفيف",
+    "description": "Max/Balanced card: includes the level below"
+  },
   "level_light": {
     "message": "خفيف",
     "description": "Saving level"
+  },
+  "level_light_breaks": {
+    "message": "نادرًا أي شيء؛ وأزرار «تسجيل الدخول بفيسبوك» في المواقع الأخرى",
+    "description": "What Light may break"
   },
   "level_light_desc": {
     "message": "يحجب المتتبّعات الثقيلة، وتظهر الصفحات وتعمل كالمعتاد.",
@@ -74,6 +130,10 @@
   "level_max": {
     "message": "أقصى",
     "description": "Saving level"
+  },
+  "level_max_breaks": {
+    "message": "تبدو الصفحات خالية؛ أعد الصور موقعًا موقعًا",
+    "description": "What Max may break"
   },
   "level_max_desc": {
     "message": "ويحجب الصور أيضًا. تبدو الصفحات ناقصة، فأعد الصور لأي موقع تحتاجه.",
@@ -122,6 +182,574 @@
   "notif_pace_title": {
     "message": "بهذا المعدل ستنفد باقتك مبكرًا",
     "description": "Weekly pace warning title"
+  },
+  "opt_accuracy": {
+    "message": "ما مدى دقة الحساب؟",
+    "description": "Section"
+  },
+  "opt_accuracy_lead": {
+    "message": "يحسب سِب ما يرسله هذا المتصفح ويستقبله، من عدّاد فايرفوكس نفسه. وبعض البيانات لا تمر عبره أبدًا.",
+    "description": "Section lead"
+  },
+  "opt_add": {
+    "message": "أضف",
+    "description": "Button"
+  },
+  "opt_add_all": {
+    "message": "أوقف كل أدوات التوفير فيه",
+    "description": "Preset"
+  },
+  "opt_add_autoplay": {
+    "message": "اسمح بتشغيل فيديوهاته تلقائيًا",
+    "description": "Preset"
+  },
+  "opt_add_block_images": {
+    "message": "احجب صوره",
+    "description": "Preset"
+  },
+  "opt_add_error": {
+    "message": "هذا ليس عنوان موقع، مثل example.com.",
+    "description": "Error"
+  },
+  "opt_add_images": {
+    "message": "اعرض صوره",
+    "description": "Preset"
+  },
+  "opt_add_placeholder": {
+    "message": "أضف موقعًا، مثل example.com",
+    "description": "Field placeholder"
+  },
+  "opt_add_site": {
+    "message": "أضف موقعًا",
+    "description": "Field name"
+  },
+  "opt_add_what": {
+    "message": "ما الذي تغيّره فيه",
+    "description": "Select name"
+  },
+  "opt_astrelle_autoplay": {
+    "message": "في Astrelle، يتبع المتصفح نفسه هذا الإعداد للتشغيل التلقائي والتحميل المسبق.",
+    "description": "Shown in Astrelle"
+  },
+  "opt_budget": {
+    "message": "حجم الباقة",
+    "description": "Field"
+  },
+  "opt_budget_hint": {
+    "message": "حجم باقتك، أو الجزء الذي تريد أن يستهلكه هذا المتصفح. اتركه فارغًا إن لم تكن لديك باقة محددة.",
+    "description": "Field hint"
+  },
+  "opt_clear": {
+    "message": "مسح",
+    "description": "Button"
+  },
+  "opt_counted": {
+    "message": "يُحسب",
+    "description": "Heading"
+  },
+  "opt_counted_elsewhere": {
+    "message": "محسوب خارج المتصفح: $1",
+    "description": "$1 the correction, e.g. +2.00 GB"
+  },
+  "opt_counted_pages": {
+    "message": "الصفحات والفيديو والتنزيلات",
+    "description": "Counted"
+  },
+  "opt_counted_private": {
+    "message": "النوافذ الخاصة، إذا سمحت بها",
+    "description": "Counted"
+  },
+  "opt_counted_stopped": {
+    "message": "التحميلات التي أوقفتها في منتصفها",
+    "description": "Counted"
+  },
+  "opt_counted_uploads": {
+    "message": "الرفع ورؤوس الطلبات",
+    "description": "Counted"
+  },
+  "opt_counting": {
+    "message": "الحساب",
+    "description": "Section"
+  },
+  "opt_custom_note": {
+    "message": "اختياراتك مزيج خاص بك، لذلك لا يوجد مستوى محدد.",
+    "description": "Shown for a custom mix"
+  },
+  "opt_data": {
+    "message": "بياناتك",
+    "description": "Section"
+  },
+  "opt_day": {
+    "message": "اليوم",
+    "description": "Day of the month"
+  },
+  "opt_days_unit": {
+    "message": "أيام",
+    "description": "After the number of days"
+  },
+  "opt_delete_history": {
+    "message": "احذف السجلّ",
+    "description": "Button"
+  },
+  "opt_every": {
+    "message": "كل",
+    "description": "Every N days"
+  },
+  "opt_footer": {
+    "message": "سِب 1.0 · برنامج حر بترخيص MPL-2.0",
+    "description": "Footer"
+  },
+  "opt_from": {
+    "message": "بدءًا من",
+    "description": "Start date"
+  },
+  "opt_history": {
+    "message": "سجلّ الاستهلاك",
+    "description": "Field"
+  },
+  "opt_history_hint": {
+    "message": "إجماليات يومية لكل موقع لمدة شهرين، محفوظة على هذا الجهاز. سِب لا يرسل شيئًا إلى أي مكان.",
+    "description": "Field hint"
+  },
+  "opt_lang_auto": {
+    "message": "تلقائي",
+    "description": "Language: follow the browser"
+  },
+  "opt_language": {
+    "message": "اللغة",
+    "description": "Section"
+  },
+  "opt_left_now": {
+    "message": "أو: ما يقول مزوّد الخدمة إنه متبقٍ",
+    "description": "Field"
+  },
+  "opt_left_now_hint": {
+    "message": "يتطلب حجم الباقة أعلاه.",
+    "description": "Field hint"
+  },
+  "opt_level": {
+    "message": "مستوى التوفير",
+    "description": "Section"
+  },
+  "opt_level_lead": {
+    "message": "اختيار واحد لمدى قوة التوفير. ويمكنك ضبط كل أداة بنفسك في الأسفل.",
+    "description": "Section lead"
+  },
+  "opt_locked_note": {
+    "message": "المستويات لا تغيّر جودة يوتيوب أبدًا. تبقى على $1 كما اخترت.",
+    "description": "$1 the chosen quality, e.g. 480p"
+  },
+  "opt_may_break": {
+    "message": "قد يعطّل",
+    "description": "Label before what a saver may break"
+  },
+  "opt_nc_calls": {
+    "message": "مكالمات الفيديو والاتصالات المباشرة",
+    "description": "Not counted"
+  },
+  "opt_nc_other": {
+    "message": "التطبيقات والأجهزة الأخرى",
+    "description": "Not counted"
+  },
+  "opt_nc_overhead": {
+    "message": "التشفير والحزم",
+    "description": "Not counted"
+  },
+  "opt_nc_updates": {
+    "message": "تحديثات المتصفح والإضافات",
+    "description": "Not counted"
+  },
+  "opt_no_rules": {
+    "message": "لا توجد قواعد للمواقع بعد.",
+    "description": "Empty list"
+  },
+  "opt_not_counted": {
+    "message": "لا يُحسب",
+    "description": "Heading"
+  },
+  "opt_notify": {
+    "message": "التنبيهات",
+    "description": "Section"
+  },
+  "opt_notify_lead": {
+    "message": "انقر على التنبيه لفتح سِب.",
+    "description": "Section lead"
+  },
+  "opt_notify_levels": {
+    "message": "عند 75% و90% و100% من باقتك",
+    "description": "Switch"
+  },
+  "opt_notify_pace": {
+    "message": "عندما يشير معدلك إلى نفاد الباقة مبكرًا",
+    "description": "Switch"
+  },
+  "opt_notify_pace_hint": {
+    "message": "قبل التجديد بأكثر من 3 أيام، ومرة في الأسبوع على الأكثر.",
+    "description": "Switch hint"
+  },
+  "opt_notify_sample": {
+    "message": "مثال على تنبيه",
+    "description": "Above the sample"
+  },
+  "opt_overhead": {
+    "message": "حمل الشبكة الإضافي (تقديري)",
+    "description": "Field"
+  },
+  "opt_overhead_covers": {
+    "message": "يغطيه تقدير الحمل الإضافي",
+    "description": "Which way the error goes"
+  },
+  "opt_overhead_hint": {
+    "message": "يحسب مزوّد الخدمة أيضًا التشفير ورؤوس الحزم التي لا يراها المتصفح. يضيف سِب هذه النسبة لحساب الباقة فقط، وتبقى أرقام المواقع كما قيست.",
+    "description": "Field hint"
+  },
+  "opt_paused": {
+    "message": "التوفير متوقف مؤقتًا.",
+    "description": "Shown while paused"
+  },
+  "opt_period_days": {
+    "message": "كل عدة أيام",
+    "description": "Period kind"
+  },
+  "opt_period_monthly": {
+    "message": "في يوم من الشهر",
+    "description": "Period kind"
+  },
+  "opt_plan": {
+    "message": "باقتك",
+    "description": "Section"
+  },
+  "opt_plan_lead": {
+    "message": "$1 · $2",
+    "description": "$1 'Renews 1 Dec', $2 '18 days left'"
+  },
+  "opt_private": {
+    "message": "النوافذ الخاصة",
+    "description": "Section"
+  },
+  "opt_private_off": {
+    "message": "لا تُحسب. لحسابها افتح صفحة الإضافات والسمات، واختر سِب، واسمح له بالعمل في النوافذ الخاصة.",
+    "description": "Private windows not allowed"
+  },
+  "opt_private_on": {
+    "message": "تُحسب كإجمالي واحد دون أسماء المواقع.",
+    "description": "Private windows allowed"
+  },
+  "opt_reads_low": {
+    "message": "يقرأ سِب أقل",
+    "description": "Which way the error goes"
+  },
+  "opt_remove_site": {
+    "message": "احذف قواعد $1",
+    "description": "$1 a site"
+  },
+  "opt_renewed_early": {
+    "message": "جدّدت مبكرًا؟",
+    "description": "Field"
+  },
+  "opt_renewed_early_hint": {
+    "message": "يبدأ فترة جديدة من اليوم، ويبقى سجلّك كما هو.",
+    "description": "Field hint"
+  },
+  "opt_renews": {
+    "message": "التجديد",
+    "description": "Field"
+  },
+  "opt_resume": {
+    "message": "استأنف التوفير",
+    "description": "Button"
+  },
+  "opt_rule_autoplay_off": {
+    "message": "التشغيل التلقائي مسموح",
+    "description": "Rule state"
+  },
+  "opt_rule_autoplay_on": {
+    "message": "التشغيل التلقائي متوقف",
+    "description": "Rule state"
+  },
+  "opt_rule_fonts_off": {
+    "message": "الخطوط ظاهرة",
+    "description": "Rule state"
+  },
+  "opt_rule_fonts_on": {
+    "message": "الخطوط محجوبة",
+    "description": "Rule state"
+  },
+  "opt_rule_images_off": {
+    "message": "الصور ظاهرة",
+    "description": "Rule state"
+  },
+  "opt_rule_images_on": {
+    "message": "الصور محجوبة",
+    "description": "Rule state"
+  },
+  "opt_rule_trackers_off": {
+    "message": "المتتبّعات مسموحة",
+    "description": "Rule state"
+  },
+  "opt_rule_trackers_on": {
+    "message": "المتتبّعات محجوبة",
+    "description": "Rule state"
+  },
+  "opt_savers": {
+    "message": "أدوات التوفير",
+    "description": "Section"
+  },
+  "opt_savers_lead": {
+    "message": "كل أداة على حدة. التغييرات تنطبق على الصفحات التي تفتحها أو تعيد تحميلها.",
+    "description": "Section lead"
+  },
+  "opt_saves": {
+    "message": "يوفّر",
+    "description": "Label before what a saver saves"
+  },
+  "opt_saves_as_you_go": {
+    "message": "التغييرات تُحفظ فورًا",
+    "description": "Note in the header"
+  },
+  "opt_sections": {
+    "message": "الأقسام",
+    "description": "The section list's name"
+  },
+  "opt_set": {
+    "message": "حفظ",
+    "description": "Button"
+  },
+  "opt_sites": {
+    "message": "قواعد المواقع",
+    "description": "Section"
+  },
+  "opt_sites_lead": {
+    "message": "مواقع غيّرت فيها ما يفعله سِب. اضبطها من النافذة وأنت على الموقع، أو من هنا.",
+    "description": "Section lead"
+  },
+  "opt_source": {
+    "message": "الشيفرة المصدرية",
+    "description": "Link"
+  },
+  "opt_subtitle": {
+    "message": "لهذا المتصفح فقط. هاتفك والتطبيقات الأخرى تستهلك أيضًا.",
+    "description": "Under the title"
+  },
+  "opt_title": {
+    "message": "إعدادات سِب",
+    "description": "Page title"
+  },
+  "opt_units": {
+    "message": "الوحدات",
+    "description": "Field"
+  },
+  "opt_units_line": {
+    "message": "1 جيجا = 1,000,000,000 بايت، كما يحسب مزوّدو الخدمة.",
+    "description": "Read-only units line"
+  },
+  "opt_used_so_far": {
+    "message": "المستهلك حتى الآن في هذه الفترة",
+    "description": "Field"
+  },
+  "opt_used_so_far_hint": {
+    "message": "ما يقول مزوّد الخدمة إنك استهلكته، بما في ذلك الأجهزة الأخرى. يحسب سِب الباقي من الآن.",
+    "description": "Field hint"
+  },
+  "opt_verdict": {
+    "message": "يميل سِب إلى الحساب الأقل. عدّاد مزوّد الخدمة هو المرجع: راجعه من حين لآخر وأدخله في قسم باقتك.",
+    "description": "Accuracy verdict"
+  },
+  "opt_youtube_lead": {
+    "message": "يبقي سِب الفيديو عند هذه الجودة أو أقل. أنت وحدك تغيّرها، ومستويات التوفير لا تفعل ذلك أبدًا. تجدها أيضًا في النافذة على يوتيوب.",
+    "description": "Section lead"
+  },
+  "opt_youtube_max": {
+    "message": "أعلى جودة ليوتيوب",
+    "description": "Section"
+  },
+  "popup_blocked__few": {
+    "message": "$1 طلبات محجوبة",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_blocked__many": {
+    "message": "$1 طلبًا محجوبًا",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_blocked__one": {
+    "message": "طلب واحد محجوب",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_blocked__other": {
+    "message": "$1 طلب محجوب",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_blocked__two": {
+    "message": "طلبان محجوبان",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_blocked__zero": {
+    "message": "لا شيء محجوب",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_change": {
+    "message": "تغيير",
+    "description": "Link to the YouTube setting"
+  },
+  "popup_chip_autoplay": {
+    "message": "تشغيل تلقائي",
+    "description": "Saver chip"
+  },
+  "popup_chip_fonts": {
+    "message": "خطوط",
+    "description": "Saver chip"
+  },
+  "popup_chip_images": {
+    "message": "صور",
+    "description": "Saver chip"
+  },
+  "popup_chip_trackers": {
+    "message": "تتبّع",
+    "description": "Saver chip"
+  },
+  "popup_confirm_again": {
+    "message": "انقر مرة أخرى للتأكيد",
+    "description": "A button asking for a second click"
+  },
+  "popup_finish_setup": {
+    "message": "أكمل الإعداد",
+    "description": "Button: open the first-run setup"
+  },
+  "popup_grant": {
+    "message": "اسمح",
+    "description": "Button: grant access to all sites"
+  },
+  "popup_hint_access": {
+    "message": "لا يستطيع سِب رؤية استهلاك المتصفح بعد.",
+    "description": "Shown without site access"
+  },
+  "popup_hint_private": {
+    "message": "النوافذ الخاصة لا تُحسب.",
+    "description": "Shown when Sip can't run in private windows"
+  },
+  "popup_hint_private_how": {
+    "message": "كيف أحسبها؟",
+    "description": "Link to how to allow private windows"
+  },
+  "popup_hint_setup": {
+    "message": "أخبر سِب بباقتك لينبّهك في الوقت المناسب.",
+    "description": "Shown until first run is done"
+  },
+  "popup_left_of": {
+    "message": "متبقية من $1",
+    "description": "After the figure left; $1 the budget"
+  },
+  "popup_level_label": {
+    "message": "مستوى التوفير",
+    "description": "The level control's name"
+  },
+  "popup_meter_label": {
+    "message": "البيانات المستهلكة في هذه الفترة",
+    "description": "The bar's name"
+  },
+  "popup_no_sites": {
+    "message": "لا استهلاك بعد.",
+    "description": "Empty top-sites list"
+  },
+  "popup_over_carrier": {
+    "message": "قد يبطئ مزوّد الخدمة سرعتك.",
+    "description": "Shown when the budget is used up"
+  },
+  "popup_over_of": {
+    "message": "فوق باقتك البالغة $1",
+    "description": "After the figure over; $1 the budget"
+  },
+  "popup_period_label": {
+    "message": "هذه الفترة",
+    "description": "The headline card's name"
+  },
+  "popup_private_tab": {
+    "message": "نافذة خاصة: تُحسب دون أسماء المواقع.",
+    "description": "On a private tab"
+  },
+  "popup_projection": {
+    "message": "≈ $1 بحلول $2",
+    "description": "Under the bar: $1 projected use by $2 the renewal date"
+  },
+  "popup_reload": {
+    "message": "أعد التحميل للتطبيق",
+    "description": "Button: reload the tab after a change"
+  },
+  "popup_renewed_today": {
+    "message": "جدّدت اليوم",
+    "description": "Button: the plan renewed today"
+  },
+  "popup_reset_site": {
+    "message": "عُد إلى الافتراضي",
+    "description": "Button: remove this site's rule"
+  },
+  "popup_runs_out": {
+    "message": "تنفد ≈ $1، قبل موعدها بـ $2",
+    "description": "Under the bar when the pace is too fast: $1 a date, $2 days"
+  },
+  "popup_saving_here": {
+    "message": "التوفير في هذا الموقع",
+    "description": "The saver chips' group name"
+  },
+  "popup_set_budget": {
+    "message": "حدّد باقتك الشهرية",
+    "description": "Link when there is no budget"
+  },
+  "popup_settings": {
+    "message": "الإعدادات",
+    "description": "Button: open Sip's settings"
+  },
+  "popup_site_label": {
+    "message": "هذا الموقع",
+    "description": "The site card's name"
+  },
+  "popup_site_rule": {
+    "message": "لهذا الموقع قاعدة خاصة.",
+    "description": "Shown when a site rule applies"
+  },
+  "popup_site_savers": {
+    "message": "أدوات التوفير لهذا الموقع",
+    "description": "Disclosure for a site's savers on YouTube"
+  },
+  "popup_site_use": {
+    "message": "$1 اليوم · $2 في هذه الفترة",
+    "description": "This site's use"
+  },
+  "popup_this_period": {
+    "message": "هذه الفترة",
+    "description": "Top sites over the billing period"
+  },
+  "popup_tip_max": {
+    "message": "مدّد ما تبقّى بالتوفير الأقصى.",
+    "description": "Tip when the pace is too fast"
+  },
+  "popup_today": {
+    "message": "اليوم",
+    "description": "Today's line, and the top-sites switch"
+  },
+  "popup_today_share": {
+    "message": "$1 من حصة $2",
+    "description": "$1 used today, $2 today's share"
+  },
+  "popup_top_sites": {
+    "message": "أكثر المواقع استهلاكًا",
+    "description": "Heading"
+  },
+  "popup_use_max": {
+    "message": "استخدم الأقصى",
+    "description": "Button: switch to the Max level"
+  },
+  "popup_used": {
+    "message": "استُهلك $1",
+    "description": "Under the bar; $1 used this period"
+  },
+  "popup_used_period": {
+    "message": "مستهلكة في هذه الفترة",
+    "description": "After the headline figure, without a budget"
+  },
+  "popup_yt_title": {
+    "message": "جودة الفيديو · اختيارك",
+    "description": "Heading of the YouTube switcher"
   },
   "saver_autoplay_breaks": {
     "message": "بعض المشغلات تحتاج نقرة ثانية. فيديوهات يوتيوب التي تفتحها تعمل كالمعتاد.",

@@ -1,79 +1,94 @@
 <!doctype html>
-<html lang="en">
+<html class="i18n-pending">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=400">
+<title data-i18n="ext_short">Sip</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="popup.js"></script>
 </head>
 <body class="popup">
-  <header>
-    <h1>Sip</h1>
-    <label class="switch" title="Turn all saving on or off">
-      <span>Saver</span>
-      <input type="checkbox" id="saver">
-    </label>
-  </header>
 
-  <section id="grant" class="banner" hidden>
-    <p>Sip needs access to all sites to measure your data.</p>
-    <button id="grant-btn">Allow access</button>
-  </section>
-
-  <section class="card">
-    <div class="row">
-      <span class="label">This period</span>
-      <span id="period-used" class="big"></span>
+<header class="top">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="drop"><path d="M12 2.2C12 2.2 4.6 10.6 4.6 15.4a7.4 7.4 0 0 0 14.8 0C19.4 10.6 12 2.2 12 2.2z"/></clipPath></defs><g clip-path="url(#drop)"><rect width="24" height="24" fill="#0b7a75"/><rect y="14.2" width="24" height="10" fill="#3cc5bd"/></g></svg>
+    <span data-i18n="ext_short">Sip</span>
+  </div>
+  <div class="level-box">
+    <span id="custom" class="custom" data-i18n="level_custom" hidden>Custom</span>
+    <div class="seg accent" id="level" role="radiogroup" data-i18n-attr="aria-label:popup_level_label">
+      <button role="radio" data-level="off" data-i18n="level_off">Off</button>
+      <button role="radio" data-level="light" data-i18n="level_light">Light</button>
+      <button role="radio" data-level="balanced" data-i18n="level_balanced">Balanced</button>
+      <button role="radio" data-level="max" data-i18n="level_max">Max</button>
     </div>
-    <div id="budget-box" hidden>
-      <div class="bar"><div id="bar-fill"></div></div>
-      <div class="row small">
-        <span id="period-left"></span>
-        <span id="days-left"></span>
-      </div>
-      <div class="row">
-        <span class="label" id="pace-label">Safe to use today</span>
-        <span id="pace"></span>
-      </div>
+  </div>
+</header>
+
+<section class="hero glass" id="hero" data-i18n-attr="aria-label:popup_period_label">
+  <div class="hero-top"><span class="muted" id="renews"></span><span class="pill" id="pace" hidden></span></div>
+  <div class="hero-num"><span class="big num" id="big"></span><span class="of" id="of"></span></div>
+  <div class="meter" id="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-i18n-attr="aria-label:popup_meter_label"><div class="used"></div><div class="proj"></div></div>
+  <div class="scale" id="scale"><span id="used"></span><span class="proj-label" id="projection"></span></div>
+  <div class="today" id="today-row"><span class="lbl" data-i18n="popup_today">Today</span><span class="mini" id="today-mini"><i></i></span><span class="val num" id="today"></span></div>
+  <div class="tip" id="tip-max" hidden><span data-i18n="popup_tip_max">Stretch it with Max saving.</span><button class="btn primary small" id="use-max" data-i18n="popup_use_max">Use Max</button></div>
+  <div class="tip danger" id="tip-over" hidden><span data-i18n="popup_over_carrier">Your carrier may slow you down.</span><button class="btn small" id="renewed" data-i18n="popup_renewed_today">I renewed today</button></div>
+  <button class="btn ghost set-budget" id="set-budget" data-i18n="popup_set_budget" hidden>Set your monthly data</button>
+</section>
+
+<div class="hint warn" id="hint-access" hidden><span data-i18n="popup_hint_access">Sip can't see this browser's traffic yet.</span><button class="btn primary small" id="grant" data-i18n="popup_grant">Allow</button></div>
+<div class="hint" id="hint-setup" hidden><span data-i18n="popup_hint_setup">Tell Sip about your plan so it can warn you in time.</span><button class="btn primary small" id="setup" data-i18n="popup_finish_setup">Finish setting up</button></div>
+
+<section class="site glass" id="site" hidden data-i18n-attr="aria-label:popup_site_label">
+  <div class="site-head"><span id="site-tile"></span><span class="who"><span class="host"><bdi id="site-host"></bdi></span><span class="site-use num" id="site-use"></span></span></div>
+  <div class="yt" id="yt" hidden>
+    <div class="q-head"><b id="yt-title" data-i18n="popup_yt_title">Video quality · your choice</b><span class="mine" id="yt-cost"></span></div>
+    <div class="seg accent q" id="yt-choices" role="radiogroup" aria-labelledby="yt-title">
+      <button role="radio" data-q="240" data-i18n-attr="title:yt_choice_240">240p<small></small></button>
+      <button role="radio" data-q="360" data-i18n-attr="title:yt_choice_360">360p<small></small></button>
+      <button role="radio" data-q="480" data-i18n-attr="title:yt_choice_480">480p<small></small></button>
+      <button role="radio" data-q="720" data-i18n-attr="title:yt_choice_720">720p<small>HD</small></button>
+      <button role="radio" data-q="1080" data-i18n-attr="title:yt_choice_1080">1080p<small>Full HD</small></button>
+      <button role="radio" data-q="0" data-i18n-attr="title:yt_choice_0"><span data-i18n="yt_choice_0">No limit</span><small></small></button>
     </div>
-    <p id="no-budget" class="small" hidden>
-      <a href="#" class="open-options">Set your monthly data budget</a> to see how much is left.
-    </p>
-    <div class="row">
-      <span class="label">Today</span>
-      <span id="today"></span>
+    <p class="q-note applied" id="yt-applied" hidden></p>
+  </div>
+  <details class="savers" id="site-savers">
+    <summary data-i18n="popup_site_savers">Site savers</summary>
+    <div class="chips" role="group" data-i18n-attr="aria-label:popup_saving_here">
+      <button class="chip" role="switch" data-saver="trackers" data-i18n="popup_chip_trackers">Trackers</button>
+      <button class="chip" role="switch" data-saver="autoplay" data-i18n="popup_chip_autoplay">Autoplay</button>
+      <button class="chip" role="switch" data-saver="images" data-i18n="popup_chip_images">Images</button>
+      <button class="chip" role="switch" data-saver="fonts" data-i18n="popup_chip_fonts">Fonts</button>
     </div>
-  </section>
+  </details>
+  <div class="site-actions" id="site-actions" hidden>
+    <span class="muted" id="site-rule" data-i18n="popup_site_rule">This site has its own rule.</span>
+    <button class="btn ghost small" id="site-reset" data-i18n="popup_reset_site" hidden>Reset to default</button>
+    <button class="btn primary small" id="site-reload" data-i18n="popup_reload" hidden>Reload to apply</button>
+  </div>
+  <p class="muted private-note" id="site-private" data-i18n="popup_private_tab" hidden>Private window: counted with no site names.</p>
+</section>
 
-  <section class="card">
-    <h2>Top sites today</h2>
-    <ol id="sites"></ol>
-    <p id="no-sites" class="small" hidden>Nothing measured yet today.</p>
-  </section>
-
-  <section class="card" id="site-card" hidden>
-    <div class="row">
-      <span class="label" id="site-name"></span>
-      <span id="site-today"></span>
+<section class="sites glass" id="sites">
+  <div class="sites-head">
+    <h2 data-i18n="popup_top_sites">Top sites</h2>
+    <div class="seg" id="span">
+      <button data-span="today" aria-pressed="true" data-i18n="popup_today">Today</button>
+      <button data-span="period" aria-pressed="false" data-i18n="popup_this_period">This period</button>
     </div>
-    <label class="switch">
-      <span>Don't block anything on this site</span>
-      <input type="checkbox" id="site-allow">
-    </label>
-    <button type="button" id="site-reload" hidden>Reload to apply</button>
-  </section>
+  </div>
+  <ol id="site-list"></ol>
+  <p class="muted empty" id="no-sites" data-i18n="popup_no_sites" hidden>Nothing used yet.</p>
+</section>
 
-  <section class="card" id="savers">
-    <h2>Save data by</h2>
-    <label class="switch"><span>Stopping autoplay and video preloading</span><input type="checkbox" data-key="autoplay"></label>
-    <label class="switch"><span>Blocking ads and trackers</span><input type="checkbox" data-key="trackers"></label>
-    <label class="switch"><span>Blocking images</span><input type="checkbox" data-key="images"></label>
-    <label class="switch"><span>Blocking web fonts</span><input type="checkbox" data-key="fonts"></label>
-    <p class="small">Changes apply to pages you open or reload.</p>
-  </section>
+<p class="muted private-hint" id="hint-private" hidden><span data-i18n="popup_hint_private">Private windows aren't counted.</span> <button class="link" id="private-how" data-i18n="popup_hint_private_how">How to count them</button></p>
 
-  <footer>
-    <a href="#" class="open-options">Settings</a>
-  </footer>
+<footer class="foot glass">
+  <span class="leaf" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg></span>
+  <span class="saved"><span id="saved" class="saved-line"></span><span class="yt-line" id="yt-row"><span id="yt-line"></span> · <button class="link" id="yt-change" data-i18n="popup_change">Change</button></span></span>
+  <button class="btn" id="settings"><svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span data-i18n="popup_settings">Settings</span></button>
+</footer>
 
-  <script type="module" src="popup.js"></script>
 </body>
 </html>

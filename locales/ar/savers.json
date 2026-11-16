@@ -170,5 +170,25 @@
   "yt_levels_note": {
     "message": "مستويات التوفير لا تغيّر جودة يوتيوب أبدًا.",
     "description": "Note under the YouTube choices"
+  },
+  "level_everything_light": {
+    "message": "كل ما في الخفيف",
+    "description": "Max/Balanced card: includes the level below"
+  },
+  "level_everything_balanced": {
+    "message": "كل ما في المتوازن",
+    "description": "Max card: includes Balanced"
+  },
+  "level_light_breaks": {
+    "message": "نادرًا أي شيء؛ وأزرار «تسجيل الدخول بفيسبوك» في المواقع الأخرى",
+    "description": "What Light may break"
+  },
+  "level_balanced_breaks": {
+    "message": "بعض المشغلات تحتاج نقرة ثانية",
+    "description": "What Balanced may break"
+  },
+  "level_max_breaks": {
+    "message": "تبدو الصفحات خالية؛ أعد الصور موقعًا موقعًا",
+    "description": "What Max may break"
   }
 }

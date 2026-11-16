@@ -30,7 +30,7 @@ test('the summary\'s figures and English texts', () => {
   assert.deepEqual(s.topSite, { host: 'youtube.com', bytes: 31.2e9 * 0.7 });
   assert.deepEqual(text(s), {
     hero: '15.24 GB left · 18 days',
-    left: '15.24 GB left of 50.00 GB',
+    left: '15.24 GB left of 50 GB',
     days: '18 days left',
     today: 'Today 1.26 GB of 917 MB share',
     over: '343 MB over · tomorrow ≈ 896 MB',

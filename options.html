@@ -1,59 +1,181 @@
 <!doctype html>
-<html lang="en">
+<html class="i18n-pending">
 <head>
-  <meta charset="utf-8">
-  <title>Sip settings</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="opt_title">Sip settings</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="options.js"></script>
 </head>
-<body class="options">
-  <h1>Sip settings</h1>
+<body class="settings">
 
-  <section class="card">
-    <h2>Monthly data budget</h2>
-    <label class="field">
-      <span>Budget in GB <small>(0 for none)</small></span>
-      <input type="number" id="budgetGB" min="0" step="0.5">
-    </label>
-    <label class="field">
-      <span>Renews on day of month</span>
-      <input type="number" id="resetDay" min="1" max="31" step="1">
-    </label>
-    <label class="switch">
-      <span>Warn me at 75%, 90% and 100%</span>
-      <input type="checkbox" id="notify">
-    </label>
-    <label class="switch">
-      <span>Highest YouTube quality (an hour of 1080p uses about 2 GB; 480p about 0.6 GB)</span>
-      <select id="youtube">
-        <option value="240">240p</option>
-        <option value="360">360p</option>
-        <option value="480">480p</option>
-        <option value="720">720p</option>
-        <option value="1080">1080p</option>
-        <option value="0">No limit</option>
-      </select>
-    </label>
-    <p class="small">
-      Sip counts what this browser downloads. Your phone, other apps and other browsers use data
-      too, so your carrier's counter is the official number. Set the budget to the share you
-      want this browser to use.
-    </p>
+<div class="first" id="first-run" hidden>
+  <section class="card glass first-card" aria-labelledby="first-title">
+    <div class="first-head">
+      <svg class="mark big-mark" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="drop1"><path d="M12 2.2C12 2.2 4.6 10.6 4.6 15.4a7.4 7.4 0 0 0 14.8 0C19.4 10.6 12 2.2 12 2.2z"/></clipPath></defs><g clip-path="url(#drop1)"><rect width="24" height="24" fill="#0b7a75"/><rect y="14.2" width="24" height="10" fill="#3cc5bd"/></g></svg>
+      <div><h1 id="first-title" data-i18n="first_title">Welcome to Sip</h1><p class="muted" data-i18n="first_lead">Sip counts the data this browser uses and saves where it can. A few questions and you're set.</p></div>
+    </div>
+    <div class="row"><label class="txt" for="f-budget"><span class="t" data-i18n="opt_budget">Monthly data</span><span class="d" data-i18n="first_budget_hint">Your plan's size, or the share this browser may use. Leave it empty for no budget.</span></label>
+      <span class="input"><input id="f-budget" inputmode="decimal" autocomplete="off" size="6"><span class="u" data-i18n="unit_GB">GB</span></span></div>
+    <div class="row"><label class="txt" for="f-day"><span class="t" data-i18n="first_renews">It renews on day</span><span class="d" data-i18n="first_renews_hint">The day of the month your data starts again.</span></label>
+      <span class="input"><input id="f-day" inputmode="numeric" autocomplete="off" size="3" value="1"></span></div>
+    <div class="row"><label class="txt" for="f-used"><span class="t" data-i18n="first_used">Used so far this period (optional)</span><span class="d" data-i18n="first_used_hint">What your carrier says you've used, so the budget starts right.</span></label>
+      <span class="input"><input id="f-used" inputmode="decimal" autocomplete="off" size="6"><span class="u" data-i18n="unit_GB">GB</span></span></div>
+    <div class="row stack"><div class="txt"><span class="t" id="f-level-label" data-i18n="opt_level">Saving level</span><span class="d" id="f-level-desc"></span></div>
+      <div class="seg accent wide" id="f-level" role="radiogroup" aria-labelledby="f-level-label">
+        <button role="radio" data-level="light" data-i18n="level_light">Light</button>
+        <button role="radio" data-level="balanced" data-i18n="level_balanced">Balanced</button>
+        <button role="radio" data-level="max" data-i18n="level_max">Max</button>
+      </div></div>
+    <div class="row stack"><div class="txt"><span class="t" id="f-yt-label" data-i18n="opt_youtube_max">Highest YouTube quality</span><span class="d" id="f-yt-cost"></span></div>
+      <div class="seg accent qq" id="f-yt" role="radiogroup" aria-labelledby="f-yt-label"></div></div>
+    <ul class="first-notes muted">
+      <li data-i18n="first_button">Sip's button is in the toolbar: click it to see what's left.</li>
+      <li data-i18n="first_only_browser">Sip only sees this browser. Your phone and other apps use data too.</li>
+    </ul>
+    <div class="first-actions"><button class="btn primary" id="f-done" data-i18n="first_done">Done</button></div>
   </section>
+</div>
 
-  <section class="card">
-    <h2>Sites where nothing is blocked</h2>
-    <ul id="allow"></ul>
-    <p id="no-allow" class="small">None yet. Add one from the popup while you're on the site.</p>
-  </section>
+<div class="page" id="page" hidden>
+  <header class="page-head">
+    <svg class="mark big-mark" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="drop2"><path d="M12 2.2C12 2.2 4.6 10.6 4.6 15.4a7.4 7.4 0 0 0 14.8 0C19.4 10.6 12 2.2 12 2.2z"/></clipPath></defs><g clip-path="url(#drop2)"><rect width="24" height="24" fill="#0b7a75"/><rect y="14.2" width="24" height="10" fill="#3cc5bd"/></g></svg>
+    <div><h1 data-i18n="opt_title">Sip settings</h1><p class="muted" data-i18n="opt_subtitle">For this browser only. Your phone and other apps use data too.</p></div>
+    <span class="saved-note" data-i18n="opt_saves_as_you_go">Changes save as you go</span>
+  </header>
 
-  <section class="card">
-    <h2>History</h2>
-    <p class="small">Sip keeps two months of daily totals, on this device only.</p>
-    <button id="clear" class="danger">Delete usage history</button>
-  </section>
+  <nav class="toc glass" data-i18n-attr="aria-label:opt_sections">
+    <a href="#plan" data-i18n="opt_plan">Your plan</a>
+    <a href="#level" data-i18n="opt_level">Saving level</a>
+    <a href="#savers" data-i18n="opt_savers">Savers</a>
+    <a href="#youtube" data-i18n="yt_title">YouTube quality</a>
+    <a href="#sites" data-i18n="opt_sites">Site rules</a>
+    <a href="#counting" data-i18n="opt_counting">Counting</a>
+    <a href="#notify" data-i18n="opt_notify">Notifications</a>
+    <a href="#private" data-i18n="opt_private">Private windows</a>
+    <a href="#language" data-i18n="opt_language">Language</a>
+    <a href="#accuracy" data-i18n="opt_accuracy">How accurate is this?</a>
+    <a href="#data" data-i18n="opt_data">Your data</a>
+  </nav>
 
-  <p id="saved" class="small" aria-live="polite"></p>
+  <main class="cards">
+    <section class="card glass" id="plan">
+      <h2 data-i18n="opt_plan">Your plan</h2>
+      <p class="lead" id="plan-lead"></p>
+      <div class="row"><label class="txt" for="budget"><span class="t" data-i18n="opt_budget">Monthly data</span><span class="d" data-i18n="opt_budget_hint">The size of your plan, or the share you want this browser to use. Empty means no budget.</span></label>
+        <span class="input"><input id="budget" inputmode="decimal" autocomplete="off" size="6"><span class="u" data-i18n="unit_GB">GB</span></span></div>
+      <div class="row top"><div class="txt"><span class="t" id="period-label" data-i18n="opt_renews">Renews</span>
+          <div class="seg" id="period-kind" role="radiogroup" aria-labelledby="period-label">
+            <button role="radio" data-kind="monthly" data-i18n="opt_period_monthly">On a day of the month</button>
+            <button role="radio" data-kind="days" data-i18n="opt_period_days">Every few days</button>
+          </div></div>
+        <span class="period-fields">
+          <span class="input" id="monthly-fields"><label class="u" for="period-day" data-i18n="opt_day">Day</label><input id="period-day" inputmode="numeric" autocomplete="off" size="3"></span>
+          <span id="days-fields" hidden><span class="input"><label class="u" for="period-every" data-i18n="opt_every">Every</label><input id="period-every" inputmode="numeric" autocomplete="off" size="3"><span class="u" data-i18n="opt_days_unit">days</span></span>
+            <span class="input"><label class="u" for="period-from" data-i18n="opt_from">From</label><input id="period-from" type="date"></span></span>
+        </span></div>
+      <div class="row top"><div class="txt"><span class="t" data-i18n="opt_used_so_far">Used so far this period</span><span class="d" data-i18n="opt_used_so_far_hint">What your carrier says you've used, counting other devices. Sip counts the rest from here on.</span>
+          <span class="d" id="other-line" hidden><span id="other"></span> <button class="link" id="other-clear" data-i18n="opt_clear">Clear</button></span></div>
+        <span class="carrier"><span class="input"><input id="used-so-far" inputmode="decimal" autocomplete="off" size="6" data-i18n-attr="aria-label:opt_used_so_far"><span class="u" data-i18n="unit_GB">GB</span></span><button class="btn" id="used-set" data-i18n="opt_set">Set</button></span></div>
+      <div class="row top"><div class="txt"><span class="t" data-i18n="opt_left_now">Or: what your carrier says is left</span><span class="d" data-i18n="opt_left_now_hint">Needs your monthly data above.</span></div>
+        <span class="carrier"><span class="input"><input id="left-now" inputmode="decimal" autocomplete="off" size="6" data-i18n-attr="aria-label:opt_left_now"><span class="u" data-i18n="unit_GB">GB</span></span><button class="btn" id="left-set" data-i18n="opt_set">Set</button></span></div>
+      <div class="row"><div class="txt"><span class="t" data-i18n="opt_renewed_early">Renewed early?</span><span class="d" data-i18n="opt_renewed_early_hint">Starts a new period from today. Your history is kept.</span></div>
+        <button class="btn" id="renew" data-i18n="popup_renewed_today">I renewed today</button></div>
+    </section>
 
-  <script type="module" src="options.js"></script>
+    <section class="card glass" id="level">
+      <h2 data-i18n="opt_level">Saving level</h2>
+      <p class="lead" data-i18n="opt_level_lead">One choice for how hard Sip saves. You can still set each saver yourself below.</p>
+      <p class="paused" id="paused" hidden><span data-i18n="opt_paused">Saving is paused.</span> <button class="btn primary small" id="resume" data-i18n="opt_resume">Resume saving</button></p>
+      <div class="levels" id="levels" role="radiogroup" data-i18n-attr="aria-label:opt_level"></div>
+      <p class="muted custom-note" id="custom-note" data-i18n="opt_custom_note" hidden>Your savers are a mix of your own, so no level is chosen.</p>
+      <div class="note-mine"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span id="locked-note"></span></div>
+    </section>
+
+    <section class="card glass" id="savers">
+      <h2 data-i18n="opt_savers">Savers</h2>
+      <p class="lead" data-i18n="opt_savers_lead">Each one on its own. Changes apply to pages you open or reload.</p>
+      <div id="saver-rows"></div>
+    </section>
+
+    <section class="card glass" id="youtube">
+      <h2><span id="yt-label" data-i18n="opt_youtube_max">Highest YouTube quality</span> <span class="mine-badge" data-i18n="yt_your_choice">Your choice</span></h2>
+      <p class="lead" data-i18n="opt_youtube_lead">Sip keeps videos at or below this. Only you change it: saving levels never do. It's also in the popup on YouTube.</p>
+      <div class="seg accent qq" id="yt" role="radiogroup" aria-labelledby="yt-label"></div>
+    </section>
+
+    <section class="card glass" id="sites">
+      <h2 data-i18n="opt_sites">Site rules</h2>
+      <p class="lead" data-i18n="opt_sites_lead">Sites where you changed what Sip does. Set these from the popup while you're on the site, or here.</p>
+      <ul class="sitelist" id="site-rules"></ul>
+      <p class="muted" id="no-rules" data-i18n="opt_no_rules" hidden>No site rules yet.</p>
+      <form class="add" id="add-site">
+        <span class="input wide"><input id="add-host" autocomplete="off" data-i18n-attr="placeholder:opt_add_placeholder;aria-label:opt_add_site"></span>
+        <select id="add-what" data-i18n-attr="aria-label:opt_add_what">
+          <option value="all" data-i18n="opt_add_all">Turn every saver off there</option>
+          <option value="images" data-i18n="opt_add_images">Show its images</option>
+          <option value="autoplay" data-i18n="opt_add_autoplay">Let its videos autoplay</option>
+          <option value="block-images" data-i18n="opt_add_block_images">Block its images</option>
+        </select>
+        <button class="btn" data-i18n="opt_add">Add</button>
+      </form>
+      <p class="error" id="add-error" data-i18n="opt_add_error" hidden>That isn't a site address, like example.com.</p>
+    </section>
+
+    <section class="card glass" id="counting">
+      <h2 data-i18n="opt_counting">Counting</h2>
+      <div class="row top"><label class="txt" for="overhead"><span class="t" data-i18n="opt_overhead">Network overhead (estimate)</span><span class="d" data-i18n="opt_overhead_hint">Your carrier also counts encryption and packet headers that a browser never sees. Sip adds this much for the budget only; site figures stay as measured.</span></label>
+        <span class="slider"><input type="range" id="overhead" min="0" max="20" step="0.5"><output class="num" id="overhead-value" for="overhead"></output></span></div>
+      <div class="row"><div class="txt"><span class="t" data-i18n="opt_units">Units</span><span class="d" data-i18n="opt_units_line">1 GB = 1,000,000,000 bytes, the way carriers count.</span></div></div>
+    </section>
+
+    <section class="card glass" id="notify">
+      <h2 data-i18n="opt_notify">Notifications</h2>
+      <p class="lead" data-i18n="opt_notify_lead">Click one to open Sip.</p>
+      <div class="row"><div class="txt"><span class="t" id="notify-label" data-i18n="opt_notify_levels">At 75%, 90% and 100% of your plan</span></div><button class="switch" role="switch" id="notify-switch" aria-labelledby="notify-label"></button></div>
+      <div class="row"><div class="txt"><span class="t" id="pace-label" data-i18n="opt_notify_pace">When you're on pace to run out early</span><span class="d" data-i18n="opt_notify_pace_hint">More than 3 days before renewal; at most once a week.</span></div><button class="switch" role="switch" id="pace-switch" aria-labelledby="pace-label"></button></div>
+      <div class="row stack"><span class="d" data-i18n="opt_notify_sample">What one looks like</span>
+        <div class="notif"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><g clip-path="url(#drop2)"><rect width="24" height="24" fill="#0b7a75"/><rect y="14.2" width="24" height="10" fill="#3cc5bd"/></g></svg><div><b id="sample-title"></b><span id="sample-body"></span></div></div></div>
+    </section>
+
+    <section class="card glass" id="private">
+      <h2 data-i18n="opt_private">Private windows</h2>
+      <p class="lead" id="private-status"></p>
+    </section>
+
+    <section class="card glass" id="language">
+      <h2 id="lang-label" data-i18n="opt_language">Language</h2>
+      <div class="seg" id="lang" role="radiogroup" aria-labelledby="lang-label">
+        <button role="radio" data-lang="auto" data-i18n="opt_lang_auto">Automatic</button>
+        <button role="radio" data-lang="en" lang="en">English</button>
+        <button role="radio" data-lang="ar" lang="ar">العربية</button>
+      </div>
+    </section>
+
+    <section class="card glass" id="accuracy">
+      <h2 data-i18n="opt_accuracy">How accurate is this?</h2>
+      <p class="lead" data-i18n="opt_accuracy_lead">Sip counts what this browser sends and receives, from Firefox's own byte counts. Some data never passes through it.</p>
+      <div class="acc">
+        <div><h3><span class="ic yes" aria-hidden="true">✓</span><span data-i18n="opt_counted">Counted</span></h3><ul>
+          <li data-i18n="opt_counted_pages">Pages, videos and downloads</li><li data-i18n="opt_counted_uploads">Uploads and headers</li>
+          <li data-i18n="opt_counted_stopped">Transfers you stopped halfway</li><li data-i18n="opt_counted_private">Private windows, when allowed</li></ul></div>
+        <div><h3><span class="ic no" aria-hidden="true">!</span><span data-i18n="opt_not_counted">Not counted</span></h3><ul>
+          <li><span data-i18n="opt_nc_other">Other apps and devices</span><span class="dir" data-i18n="opt_reads_low">Sip reads low</span></li>
+          <li><span data-i18n="opt_nc_updates">Browser and add-on updates</span><span class="dir" data-i18n="opt_reads_low">Sip reads low</span></li>
+          <li><span data-i18n="opt_nc_calls">Video calls and live connections</span><span class="dir" data-i18n="opt_reads_low">Sip reads low</span></li>
+          <li><span data-i18n="opt_nc_overhead">Encryption and packets</span><span class="dir" data-i18n="opt_overhead_covers">the overhead estimate covers it</span></li></ul></div>
+      </div>
+      <p class="verdict" data-i18n="opt_verdict">Sip errs on the low side. Your carrier's counter is the official one: check it now and then, and enter it under Your plan.</p>
+    </section>
+
+    <section class="card glass" id="data">
+      <h2 data-i18n="opt_data">Your data</h2>
+      <div class="row"><div class="txt"><span class="t" data-i18n="opt_history">Usage history</span><span class="d" data-i18n="opt_history_hint">Two months of daily totals per site, kept on this device. Sip sends nothing anywhere.</span></div>
+        <button class="btn danger" id="clear-history" data-i18n="opt_delete_history">Delete history</button></div>
+    </section>
+
+    <p class="foot-note"><span data-i18n="opt_footer">Sip 1.0 · Free software under the MPL-2.0</span> · <a href="https://github.com/OsamaFoda/sip" data-i18n="opt_source">Source code</a></p>
+  </main>
+</div>
 </body>
 </html>

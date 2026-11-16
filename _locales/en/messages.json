@@ -39,6 +39,46 @@
     "message": "Sip",
     "description": "Short add-on name"
   },
+  "first_budget_hint": {
+    "message": "Your plan's size, or the share this browser may use. Leave it empty for no budget.",
+    "description": "Field hint"
+  },
+  "first_button": {
+    "message": "Sip's button is in the toolbar: click it to see what's left.",
+    "description": "Note"
+  },
+  "first_done": {
+    "message": "Done",
+    "description": "Button"
+  },
+  "first_lead": {
+    "message": "Sip counts the data this browser uses and saves where it can. A few questions and you're set.",
+    "description": "First-run lead"
+  },
+  "first_only_browser": {
+    "message": "Sip only sees this browser. Your phone and other apps use data too.",
+    "description": "Note"
+  },
+  "first_renews": {
+    "message": "It renews on day",
+    "description": "Field"
+  },
+  "first_renews_hint": {
+    "message": "The day of the month your data starts again.",
+    "description": "Field hint"
+  },
+  "first_title": {
+    "message": "Welcome to Sip",
+    "description": "First-run heading"
+  },
+  "first_used": {
+    "message": "Used so far this period (optional)",
+    "description": "Field"
+  },
+  "first_used_hint": {
+    "message": "What your carrier says you've used, so the budget starts right.",
+    "description": "Field hint"
+  },
   "fmt_size": {
     "message": "$1 $2",
     "description": "A size: $1 number, $2 unit"
@@ -46,6 +86,10 @@
   "level_balanced": {
     "message": "Balanced",
     "description": "Saving level (the default)"
+  },
+  "level_balanced_breaks": {
+    "message": "Some players need a second click",
+    "description": "What Balanced may break"
   },
   "level_balanced_desc": {
     "message": "Also stops videos from playing and downloading on their own.",
@@ -63,9 +107,21 @@
     "message": "Default",
     "description": "Marks the default level"
   },
+  "level_everything_balanced": {
+    "message": "Everything in Balanced",
+    "description": "Max card: includes Balanced"
+  },
+  "level_everything_light": {
+    "message": "Everything in Light",
+    "description": "Max/Balanced card: includes the level below"
+  },
   "level_light": {
     "message": "Light",
     "description": "Saving level"
+  },
+  "level_light_breaks": {
+    "message": "Rarely anything; \"Log in with Facebook\" on other sites",
+    "description": "What Light may break"
   },
   "level_light_desc": {
     "message": "Blocks heavy trackers. Pages look and play as usual.",
@@ -74,6 +130,10 @@
   "level_max": {
     "message": "Max",
     "description": "Saving level"
+  },
+  "level_max_breaks": {
+    "message": "Pages look bare; show images again site by site",
+    "description": "What Max may break"
   },
   "level_max_desc": {
     "message": "Also blocks images. Pages look unfinished; turn images back on for a site you need.",
@@ -122,6 +182,558 @@
   "notif_pace_title": {
     "message": "You're on pace to run out early",
     "description": "Weekly pace warning title"
+  },
+  "opt_accuracy": {
+    "message": "How accurate is this?",
+    "description": "Section"
+  },
+  "opt_accuracy_lead": {
+    "message": "Sip counts what this browser sends and receives, from Firefox's own byte counts. Some data never passes through it.",
+    "description": "Section lead"
+  },
+  "opt_add": {
+    "message": "Add",
+    "description": "Button"
+  },
+  "opt_add_all": {
+    "message": "Turn every saver off there",
+    "description": "Preset"
+  },
+  "opt_add_autoplay": {
+    "message": "Let its videos autoplay",
+    "description": "Preset"
+  },
+  "opt_add_block_images": {
+    "message": "Block its images",
+    "description": "Preset"
+  },
+  "opt_add_error": {
+    "message": "That isn't a site address, like example.com.",
+    "description": "Error"
+  },
+  "opt_add_images": {
+    "message": "Show its images",
+    "description": "Preset"
+  },
+  "opt_add_placeholder": {
+    "message": "Add a site, like example.com",
+    "description": "Field placeholder"
+  },
+  "opt_add_site": {
+    "message": "Add a site",
+    "description": "Field name"
+  },
+  "opt_add_what": {
+    "message": "What to change there",
+    "description": "Select name"
+  },
+  "opt_astrelle_autoplay": {
+    "message": "In Astrelle, the browser's own autoplay and preloading follow this.",
+    "description": "Shown in Astrelle"
+  },
+  "opt_budget": {
+    "message": "Monthly data",
+    "description": "Field"
+  },
+  "opt_budget_hint": {
+    "message": "The size of your plan, or the share you want this browser to use. Empty means no budget.",
+    "description": "Field hint"
+  },
+  "opt_clear": {
+    "message": "Clear",
+    "description": "Button"
+  },
+  "opt_counted": {
+    "message": "Counted",
+    "description": "Heading"
+  },
+  "opt_counted_elsewhere": {
+    "message": "Counted elsewhere: $1",
+    "description": "$1 the correction, e.g. +2.00 GB"
+  },
+  "opt_counted_pages": {
+    "message": "Pages, videos and downloads",
+    "description": "Counted"
+  },
+  "opt_counted_private": {
+    "message": "Private windows, when allowed",
+    "description": "Counted"
+  },
+  "opt_counted_stopped": {
+    "message": "Transfers you stopped halfway",
+    "description": "Counted"
+  },
+  "opt_counted_uploads": {
+    "message": "Uploads and headers",
+    "description": "Counted"
+  },
+  "opt_counting": {
+    "message": "Counting",
+    "description": "Section"
+  },
+  "opt_custom_note": {
+    "message": "Your savers are a mix of your own, so no level is chosen.",
+    "description": "Shown for a custom mix"
+  },
+  "opt_data": {
+    "message": "Your data",
+    "description": "Section"
+  },
+  "opt_day": {
+    "message": "Day",
+    "description": "Day of the month"
+  },
+  "opt_days_unit": {
+    "message": "days",
+    "description": "After the number of days"
+  },
+  "opt_delete_history": {
+    "message": "Delete history",
+    "description": "Button"
+  },
+  "opt_every": {
+    "message": "Every",
+    "description": "Every N days"
+  },
+  "opt_footer": {
+    "message": "Sip 1.0 · Free software under the MPL-2.0",
+    "description": "Footer"
+  },
+  "opt_from": {
+    "message": "From",
+    "description": "Start date"
+  },
+  "opt_history": {
+    "message": "Usage history",
+    "description": "Field"
+  },
+  "opt_history_hint": {
+    "message": "Two months of daily totals per site, kept on this device. Sip sends nothing anywhere.",
+    "description": "Field hint"
+  },
+  "opt_lang_auto": {
+    "message": "Automatic",
+    "description": "Language: follow the browser"
+  },
+  "opt_language": {
+    "message": "Language",
+    "description": "Section"
+  },
+  "opt_left_now": {
+    "message": "Or: what your carrier says is left",
+    "description": "Field"
+  },
+  "opt_left_now_hint": {
+    "message": "Needs your monthly data above.",
+    "description": "Field hint"
+  },
+  "opt_level": {
+    "message": "Saving level",
+    "description": "Section"
+  },
+  "opt_level_lead": {
+    "message": "One choice for how hard Sip saves. You can still set each saver yourself below.",
+    "description": "Section lead"
+  },
+  "opt_locked_note": {
+    "message": "Levels never change your YouTube quality. It stays at $1, as you chose.",
+    "description": "$1 the chosen quality, e.g. 480p"
+  },
+  "opt_may_break": {
+    "message": "May break",
+    "description": "Label before what a saver may break"
+  },
+  "opt_nc_calls": {
+    "message": "Video calls and live connections",
+    "description": "Not counted"
+  },
+  "opt_nc_other": {
+    "message": "Other apps and devices",
+    "description": "Not counted"
+  },
+  "opt_nc_overhead": {
+    "message": "Encryption and packets",
+    "description": "Not counted"
+  },
+  "opt_nc_updates": {
+    "message": "Browser and add-on updates",
+    "description": "Not counted"
+  },
+  "opt_no_rules": {
+    "message": "No site rules yet.",
+    "description": "Empty list"
+  },
+  "opt_not_counted": {
+    "message": "Not counted",
+    "description": "Heading"
+  },
+  "opt_notify": {
+    "message": "Notifications",
+    "description": "Section"
+  },
+  "opt_notify_lead": {
+    "message": "Click one to open Sip.",
+    "description": "Section lead"
+  },
+  "opt_notify_levels": {
+    "message": "At 75%, 90% and 100% of your plan",
+    "description": "Switch"
+  },
+  "opt_notify_pace": {
+    "message": "When you're on pace to run out early",
+    "description": "Switch"
+  },
+  "opt_notify_pace_hint": {
+    "message": "More than 3 days before renewal; at most once a week.",
+    "description": "Switch hint"
+  },
+  "opt_notify_sample": {
+    "message": "What one looks like",
+    "description": "Above the sample"
+  },
+  "opt_overhead": {
+    "message": "Network overhead (estimate)",
+    "description": "Field"
+  },
+  "opt_overhead_covers": {
+    "message": "the overhead estimate covers it",
+    "description": "Which way the error goes"
+  },
+  "opt_overhead_hint": {
+    "message": "Your carrier also counts encryption and packet headers that a browser never sees. Sip adds this much for the budget only; site figures stay as measured.",
+    "description": "Field hint"
+  },
+  "opt_paused": {
+    "message": "Saving is paused.",
+    "description": "Shown while paused"
+  },
+  "opt_period_days": {
+    "message": "Every few days",
+    "description": "Period kind"
+  },
+  "opt_period_monthly": {
+    "message": "On a day of the month",
+    "description": "Period kind"
+  },
+  "opt_plan": {
+    "message": "Your plan",
+    "description": "Section"
+  },
+  "opt_plan_lead": {
+    "message": "$1 · $2",
+    "description": "$1 'Renews 1 Dec', $2 '18 days left'"
+  },
+  "opt_private": {
+    "message": "Private windows",
+    "description": "Section"
+  },
+  "opt_private_off": {
+    "message": "Not counted. To count them, open Add-ons and themes, choose Sip and allow it in private windows.",
+    "description": "Private windows not allowed"
+  },
+  "opt_private_on": {
+    "message": "Counted, as one total with no site names.",
+    "description": "Private windows allowed"
+  },
+  "opt_reads_low": {
+    "message": "Sip reads low",
+    "description": "Which way the error goes"
+  },
+  "opt_remove_site": {
+    "message": "Remove the rules for $1",
+    "description": "$1 a site"
+  },
+  "opt_renewed_early": {
+    "message": "Renewed early?",
+    "description": "Field"
+  },
+  "opt_renewed_early_hint": {
+    "message": "Starts a new period from today. Your history is kept.",
+    "description": "Field hint"
+  },
+  "opt_renews": {
+    "message": "Renews",
+    "description": "Field"
+  },
+  "opt_resume": {
+    "message": "Resume saving",
+    "description": "Button"
+  },
+  "opt_rule_autoplay_off": {
+    "message": "Autoplay allowed",
+    "description": "Rule state"
+  },
+  "opt_rule_autoplay_on": {
+    "message": "Autoplay stopped",
+    "description": "Rule state"
+  },
+  "opt_rule_fonts_off": {
+    "message": "Fonts shown",
+    "description": "Rule state"
+  },
+  "opt_rule_fonts_on": {
+    "message": "Fonts blocked",
+    "description": "Rule state"
+  },
+  "opt_rule_images_off": {
+    "message": "Images shown",
+    "description": "Rule state"
+  },
+  "opt_rule_images_on": {
+    "message": "Images blocked",
+    "description": "Rule state"
+  },
+  "opt_rule_trackers_off": {
+    "message": "Trackers allowed",
+    "description": "Rule state"
+  },
+  "opt_rule_trackers_on": {
+    "message": "Trackers blocked",
+    "description": "Rule state"
+  },
+  "opt_savers": {
+    "message": "Savers",
+    "description": "Section"
+  },
+  "opt_savers_lead": {
+    "message": "Each one on its own. Changes apply to pages you open or reload.",
+    "description": "Section lead"
+  },
+  "opt_saves": {
+    "message": "Saves",
+    "description": "Label before what a saver saves"
+  },
+  "opt_saves_as_you_go": {
+    "message": "Changes save as you go",
+    "description": "Note in the header"
+  },
+  "opt_sections": {
+    "message": "Sections",
+    "description": "The section list's name"
+  },
+  "opt_set": {
+    "message": "Set",
+    "description": "Button"
+  },
+  "opt_sites": {
+    "message": "Site rules",
+    "description": "Section"
+  },
+  "opt_sites_lead": {
+    "message": "Sites where you changed what Sip does. Set these from the popup while you're on the site, or here.",
+    "description": "Section lead"
+  },
+  "opt_source": {
+    "message": "Source code",
+    "description": "Link"
+  },
+  "opt_subtitle": {
+    "message": "For this browser only. Your phone and other apps use data too.",
+    "description": "Under the title"
+  },
+  "opt_title": {
+    "message": "Sip settings",
+    "description": "Page title"
+  },
+  "opt_units": {
+    "message": "Units",
+    "description": "Field"
+  },
+  "opt_units_line": {
+    "message": "1 GB = 1,000,000,000 bytes, the way carriers count.",
+    "description": "Read-only units line"
+  },
+  "opt_used_so_far": {
+    "message": "Used so far this period",
+    "description": "Field"
+  },
+  "opt_used_so_far_hint": {
+    "message": "What your carrier says you've used, counting other devices. Sip counts the rest from here on.",
+    "description": "Field hint"
+  },
+  "opt_verdict": {
+    "message": "Sip errs on the low side. Your carrier's counter is the official one: check it now and then, and enter it under Your plan.",
+    "description": "Accuracy verdict"
+  },
+  "opt_youtube_lead": {
+    "message": "Sip keeps videos at or below this. Only you change it: saving levels never do. It's also in the popup on YouTube.",
+    "description": "Section lead"
+  },
+  "opt_youtube_max": {
+    "message": "Highest YouTube quality",
+    "description": "Section"
+  },
+  "popup_blocked__one": {
+    "message": "1 blocked",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_blocked__other": {
+    "message": "$1 blocked",
+    "description": "What Sip saved: $1 requests blocked"
+  },
+  "popup_change": {
+    "message": "Change",
+    "description": "Link to the YouTube setting"
+  },
+  "popup_chip_autoplay": {
+    "message": "Autoplay",
+    "description": "Saver chip"
+  },
+  "popup_chip_fonts": {
+    "message": "Fonts",
+    "description": "Saver chip"
+  },
+  "popup_chip_images": {
+    "message": "Images",
+    "description": "Saver chip"
+  },
+  "popup_chip_trackers": {
+    "message": "Trackers",
+    "description": "Saver chip"
+  },
+  "popup_confirm_again": {
+    "message": "Click again to confirm",
+    "description": "A button asking for a second click"
+  },
+  "popup_finish_setup": {
+    "message": "Finish setting up",
+    "description": "Button: open the first-run setup"
+  },
+  "popup_grant": {
+    "message": "Allow",
+    "description": "Button: grant access to all sites"
+  },
+  "popup_hint_access": {
+    "message": "Sip can't see this browser's traffic yet.",
+    "description": "Shown without site access"
+  },
+  "popup_hint_private": {
+    "message": "Private windows aren't counted.",
+    "description": "Shown when Sip can't run in private windows"
+  },
+  "popup_hint_private_how": {
+    "message": "How to count them",
+    "description": "Link to how to allow private windows"
+  },
+  "popup_hint_setup": {
+    "message": "Tell Sip about your plan so it can warn you in time.",
+    "description": "Shown until first run is done"
+  },
+  "popup_left_of": {
+    "message": "left of $1",
+    "description": "After the figure left; $1 the budget"
+  },
+  "popup_level_label": {
+    "message": "Saving level",
+    "description": "The level control's name"
+  },
+  "popup_meter_label": {
+    "message": "Data used this period",
+    "description": "The bar's name"
+  },
+  "popup_no_sites": {
+    "message": "Nothing used yet.",
+    "description": "Empty top-sites list"
+  },
+  "popup_over_carrier": {
+    "message": "Your carrier may slow you down.",
+    "description": "Shown when the budget is used up"
+  },
+  "popup_over_of": {
+    "message": "over your $1",
+    "description": "After the figure over; $1 the budget"
+  },
+  "popup_period_label": {
+    "message": "This period",
+    "description": "The headline card's name"
+  },
+  "popup_private_tab": {
+    "message": "Private window: counted without site names.",
+    "description": "On a private tab"
+  },
+  "popup_projection": {
+    "message": "≈ $1 by $2",
+    "description": "Under the bar: $1 projected use by $2 the renewal date"
+  },
+  "popup_reload": {
+    "message": "Reload to apply",
+    "description": "Button: reload the tab after a change"
+  },
+  "popup_renewed_today": {
+    "message": "I renewed today",
+    "description": "Button: the plan renewed today"
+  },
+  "popup_reset_site": {
+    "message": "Reset to default",
+    "description": "Button: remove this site's rule"
+  },
+  "popup_runs_out": {
+    "message": "Runs out ≈ $1, $2 early",
+    "description": "Under the bar when the pace is too fast: $1 a date, $2 days"
+  },
+  "popup_saving_here": {
+    "message": "Saving on this site",
+    "description": "The saver chips' group name"
+  },
+  "popup_set_budget": {
+    "message": "Set your monthly data",
+    "description": "Link when there is no budget"
+  },
+  "popup_settings": {
+    "message": "Settings",
+    "description": "Button: open Sip's settings"
+  },
+  "popup_site_label": {
+    "message": "This site",
+    "description": "The site card's name"
+  },
+  "popup_site_rule": {
+    "message": "This site has its own rule.",
+    "description": "Shown when a site rule applies"
+  },
+  "popup_site_savers": {
+    "message": "Site savers",
+    "description": "Disclosure for a site's savers on YouTube"
+  },
+  "popup_site_use": {
+    "message": "$1 today · $2 this period",
+    "description": "This site's use"
+  },
+  "popup_this_period": {
+    "message": "This period",
+    "description": "Top sites over the billing period"
+  },
+  "popup_tip_max": {
+    "message": "Stretch it with Max saving.",
+    "description": "Tip when the pace is too fast"
+  },
+  "popup_today": {
+    "message": "Today",
+    "description": "Today's line, and the top-sites switch"
+  },
+  "popup_today_share": {
+    "message": "$1 of $2 share",
+    "description": "$1 used today, $2 today's share"
+  },
+  "popup_top_sites": {
+    "message": "Top sites",
+    "description": "Heading"
+  },
+  "popup_use_max": {
+    "message": "Use Max",
+    "description": "Button: switch to the Max level"
+  },
+  "popup_used": {
+    "message": "$1 used",
+    "description": "Under the bar; $1 used this period"
+  },
+  "popup_used_period": {
+    "message": "used this period",
+    "description": "After the headline figure, without a budget"
+  },
+  "popup_yt_title": {
+    "message": "Video quality · your choice",
+    "description": "Heading of the YouTube switcher"
   },
   "saver_autoplay_breaks": {
     "message": "Some players need a second click. YouTube videos you open still play.",

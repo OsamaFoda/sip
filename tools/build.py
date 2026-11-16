@@ -22,7 +22,7 @@ PARTS = ["core", "savers", "ui"]
 PLURALS = {"en": {"one", "other"}, "ar": {"zero", "one", "two", "few", "many", "other"}}
 PACK = ["manifest.json", "background.js", "content.js", "autoplay.js", "autoplay-main.js",
         "youtube-quality.js", "youtube-player.js", "youtube/*.js", "popup.html", "popup.js",
-        "options.html", "options.js", "style.css", "lib.js", "lib/*.js", "ui/*.js",
+        "options.html", "options.js", "style.css", "lib/*.js", "ui/*.js",
         "_locales/*/messages.json", "icons/*.png"]
 
 

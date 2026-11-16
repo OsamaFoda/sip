@@ -449,6 +449,17 @@ class Context:
         finally:
             self.m.context("chrome")
 
+    def type(self, selector, text, enter=True):
+        """Real typing into a field of the selected tab's page, then Enter (which commits it)."""
+        self.m.context("content")
+        try:
+            element = self.m.call("WebDriver:FindElement", {"using": "css selector", "value": selector})["value"]
+            eid = list(element.values())[0]
+            self.m.call("WebDriver:ElementClear", {"id": eid})
+            self.m.call("WebDriver:ElementSendKeys", {"id": eid, "text": text + ("\ue007" if enter else "")})
+        finally:
+            self.m.context("chrome")
+
     def reload_sip(self):
         self.chrome_js(f"const {{ AddonManager }} = ChromeUtils.importESModule('resource://gre/modules/AddonManager.sys.mjs');"
                        f"await (await AddonManager.getAddonByID({json.dumps(SIP_ID)})).reload(); return true;")

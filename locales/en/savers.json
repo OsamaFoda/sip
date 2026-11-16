@@ -170,5 +170,25 @@
   "yt_levels_note": {
     "message": "Saving levels never change your YouTube quality.",
     "description": "Note under the YouTube choices"
+  },
+  "level_everything_light": {
+    "message": "Everything in Light",
+    "description": "Max/Balanced card: includes the level below"
+  },
+  "level_everything_balanced": {
+    "message": "Everything in Balanced",
+    "description": "Max card: includes Balanced"
+  },
+  "level_light_breaks": {
+    "message": "Rarely anything; \"Log in with Facebook\" on other sites",
+    "description": "What Light may break"
+  },
+  "level_balanced_breaks": {
+    "message": "Some players need a second click",
+    "description": "What Balanced may break"
+  },
+  "level_max_breaks": {
+    "message": "Pages look bare; show images again site by site",
+    "description": "What Max may break"
   }
 }
