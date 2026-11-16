@@ -1,0 +1,254 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Sip: Arabic review</title>
+<style>body{font:14px/1.45 system-ui,"Noto Sans Arabic",sans-serif;margin:24px;color:#13242b} table{border-collapse:collapse;width:100%}
+td,th{border:1px solid #d5dde0;padding:6px 8px;vertical-align:top;text-align:start} th{background:#eaf0f6;position:sticky;top:0}
+td:nth-child(5){font-size:16px} small{color:#5b6b71;font-family:monospace} code{font-size:12px} .note{background:#fff6dd;padding:10px 14px;border-radius:8px}</style></head><body>
+<h1>Sip 1.0: strings to review</h1>
+<p class=note>Arabic digits: <b>latn</b> (Western digits, 1.42 جيجا).
+Change <code>ARABIC_DIGITS</code> in <code>lib/format.js</code> to switch. Plural sets show each form Arabic needs:
+zero, one, two, few (3–10), many (11–99), other (100 and up). To change a string, edit <code>locales/ar/&lt;part&gt;.json</code> and run <code>python3 tools/build.py</code>.</p>
+<p>243 strings.</p>
+<table><thead><tr><th>Part</th><th>Key</th><th>What it's for</th><th>English</th><th>العربية</th></tr></thead><tbody>
+<tr><td>core</td><td><code>ext_name</code></td><td>Add-on name</td><td>Sip — Data Saver</td><td lang=ar dir=rtl>سِب — موفّر البيانات</td></tr>
+<tr><td>core</td><td><code>ext_short</code></td><td>Short add-on name</td><td>Sip</td><td lang=ar dir=rtl>سِب</td></tr>
+<tr><td>core</td><td><code>ext_description</code></td><td>Add-on description in the add-ons manager</td><td>See how much data each site uses, keep to a monthly budget, and cut the waste: autoplay, trackers and more.</td><td lang=ar dir=rtl>اعرف كم يستهلك كل موقع من بياناتك، والتزم بباقتك الشهرية، ووفّر الهدر: التشغيل التلقائي والمتتبّعات وغيرها.</td></tr>
+<tr><td>core</td><td><code>ext_action_title</code></td><td>Toolbar button tooltip before Sip has started</td><td>Sip</td><td lang=ar dir=rtl>سِب</td></tr>
+<tr><td>core</td><td><code>locale_code</code></td><td>The language this file is: en or ar</td><td>en</td><td lang=ar dir=rtl>ar</td></tr>
+<tr><td>core</td><td><code>unit_B</code></td><td>Bytes</td><td>B</td><td lang=ar dir=rtl>بايت</td></tr>
+<tr><td>core</td><td><code>unit_KB</code></td><td>Kilobytes (1,000 bytes)</td><td>KB</td><td lang=ar dir=rtl>كيلوبايت</td></tr>
+<tr><td>core</td><td><code>unit_MB</code></td><td>Megabytes</td><td>MB</td><td lang=ar dir=rtl>ميجا</td></tr>
+<tr><td>core</td><td><code>unit_GB</code></td><td>Gigabytes (1,000,000,000 bytes)</td><td>GB</td><td lang=ar dir=rtl>جيجا</td></tr>
+<tr><td>core</td><td><code>unit_TB</code></td><td>Terabytes</td><td>TB</td><td lang=ar dir=rtl>تيرا</td></tr>
+<tr><td>core</td><td><code>fmt_size</code></td><td>A size: $1 number, $2 unit</td><td>$1 $2</td><td lang=ar dir=rtl>$1 $2</td></tr>
+<tr><td>core</td><td><code>bucket_private</code></td><td>Usage from private windows, counted without site names</td><td>Private windows</td><td lang=ar dir=rtl>النوافذ الخاصة</td></tr>
+<tr><td>core</td><td><code>bucket_extensions</code></td><td>Usage by add-ons, such as filter list updates</td><td>Extensions</td><td lang=ar dir=rtl>الإضافات</td></tr>
+<tr><td>core</td><td><code>bucket_other</code></td><td>Usage with no site</td><td>Other</td><td lang=ar dir=rtl>غير ذلك</td></tr>
+<tr><td>core</td><td><code>sum_days (plural)</code></td><td>A number of days: $1</td><td><small>one</small> 1 day<br><small>other</small> $1 days</td><td lang=ar dir=rtl><small>zero</small> $1 يوم<br><small>one</small> يوم واحد<br><small>two</small> يومان<br><small>few</small> $1 أيام<br><small>many</small> $1 يومًا<br><small>other</small> $1 يوم</td></tr>
+<tr><td>core</td><td><code>sum_days_left (plural)</code></td><td>$1 days left in the period</td><td><small>one</small> 1 day left<br><small>other</small> $1 days left</td><td lang=ar dir=rtl><small>zero</small> لا أيام متبقية<br><small>one</small> يوم واحد متبقٍ<br><small>two</small> يومان متبقيان<br><small>few</small> $1 أيام متبقية<br><small>many</small> $1 يومًا متبقيًا<br><small>other</small> $1 يوم متبقٍ</td></tr>
+<tr><td>core</td><td><code>sum_hero_left</code></td><td>Popup headline: $1 data left, $2 days left (e.g. 17 days)</td><td>$1 left · $2</td><td lang=ar dir=rtl>متبقٍ $1 · $2</td></tr>
+<tr><td>core</td><td><code>sum_hero_over</code></td><td>Popup headline when over budget: $1 over, $2 days left</td><td>Over by $1 · $2</td><td lang=ar dir=rtl>تجاوزت بـ $1 · $2</td></tr>
+<tr><td>core</td><td><code>sum_hero_used</code></td><td>Headline without a budget: $1 used</td><td>Used this period: $1</td><td lang=ar dir=rtl>استهلاك هذه الفترة: $1</td></tr>
+<tr><td>core</td><td><code>sum_left</code></td><td>$1 left of a $2 budget</td><td>$1 left of $2</td><td lang=ar dir=rtl>متبقٍ $1 من $2</td></tr>
+<tr><td>core</td><td><code>sum_over_by</code></td><td>$1 over the budget</td><td>Over by $1</td><td lang=ar dir=rtl>تجاوزت الباقة بـ $1</td></tr>
+<tr><td>core</td><td><code>sum_today_share</code></td><td>$1 used today, $2 today&#x27;s fair share of what&#x27;s left</td><td>Today $1 of $2 share</td><td lang=ar dir=rtl>اليوم $1 من حصة $2</td></tr>
+<tr><td>core</td><td><code>sum_today</code></td><td>$1 used today (no budget)</td><td>Today $1</td><td lang=ar dir=rtl>اليوم $1</td></tr>
+<tr><td>core</td><td><code>sum_over_tomorrow</code></td><td>$1 over today&#x27;s share; $2 tomorrow&#x27;s share if today ends here</td><td>$1 over · tomorrow ≈ $2</td><td lang=ar dir=rtl>$1 فوق الحصة · غدًا ≈ $2</td></tr>
+<tr><td>core</td><td><code>sum_over_today</code></td><td>$1 over today&#x27;s share, on the last day</td><td>$1 over today&#x27;s share</td><td lang=ar dir=rtl>$1 فوق حصة اليوم</td></tr>
+<tr><td>core</td><td><code>sum_renews</code></td><td>$1 the date the data renews, e.g. 1 Dec</td><td>Renews $1</td><td lang=ar dir=rtl>تتجدد في $1</td></tr>
+<tr><td>core</td><td><code>sum_pace</code></td><td>$1 a date; $2 days early, e.g. 5 days</td><td>At this pace you&#x27;ll run out around $1 ($2 early)</td><td lang=ar dir=rtl>بهذا المعدل ستنفد الباقة نحو $1 (قبل موعدها بـ $2)</td></tr>
+<tr><td>core</td><td><code>sum_pace_ok</code></td><td>Pace pill: the projection stays within the budget</td><td>On track</td><td lang=ar dir=rtl>في الحدود</td></tr>
+<tr><td>core</td><td><code>sum_pace_fast</code></td><td>Pace pill: at this pace the data runs out before renewal</td><td>Too fast</td><td lang=ar dir=rtl>أسرع من اللازم</td></tr>
+<tr><td>core</td><td><code>sum_pace_over</code></td><td>Pace pill: the budget is used up</td><td>Over budget</td><td lang=ar dir=rtl>تجاوزت الباقة</td></tr>
+<tr><td>core</td><td><code>sum_projection</code></td><td>$1 projected use, $2 the renewal date</td><td>≈ $1 by $2 at this pace</td><td lang=ar dir=rtl>≈ $1 بحلول $2 بهذا المعدل</td></tr>
+<tr><td>core</td><td><code>sum_saved_req (plural)</code></td><td>What Sip saved: $1 blocked requests</td><td><small>one</small> Blocked 1 request<br><small>other</small> Blocked $1 requests</td><td lang=ar dir=rtl><small>zero</small> لم يُحجب أي طلب<br><small>one</small> حُجب طلب واحد<br><small>two</small> حُجب طلبان<br><small>few</small> حُجبت $1 طلبات<br><small>many</small> حُجب $1 طلبًا<br><small>other</small> حُجب $1 طلب</td></tr>
+<tr><td>core</td><td><code>sum_saved_media (plural)</code></td><td>What Sip saved: $1 videos stopped from playing on their own</td><td><small>one</small> 1 video stopped<br><small>other</small> $1 videos stopped</td><td lang=ar dir=rtl><small>zero</small> لم يُوقَف أي مقطع<br><small>one</small> أُوقف مقطع واحد<br><small>two</small> أُوقف مقطعان<br><small>few</small> أُوقفت $1 مقاطع<br><small>many</small> أُوقف $1 مقطعًا<br><small>other</small> أُوقف $1 مقطع</td></tr>
+<tr><td>core</td><td><code>sum_saved_est</code></td><td>An estimate of the data saved, $1</td><td>≈ $1 saved</td><td lang=ar dir=rtl>وُفّر ≈ $1</td></tr>
+<tr><td>core</td><td><code>sum_join</code></td><td>Separator between parts of a line</td><td> · </td><td lang=ar dir=rtl> · </td></tr>
+<tr><td>core</td><td><code>sum_youtube</code></td><td>$1 the highest YouTube quality in lines, e.g. 480</td><td>YouTube: up to $1p</td><td lang=ar dir=rtl>يوتيوب: حتى $1p</td></tr>
+<tr><td>core</td><td><code>sum_youtube_none</code></td><td>YouTube quality not limited</td><td>YouTube: no limit</td><td lang=ar dir=rtl>يوتيوب: بلا حد</td></tr>
+<tr><td>core</td><td><code>notif_level_title</code></td><td>Notification title: $1 percent used</td><td>$1% of your data used</td><td lang=ar dir=rtl>استهلكت $1% من باقتك</td></tr>
+<tr><td>core</td><td><code>notif_level_body</code></td><td>$1 data left, $2 days left, $3 top site, $4 its use</td><td>$1 left for $2. The most went to $3 ($4).</td><td lang=ar dir=rtl>متبقٍ $1 لمدة $2. أكثر ما استهلك: $3 ($4).</td></tr>
+<tr><td>core</td><td><code>notif_level_body_plain</code></td><td>$1 data left, $2 days left</td><td>$1 left for $2.</td><td lang=ar dir=rtl>متبقٍ $1 لمدة $2.</td></tr>
+<tr><td>core</td><td><code>notif_full_title</code></td><td>$1 the budget, e.g. 50 GB</td><td>You&#x27;ve used all of your $1</td><td lang=ar dir=rtl>استهلكت باقتك كلها ($1)</td></tr>
+<tr><td>core</td><td><code>notif_full_body</code></td><td>$1 the renewal date</td><td>Your carrier may slow you down or charge extra until it renews on $1. Turn on Max saving in Sip.</td><td lang=ar dir=rtl>قد يبطئ مزوّد الخدمة سرعتك أو يحاسبك على الزيادة حتى التجديد في $1. شغّل التوفير الأقصى في سِب.</td></tr>
+<tr><td>core</td><td><code>notif_pace_title</code></td><td>Weekly pace warning title</td><td>You&#x27;re on pace to run out early</td><td lang=ar dir=rtl>بهذا المعدل ستنفد باقتك مبكرًا</td></tr>
+<tr><td>core</td><td><code>notif_pace_body</code></td><td>$1 run-out date, $2 days early, $3 top site</td><td>At this rate it runs out around $1, $2 before it renews. The most this period went to $3.</td><td lang=ar dir=rtl>بهذا المعدل تنفد نحو $1، قبل التجديد بـ $2. أكثر ما استهلك في هذه الفترة: $3.</td></tr>
+<tr><td>core</td><td><code>notif_pace_body_plain</code></td><td>$1 run-out date, $2 days early</td><td>At this rate it runs out around $1, $2 before it renews.</td><td lang=ar dir=rtl>بهذا المعدل تنفد نحو $1، قبل التجديد بـ $2.</td></tr>
+<tr><td>core</td><td><code>badge_title_budget</code></td><td>Toolbar tooltip: $1 the headline, e.g. 15.8 GB left · 17 days</td><td>Sip: $1</td><td lang=ar dir=rtl>سِب: $1</td></tr>
+<tr><td>core</td><td><code>badge_title_today</code></td><td>Toolbar tooltip without a budget: $1 used today</td><td>Sip: $1 today</td><td lang=ar dir=rtl>سِب: $1 اليوم</td></tr>
+<tr><td>core</td><td><code>badge_paused</code></td><td>Added to the tooltip while saving is paused</td><td> · saving paused</td><td lang=ar dir=rtl> · التوفير متوقف</td></tr>
+<tr><td>savers</td><td><code>level_off</code></td><td>Saving level: saving paused</td><td>Off</td><td lang=ar dir=rtl>إيقاف</td></tr>
+<tr><td>savers</td><td><code>level_light</code></td><td>Saving level</td><td>Light</td><td lang=ar dir=rtl>خفيف</td></tr>
+<tr><td>savers</td><td><code>level_balanced</code></td><td>Saving level (the default)</td><td>Balanced</td><td lang=ar dir=rtl>متوازن</td></tr>
+<tr><td>savers</td><td><code>level_max</code></td><td>Saving level</td><td>Max</td><td lang=ar dir=rtl>أقصى</td></tr>
+<tr><td>savers</td><td><code>level_custom</code></td><td>Your own mix of savers, not one of the levels</td><td>Custom</td><td lang=ar dir=rtl>مخصّص</td></tr>
+<tr><td>savers</td><td><code>level_default</code></td><td>Marks the default level</td><td>Default</td><td lang=ar dir=rtl>الافتراضي</td></tr>
+<tr><td>savers</td><td><code>level_off_desc</code></td><td>What Off does</td><td>Saving is paused. Your YouTube limit stays on.</td><td lang=ar dir=rtl>التوفير متوقف مؤقتًا، وحدّ جودة يوتيوب يبقى كما هو.</td></tr>
+<tr><td>savers</td><td><code>level_light_desc</code></td><td>What Light does</td><td>Blocks heavy trackers. Pages look and play as usual.</td><td lang=ar dir=rtl>يحجب المتتبّعات الثقيلة، وتظهر الصفحات وتعمل كالمعتاد.</td></tr>
+<tr><td>savers</td><td><code>level_balanced_desc</code></td><td>What Balanced does</td><td>Also stops videos from playing and downloading on their own.</td><td lang=ar dir=rtl>ويوقف أيضًا تشغيل الفيديو وتحميله من تلقاء نفسه.</td></tr>
+<tr><td>savers</td><td><code>level_max_desc</code></td><td>What Max does</td><td>Also blocks images. Pages look unfinished; turn images back on for a site you need.</td><td lang=ar dir=rtl>ويحجب الصور أيضًا. تبدو الصفحات ناقصة، فأعد الصور لأي موقع تحتاجه.</td></tr>
+<tr><td>savers</td><td><code>level_custom_desc</code></td><td>What Custom means</td><td>Your own mix of savers.</td><td lang=ar dir=rtl>مزيج اختياراتك من أدوات التوفير.</td></tr>
+<tr><td>savers</td><td><code>saver_autoplay_name</code></td><td>Saver name</td><td>Stop autoplay</td><td lang=ar dir=rtl>إيقاف التشغيل التلقائي</td></tr>
+<tr><td>savers</td><td><code>saver_autoplay_saves</code></td><td>What the autoplay saver saves</td><td>Videos and sound don&#x27;t play or download until you press play.</td><td lang=ar dir=rtl>لا يعمل الفيديو أو الصوت ولا يُحمَّل حتى تضغط تشغيل.</td></tr>
+<tr><td>savers</td><td><code>saver_autoplay_breaks</code></td><td>What the autoplay saver may break</td><td>Some players need a second click. YouTube videos you open still play.</td><td lang=ar dir=rtl>بعض المشغلات تحتاج نقرة ثانية. فيديوهات يوتيوب التي تفتحها تعمل كالمعتاد.</td></tr>
+<tr><td>savers</td><td><code>saver_trackers_name</code></td><td>Saver name</td><td>Block heavy trackers</td><td lang=ar dir=rtl>حجب المتتبّعات الثقيلة</td></tr>
+<tr><td>savers</td><td><code>saver_trackers_saves</code></td><td>What the trackers saver saves</td><td>Ads and tracking scripts that load on page after page.</td><td lang=ar dir=rtl>الإعلانات وسكربتات التتبّع التي تُحمَّل في صفحة بعد صفحة.</td></tr>
+<tr><td>savers</td><td><code>saver_trackers_breaks</code></td><td>What the trackers saver may break</td><td>Rarely breaks anything, though &quot;Log in with Facebook&quot; buttons may not work. For much more blocking, use uBlock Origin.</td><td lang=ar dir=rtl>نادرًا ما يعطّل شيئًا، لكن أزرار «تسجيل الدخول بفيسبوك» قد لا تعمل. لحجب أكثر بكثير استخدم uBlock Origin.</td></tr>
+<tr><td>savers</td><td><code>saver_images_name</code></td><td>Saver name</td><td>Block images</td><td lang=ar dir=rtl>حجب الصور</td></tr>
+<tr><td>savers</td><td><code>saver_images_saves</code></td><td>What the images saver saves</td><td>Photos and pictures, often the largest part of a page.</td><td lang=ar dir=rtl>الصور، وهي غالبًا أكبر جزء من الصفحة.</td></tr>
+<tr><td>savers</td><td><code>saver_images_breaks</code></td><td>What the images saver may break</td><td>Pages look unfinished. Turn images back on for a site with a site rule.</td><td lang=ar dir=rtl>تبدو الصفحات ناقصة. أعِد الصور لأي موقع بقاعدة خاصة به.</td></tr>
+<tr><td>savers</td><td><code>saver_fonts_name</code></td><td>Saver name</td><td>Block web fonts</td><td lang=ar dir=rtl>حجب خطوط الويب</td></tr>
+<tr><td>savers</td><td><code>saver_fonts_saves</code></td><td>What the fonts saver saves</td><td>Font files a site downloads the first time you visit it.</td><td lang=ar dir=rtl>ملفات الخطوط التي يحمّلها الموقع في أول زيارة له.</td></tr>
+<tr><td>savers</td><td><code>saver_fonts_breaks</code></td><td>What the fonts saver may break</td><td>Icons may turn into words like &quot;menu&quot;, and text uses your system&#x27;s fonts.</td><td lang=ar dir=rtl>قد تتحول الأيقونات إلى كلمات مثل «menu»، ويظهر النص بخطوط جهازك.</td></tr>
+<tr><td>savers</td><td><code>saver_saveData_name</code></td><td>Saver name</td><td>Ask sites for lighter pages (Save-Data)</td><td lang=ar dir=rtl>اطلب صفحات أخف (Save-Data)</td></tr>
+<tr><td>savers</td><td><code>saver_saveData_saves</code></td><td>What Save-Data saves</td><td>Sites that honour it send smaller images and video.</td><td lang=ar dir=rtl>المواقع التي تدعمه ترسل صورًا وفيديو أصغر.</td></tr>
+<tr><td>savers</td><td><code>saver_saveData_breaks</code></td><td>Save-Data&#x27;s drawback (fingerprinting)</td><td>Few sites honour it, and it makes your browser a little easier to tell apart from others.</td><td lang=ar dir=rtl>قليل من المواقع يدعمه، ويجعل متصفحك أسهل تمييزًا عن غيره قليلًا.</td></tr>
+<tr><td>savers</td><td><code>yt_choice_240</code></td><td>YouTube quality choice</td><td>240p</td><td lang=ar dir=rtl>240p</td></tr>
+<tr><td>savers</td><td><code>yt_choice_360</code></td><td>YouTube quality choice</td><td>360p</td><td lang=ar dir=rtl>360p</td></tr>
+<tr><td>savers</td><td><code>yt_choice_480</code></td><td>YouTube quality choice</td><td>480p</td><td lang=ar dir=rtl>480p</td></tr>
+<tr><td>savers</td><td><code>yt_choice_720</code></td><td>YouTube quality choice</td><td>720p (HD)</td><td lang=ar dir=rtl>720p (HD)</td></tr>
+<tr><td>savers</td><td><code>yt_choice_1080</code></td><td>YouTube quality choice</td><td>1080p (Full HD)</td><td lang=ar dir=rtl>1080p (Full HD)</td></tr>
+<tr><td>savers</td><td><code>yt_choice_0</code></td><td>YouTube quality choice</td><td>No limit</td><td lang=ar dir=rtl>بلا حد</td></tr>
+<tr><td>savers</td><td><code>yt_cost_240</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.2 GB an hour</td><td lang=ar dir=rtl>≈ 0.2 جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_360</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.3–0.4 GB an hour</td><td lang=ar dir=rtl>≈ 0.3–0.4 جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_480</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 0.5–0.7 GB an hour</td><td lang=ar dir=rtl>≈ 0.5–0.7 جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_720</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 1–1.5 GB an hour</td><td lang=ar dir=rtl>≈ 1–1.5 جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_1080</code></td><td>What an hour of YouTube costs at this quality</td><td>≈ 1.5–3.3 GB an hour</td><td lang=ar dir=rtl>≈ 1.5–3.3 جيجا في الساعة</td></tr>
+<tr><td>savers</td><td><code>yt_cost_0</code></td><td>What an hour of YouTube costs with no limit</td><td>up to 3 GB an hour or more</td><td lang=ar dir=rtl>حتى 3 جيجا في الساعة أو أكثر</td></tr>
+<tr><td>savers</td><td><code>yt_title</code></td><td>Heading</td><td>YouTube quality</td><td lang=ar dir=rtl>جودة يوتيوب</td></tr>
+<tr><td>savers</td><td><code>yt_your_choice</code></td><td>Marks the person&#x27;s YouTube choice</td><td>Your choice</td><td lang=ar dir=rtl>اختيارك</td></tr>
+<tr><td>savers</td><td><code>yt_applied_now</code></td><td>After lowering the limit: the playing video changes now</td><td>Applied now</td><td lang=ar dir=rtl>طُبّق الآن</td></tr>
+<tr><td>savers</td><td><code>yt_from_next</code></td><td>After raising the limit: it applies from the next video</td><td>From the next video</td><td lang=ar dir=rtl>من الفيديو التالي</td></tr>
+<tr><td>savers</td><td><code>yt_levels_note</code></td><td>Note under the YouTube choices</td><td>Saving levels never change your YouTube quality.</td><td lang=ar dir=rtl>مستويات التوفير لا تغيّر جودة يوتيوب أبدًا.</td></tr>
+<tr><td>savers</td><td><code>level_everything_light</code></td><td>Max/Balanced card: includes the level below</td><td>Everything in Light</td><td lang=ar dir=rtl>كل ما في الخفيف</td></tr>
+<tr><td>savers</td><td><code>level_everything_balanced</code></td><td>Max card: includes Balanced</td><td>Everything in Balanced</td><td lang=ar dir=rtl>كل ما في المتوازن</td></tr>
+<tr><td>savers</td><td><code>level_light_breaks</code></td><td>What Light may break</td><td>Rarely anything; &quot;Log in with Facebook&quot; on other sites</td><td lang=ar dir=rtl>نادرًا أي شيء؛ وأزرار «تسجيل الدخول بفيسبوك» في المواقع الأخرى</td></tr>
+<tr><td>savers</td><td><code>level_balanced_breaks</code></td><td>What Balanced may break</td><td>Some players need a second click</td><td lang=ar dir=rtl>بعض المشغلات تحتاج نقرة ثانية</td></tr>
+<tr><td>savers</td><td><code>level_max_breaks</code></td><td>What Max may break</td><td>Pages look bare; show images again site by site</td><td lang=ar dir=rtl>تبدو الصفحات خالية؛ أعد الصور موقعًا موقعًا</td></tr>
+<tr><td>ui</td><td><code>popup_level_label</code></td><td>The level control&#x27;s name</td><td>Saving level</td><td lang=ar dir=rtl>مستوى التوفير</td></tr>
+<tr><td>ui</td><td><code>popup_period_label</code></td><td>The headline card&#x27;s name</td><td>This period</td><td lang=ar dir=rtl>هذه الفترة</td></tr>
+<tr><td>ui</td><td><code>popup_meter_label</code></td><td>The bar&#x27;s name</td><td>Data used this period</td><td lang=ar dir=rtl>البيانات المستهلكة في هذه الفترة</td></tr>
+<tr><td>ui</td><td><code>popup_today</code></td><td>Today&#x27;s line, and the top-sites switch</td><td>Today</td><td lang=ar dir=rtl>اليوم</td></tr>
+<tr><td>ui</td><td><code>popup_this_period</code></td><td>Top sites over the billing period</td><td>This period</td><td lang=ar dir=rtl>هذه الفترة</td></tr>
+<tr><td>ui</td><td><code>popup_tip_max</code></td><td>Tip when the pace is too fast</td><td>Stretch it with Max saving.</td><td lang=ar dir=rtl>مدّد ما تبقّى بالتوفير الأقصى.</td></tr>
+<tr><td>ui</td><td><code>popup_use_max</code></td><td>Button: switch to the Max level</td><td>Use Max</td><td lang=ar dir=rtl>استخدم الأقصى</td></tr>
+<tr><td>ui</td><td><code>popup_over_carrier</code></td><td>Shown when the budget is used up</td><td>Your carrier may slow you down.</td><td lang=ar dir=rtl>قد يبطئ مزوّد الخدمة سرعتك.</td></tr>
+<tr><td>ui</td><td><code>popup_renewed_today</code></td><td>Button: the plan renewed today</td><td>I renewed today</td><td lang=ar dir=rtl>جدّدت اليوم</td></tr>
+<tr><td>ui</td><td><code>popup_confirm_again</code></td><td>A button asking for a second click</td><td>Click again to confirm</td><td lang=ar dir=rtl>انقر مرة أخرى للتأكيد</td></tr>
+<tr><td>ui</td><td><code>popup_set_budget</code></td><td>Link when there is no budget</td><td>Set your monthly data</td><td lang=ar dir=rtl>حدّد باقتك الشهرية</td></tr>
+<tr><td>ui</td><td><code>popup_hint_access</code></td><td>Shown without site access</td><td>Sip can&#x27;t see this browser&#x27;s traffic yet.</td><td lang=ar dir=rtl>لا يستطيع سِب رؤية استهلاك المتصفح بعد.</td></tr>
+<tr><td>ui</td><td><code>popup_grant</code></td><td>Button: grant access to all sites</td><td>Allow</td><td lang=ar dir=rtl>اسمح</td></tr>
+<tr><td>ui</td><td><code>popup_hint_setup</code></td><td>Shown until first run is done</td><td>Tell Sip about your plan so it can warn you in time.</td><td lang=ar dir=rtl>أخبر سِب بباقتك لينبّهك في الوقت المناسب.</td></tr>
+<tr><td>ui</td><td><code>popup_finish_setup</code></td><td>Button: open the first-run setup</td><td>Finish setting up</td><td lang=ar dir=rtl>أكمل الإعداد</td></tr>
+<tr><td>ui</td><td><code>popup_site_label</code></td><td>The site card&#x27;s name</td><td>This site</td><td lang=ar dir=rtl>هذا الموقع</td></tr>
+<tr><td>ui</td><td><code>popup_yt_title</code></td><td>Heading of the YouTube switcher</td><td>Video quality · your choice</td><td lang=ar dir=rtl>جودة الفيديو · اختيارك</td></tr>
+<tr><td>ui</td><td><code>popup_site_savers</code></td><td>Disclosure for a site&#x27;s savers on YouTube</td><td>Site savers</td><td lang=ar dir=rtl>أدوات التوفير لهذا الموقع</td></tr>
+<tr><td>ui</td><td><code>popup_saving_here</code></td><td>The saver chips&#x27; group name</td><td>Saving on this site</td><td lang=ar dir=rtl>التوفير في هذا الموقع</td></tr>
+<tr><td>ui</td><td><code>popup_chip_trackers</code></td><td>Saver chip</td><td>Trackers</td><td lang=ar dir=rtl>تتبّع</td></tr>
+<tr><td>ui</td><td><code>popup_chip_autoplay</code></td><td>Saver chip</td><td>Autoplay</td><td lang=ar dir=rtl>تشغيل تلقائي</td></tr>
+<tr><td>ui</td><td><code>popup_chip_images</code></td><td>Saver chip</td><td>Images</td><td lang=ar dir=rtl>صور</td></tr>
+<tr><td>ui</td><td><code>popup_chip_fonts</code></td><td>Saver chip</td><td>Fonts</td><td lang=ar dir=rtl>خطوط</td></tr>
+<tr><td>ui</td><td><code>popup_site_rule</code></td><td>Shown when a site rule applies</td><td>This site has its own rule.</td><td lang=ar dir=rtl>لهذا الموقع قاعدة خاصة.</td></tr>
+<tr><td>ui</td><td><code>popup_reset_site</code></td><td>Button: remove this site&#x27;s rule</td><td>Reset to default</td><td lang=ar dir=rtl>عُد إلى الافتراضي</td></tr>
+<tr><td>ui</td><td><code>popup_reload</code></td><td>Button: reload the tab after a change</td><td>Reload to apply</td><td lang=ar dir=rtl>أعد التحميل للتطبيق</td></tr>
+<tr><td>ui</td><td><code>popup_private_tab</code></td><td>On a private tab</td><td>Private window: counted without site names.</td><td lang=ar dir=rtl>نافذة خاصة: تُحسب دون أسماء المواقع.</td></tr>
+<tr><td>ui</td><td><code>popup_top_sites</code></td><td>Heading</td><td>Top sites</td><td lang=ar dir=rtl>أكثر المواقع استهلاكًا</td></tr>
+<tr><td>ui</td><td><code>popup_no_sites</code></td><td>Empty top-sites list</td><td>Nothing used yet.</td><td lang=ar dir=rtl>لا استهلاك بعد.</td></tr>
+<tr><td>ui</td><td><code>popup_hint_private</code></td><td>Shown when Sip can&#x27;t run in private windows</td><td>Private windows aren&#x27;t counted.</td><td lang=ar dir=rtl>النوافذ الخاصة لا تُحسب.</td></tr>
+<tr><td>ui</td><td><code>popup_hint_private_how</code></td><td>Link to how to allow private windows</td><td>How to count them</td><td lang=ar dir=rtl>كيف أحسبها؟</td></tr>
+<tr><td>ui</td><td><code>popup_change</code></td><td>Link to the YouTube setting</td><td>Change</td><td lang=ar dir=rtl>تغيير</td></tr>
+<tr><td>ui</td><td><code>popup_settings</code></td><td>Button: open Sip&#x27;s settings</td><td>Settings</td><td lang=ar dir=rtl>الإعدادات</td></tr>
+<tr><td>ui</td><td><code>popup_used_period</code></td><td>After the headline figure, without a budget</td><td>used this period</td><td lang=ar dir=rtl>مستهلكة في هذه الفترة</td></tr>
+<tr><td>ui</td><td><code>popup_left_of</code></td><td>After the figure left; $1 the budget</td><td>left of $1</td><td lang=ar dir=rtl>متبقية من $1</td></tr>
+<tr><td>ui</td><td><code>popup_over_of</code></td><td>After the figure over; $1 the budget</td><td>over your $1</td><td lang=ar dir=rtl>فوق باقتك البالغة $1</td></tr>
+<tr><td>ui</td><td><code>popup_used</code></td><td>Under the bar; $1 used this period</td><td>$1 used</td><td lang=ar dir=rtl>استُهلك $1</td></tr>
+<tr><td>ui</td><td><code>popup_today_share</code></td><td>$1 used today, $2 today&#x27;s share</td><td>$1 of $2 share</td><td lang=ar dir=rtl>$1 من حصة $2</td></tr>
+<tr><td>ui</td><td><code>popup_site_use</code></td><td>This site&#x27;s use</td><td>$1 today · $2 this period</td><td lang=ar dir=rtl>$1 اليوم · $2 في هذه الفترة</td></tr>
+<tr><td>ui</td><td><code>opt_title</code></td><td>Page title</td><td>Sip settings</td><td lang=ar dir=rtl>إعدادات سِب</td></tr>
+<tr><td>ui</td><td><code>opt_subtitle</code></td><td>Under the title</td><td>For this browser only. Your phone and other apps use data too.</td><td lang=ar dir=rtl>لهذا المتصفح فقط. هاتفك والتطبيقات الأخرى تستهلك أيضًا.</td></tr>
+<tr><td>ui</td><td><code>opt_saves_as_you_go</code></td><td>Note in the header</td><td>Changes save as you go</td><td lang=ar dir=rtl>التغييرات تُحفظ فورًا</td></tr>
+<tr><td>ui</td><td><code>opt_sections</code></td><td>The section list&#x27;s name</td><td>Sections</td><td lang=ar dir=rtl>الأقسام</td></tr>
+<tr><td>ui</td><td><code>opt_plan</code></td><td>Section</td><td>Your plan</td><td lang=ar dir=rtl>باقتك</td></tr>
+<tr><td>ui</td><td><code>opt_level</code></td><td>Section</td><td>Saving level</td><td lang=ar dir=rtl>مستوى التوفير</td></tr>
+<tr><td>ui</td><td><code>opt_savers</code></td><td>Section</td><td>Savers</td><td lang=ar dir=rtl>أدوات التوفير</td></tr>
+<tr><td>ui</td><td><code>opt_sites</code></td><td>Section</td><td>Site rules</td><td lang=ar dir=rtl>قواعد المواقع</td></tr>
+<tr><td>ui</td><td><code>opt_counting</code></td><td>Section</td><td>Counting</td><td lang=ar dir=rtl>الحساب</td></tr>
+<tr><td>ui</td><td><code>opt_notify</code></td><td>Section</td><td>Notifications</td><td lang=ar dir=rtl>التنبيهات</td></tr>
+<tr><td>ui</td><td><code>opt_private</code></td><td>Section</td><td>Private windows</td><td lang=ar dir=rtl>النوافذ الخاصة</td></tr>
+<tr><td>ui</td><td><code>opt_language</code></td><td>Section</td><td>Language</td><td lang=ar dir=rtl>اللغة</td></tr>
+<tr><td>ui</td><td><code>opt_accuracy</code></td><td>Section</td><td>How accurate is this?</td><td lang=ar dir=rtl>ما مدى دقة الحساب؟</td></tr>
+<tr><td>ui</td><td><code>opt_data</code></td><td>Section</td><td>Your data</td><td lang=ar dir=rtl>بياناتك</td></tr>
+<tr><td>ui</td><td><code>opt_plan_lead</code></td><td>$1 &#x27;Renews 1 Dec&#x27;, $2 &#x27;18 days left&#x27;</td><td>$1 · $2</td><td lang=ar dir=rtl>$1 · $2</td></tr>
+<tr><td>ui</td><td><code>opt_budget</code></td><td>Field</td><td>Monthly data</td><td lang=ar dir=rtl>حجم الباقة</td></tr>
+<tr><td>ui</td><td><code>opt_budget_hint</code></td><td>Field hint</td><td>The size of your plan, or the share you want this browser to use. Empty means no budget.</td><td lang=ar dir=rtl>حجم باقتك، أو الجزء الذي تريد أن يستهلكه هذا المتصفح. اتركه فارغًا إن لم تكن لديك باقة محددة.</td></tr>
+<tr><td>ui</td><td><code>opt_renews</code></td><td>Field</td><td>Renews</td><td lang=ar dir=rtl>التجديد</td></tr>
+<tr><td>ui</td><td><code>opt_period_monthly</code></td><td>Period kind</td><td>On a day of the month</td><td lang=ar dir=rtl>في يوم من الشهر</td></tr>
+<tr><td>ui</td><td><code>opt_period_days</code></td><td>Period kind</td><td>Every few days</td><td lang=ar dir=rtl>كل عدة أيام</td></tr>
+<tr><td>ui</td><td><code>opt_day</code></td><td>Day of the month</td><td>Day</td><td lang=ar dir=rtl>اليوم</td></tr>
+<tr><td>ui</td><td><code>opt_every</code></td><td>Every N days</td><td>Every</td><td lang=ar dir=rtl>كل</td></tr>
+<tr><td>ui</td><td><code>opt_days_unit</code></td><td>After the number of days</td><td>days</td><td lang=ar dir=rtl>أيام</td></tr>
+<tr><td>ui</td><td><code>opt_from</code></td><td>Start date</td><td>From</td><td lang=ar dir=rtl>بدءًا من</td></tr>
+<tr><td>ui</td><td><code>opt_used_so_far</code></td><td>Field</td><td>Used so far this period</td><td lang=ar dir=rtl>المستهلك حتى الآن في هذه الفترة</td></tr>
+<tr><td>ui</td><td><code>opt_used_so_far_hint</code></td><td>Field hint</td><td>What your carrier says you&#x27;ve used, counting other devices. Sip counts the rest from here on.</td><td lang=ar dir=rtl>ما يقول مزوّد الخدمة إنك استهلكته، بما في ذلك الأجهزة الأخرى. يحسب سِب الباقي من الآن.</td></tr>
+<tr><td>ui</td><td><code>opt_counted_elsewhere</code></td><td>$1 the correction, e.g. +2.00 GB</td><td>Counted elsewhere: $1</td><td lang=ar dir=rtl>محسوب خارج المتصفح: $1</td></tr>
+<tr><td>ui</td><td><code>opt_clear</code></td><td>Button</td><td>Clear</td><td lang=ar dir=rtl>مسح</td></tr>
+<tr><td>ui</td><td><code>opt_set</code></td><td>Button</td><td>Set</td><td lang=ar dir=rtl>حفظ</td></tr>
+<tr><td>ui</td><td><code>opt_left_now</code></td><td>Field</td><td>Or: what your carrier says is left</td><td lang=ar dir=rtl>أو: ما يقول مزوّد الخدمة إنه متبقٍ</td></tr>
+<tr><td>ui</td><td><code>opt_left_now_hint</code></td><td>Field hint</td><td>Needs your monthly data above.</td><td lang=ar dir=rtl>يتطلب حجم الباقة أعلاه.</td></tr>
+<tr><td>ui</td><td><code>opt_renewed_early</code></td><td>Field</td><td>Renewed early?</td><td lang=ar dir=rtl>جدّدت مبكرًا؟</td></tr>
+<tr><td>ui</td><td><code>opt_renewed_early_hint</code></td><td>Field hint</td><td>Starts a new period from today. Your history is kept.</td><td lang=ar dir=rtl>يبدأ فترة جديدة من اليوم، ويبقى سجلّك كما هو.</td></tr>
+<tr><td>ui</td><td><code>opt_level_lead</code></td><td>Section lead</td><td>One choice for how hard Sip saves. You can still set each saver yourself below.</td><td lang=ar dir=rtl>اختيار واحد لمدى قوة التوفير. ويمكنك ضبط كل أداة بنفسك في الأسفل.</td></tr>
+<tr><td>ui</td><td><code>opt_paused</code></td><td>Shown while paused</td><td>Saving is paused.</td><td lang=ar dir=rtl>التوفير متوقف مؤقتًا.</td></tr>
+<tr><td>ui</td><td><code>opt_resume</code></td><td>Button</td><td>Resume saving</td><td lang=ar dir=rtl>استأنف التوفير</td></tr>
+<tr><td>ui</td><td><code>opt_custom_note</code></td><td>Shown for a custom mix</td><td>Your savers are a mix of your own, so no level is chosen.</td><td lang=ar dir=rtl>اختياراتك مزيج خاص بك، لذلك لا يوجد مستوى محدد.</td></tr>
+<tr><td>ui</td><td><code>opt_locked_note</code></td><td>$1 the chosen quality, e.g. 480p</td><td>Levels never change your YouTube quality. It stays at $1, as you chose.</td><td lang=ar dir=rtl>المستويات لا تغيّر جودة يوتيوب أبدًا. تبقى على $1 كما اخترت.</td></tr>
+<tr><td>ui</td><td><code>opt_saves</code></td><td>Label before what a saver saves</td><td>Saves</td><td lang=ar dir=rtl>يوفّر</td></tr>
+<tr><td>ui</td><td><code>opt_may_break</code></td><td>Label before what a saver may break</td><td>May break</td><td lang=ar dir=rtl>قد يعطّل</td></tr>
+<tr><td>ui</td><td><code>opt_astrelle_autoplay</code></td><td>Shown in Astrelle</td><td>In Astrelle, the browser&#x27;s own autoplay and preloading follow this.</td><td lang=ar dir=rtl>في Astrelle، يتبع المتصفح نفسه هذا الإعداد للتشغيل التلقائي والتحميل المسبق.</td></tr>
+<tr><td>ui</td><td><code>opt_savers_lead</code></td><td>Section lead</td><td>Each one on its own. Changes apply to pages you open or reload.</td><td lang=ar dir=rtl>كل أداة على حدة. التغييرات تنطبق على الصفحات التي تفتحها أو تعيد تحميلها.</td></tr>
+<tr><td>ui</td><td><code>opt_youtube_max</code></td><td>Section</td><td>Highest YouTube quality</td><td lang=ar dir=rtl>أعلى جودة ليوتيوب</td></tr>
+<tr><td>ui</td><td><code>opt_youtube_lead</code></td><td>Section lead</td><td>Sip keeps videos at or below this. Only you change it: saving levels never do. It&#x27;s also in the popup on YouTube.</td><td lang=ar dir=rtl>يبقي سِب الفيديو عند هذه الجودة أو أقل. أنت وحدك تغيّرها، ومستويات التوفير لا تفعل ذلك أبدًا. تجدها أيضًا في النافذة على يوتيوب.</td></tr>
+<tr><td>ui</td><td><code>opt_sites_lead</code></td><td>Section lead</td><td>Sites where you changed what Sip does. Set these from the popup while you&#x27;re on the site, or here.</td><td lang=ar dir=rtl>مواقع غيّرت فيها ما يفعله سِب. اضبطها من النافذة وأنت على الموقع، أو من هنا.</td></tr>
+<tr><td>ui</td><td><code>opt_no_rules</code></td><td>Empty list</td><td>No site rules yet.</td><td lang=ar dir=rtl>لا توجد قواعد للمواقع بعد.</td></tr>
+<tr><td>ui</td><td><code>opt_add_site</code></td><td>Field name</td><td>Add a site</td><td lang=ar dir=rtl>أضف موقعًا</td></tr>
+<tr><td>ui</td><td><code>opt_add_placeholder</code></td><td>Field placeholder</td><td>Add a site, like example.com</td><td lang=ar dir=rtl>أضف موقعًا، مثل example.com</td></tr>
+<tr><td>ui</td><td><code>opt_add_what</code></td><td>Select name</td><td>What to change there</td><td lang=ar dir=rtl>ما الذي تغيّره فيه</td></tr>
+<tr><td>ui</td><td><code>opt_add_all</code></td><td>Preset</td><td>Turn every saver off there</td><td lang=ar dir=rtl>أوقف كل أدوات التوفير فيه</td></tr>
+<tr><td>ui</td><td><code>opt_add_images</code></td><td>Preset</td><td>Show its images</td><td lang=ar dir=rtl>اعرض صوره</td></tr>
+<tr><td>ui</td><td><code>opt_add_autoplay</code></td><td>Preset</td><td>Let its videos autoplay</td><td lang=ar dir=rtl>اسمح بتشغيل فيديوهاته تلقائيًا</td></tr>
+<tr><td>ui</td><td><code>opt_add_block_images</code></td><td>Preset</td><td>Block its images</td><td lang=ar dir=rtl>احجب صوره</td></tr>
+<tr><td>ui</td><td><code>opt_add</code></td><td>Button</td><td>Add</td><td lang=ar dir=rtl>أضف</td></tr>
+<tr><td>ui</td><td><code>opt_add_error</code></td><td>Error</td><td>That isn&#x27;t a site address, like example.com.</td><td lang=ar dir=rtl>هذا ليس عنوان موقع، مثل example.com.</td></tr>
+<tr><td>ui</td><td><code>opt_remove_site</code></td><td>$1 a site</td><td>Remove the rules for $1</td><td lang=ar dir=rtl>احذف قواعد $1</td></tr>
+<tr><td>ui</td><td><code>opt_rule_trackers_on</code></td><td>Rule state</td><td>Trackers blocked</td><td lang=ar dir=rtl>المتتبّعات محجوبة</td></tr>
+<tr><td>ui</td><td><code>opt_rule_trackers_off</code></td><td>Rule state</td><td>Trackers allowed</td><td lang=ar dir=rtl>المتتبّعات مسموحة</td></tr>
+<tr><td>ui</td><td><code>opt_rule_autoplay_on</code></td><td>Rule state</td><td>Autoplay stopped</td><td lang=ar dir=rtl>التشغيل التلقائي متوقف</td></tr>
+<tr><td>ui</td><td><code>opt_rule_autoplay_off</code></td><td>Rule state</td><td>Autoplay allowed</td><td lang=ar dir=rtl>التشغيل التلقائي مسموح</td></tr>
+<tr><td>ui</td><td><code>opt_rule_images_on</code></td><td>Rule state</td><td>Images blocked</td><td lang=ar dir=rtl>الصور محجوبة</td></tr>
+<tr><td>ui</td><td><code>opt_rule_images_off</code></td><td>Rule state</td><td>Images shown</td><td lang=ar dir=rtl>الصور ظاهرة</td></tr>
+<tr><td>ui</td><td><code>opt_rule_fonts_on</code></td><td>Rule state</td><td>Fonts blocked</td><td lang=ar dir=rtl>الخطوط محجوبة</td></tr>
+<tr><td>ui</td><td><code>opt_rule_fonts_off</code></td><td>Rule state</td><td>Fonts shown</td><td lang=ar dir=rtl>الخطوط ظاهرة</td></tr>
+<tr><td>ui</td><td><code>opt_overhead</code></td><td>Field</td><td>Network overhead (estimate)</td><td lang=ar dir=rtl>حمل الشبكة الإضافي (تقديري)</td></tr>
+<tr><td>ui</td><td><code>opt_overhead_hint</code></td><td>Field hint</td><td>Your carrier also counts encryption and packet headers that a browser never sees. Sip adds this much for the budget only; site figures stay as measured.</td><td lang=ar dir=rtl>يحسب مزوّد الخدمة أيضًا التشفير ورؤوس الحزم التي لا يراها المتصفح. يضيف سِب هذه النسبة لحساب الباقة فقط، وتبقى أرقام المواقع كما قيست.</td></tr>
+<tr><td>ui</td><td><code>opt_units</code></td><td>Field</td><td>Units</td><td lang=ar dir=rtl>الوحدات</td></tr>
+<tr><td>ui</td><td><code>opt_units_line</code></td><td>Read-only units line</td><td>1 GB = 1,000,000,000 bytes, the way carriers count.</td><td lang=ar dir=rtl>1 جيجا = 1,000,000,000 بايت، كما يحسب مزوّدو الخدمة.</td></tr>
+<tr><td>ui</td><td><code>opt_notify_lead</code></td><td>Section lead</td><td>Click one to open Sip.</td><td lang=ar dir=rtl>انقر على التنبيه لفتح سِب.</td></tr>
+<tr><td>ui</td><td><code>opt_notify_levels</code></td><td>Switch</td><td>At 75%, 90% and 100% of your plan</td><td lang=ar dir=rtl>عند 75% و90% و100% من باقتك</td></tr>
+<tr><td>ui</td><td><code>opt_notify_pace</code></td><td>Switch</td><td>When you&#x27;re on pace to run out early</td><td lang=ar dir=rtl>عندما يشير معدلك إلى نفاد الباقة مبكرًا</td></tr>
+<tr><td>ui</td><td><code>opt_notify_pace_hint</code></td><td>Switch hint</td><td>More than 3 days before renewal; at most once a week.</td><td lang=ar dir=rtl>قبل التجديد بأكثر من 3 أيام، ومرة في الأسبوع على الأكثر.</td></tr>
+<tr><td>ui</td><td><code>opt_notify_sample</code></td><td>Above the sample</td><td>What one looks like</td><td lang=ar dir=rtl>مثال على تنبيه</td></tr>
+<tr><td>ui</td><td><code>opt_private_on</code></td><td>Private windows allowed</td><td>Counted, as one total with no site names.</td><td lang=ar dir=rtl>تُحسب كإجمالي واحد دون أسماء المواقع.</td></tr>
+<tr><td>ui</td><td><code>opt_private_off</code></td><td>Private windows not allowed</td><td>Not counted. To count them, open Add-ons and themes, choose Sip and allow it in private windows.</td><td lang=ar dir=rtl>لا تُحسب. لحسابها افتح صفحة الإضافات والسمات، واختر سِب، واسمح له بالعمل في النوافذ الخاصة.</td></tr>
+<tr><td>ui</td><td><code>opt_lang_auto</code></td><td>Language: follow the browser</td><td>Automatic</td><td lang=ar dir=rtl>تلقائي</td></tr>
+<tr><td>ui</td><td><code>opt_accuracy_lead</code></td><td>Section lead</td><td>Sip counts what this browser sends and receives, from Firefox&#x27;s own byte counts. Some data never passes through it.</td><td lang=ar dir=rtl>يحسب سِب ما يرسله هذا المتصفح ويستقبله، من عدّاد فايرفوكس نفسه. وبعض البيانات لا تمر عبره أبدًا.</td></tr>
+<tr><td>ui</td><td><code>opt_counted</code></td><td>Heading</td><td>Counted</td><td lang=ar dir=rtl>يُحسب</td></tr>
+<tr><td>ui</td><td><code>opt_counted_pages</code></td><td>Counted</td><td>Pages, videos and downloads</td><td lang=ar dir=rtl>الصفحات والفيديو والتنزيلات</td></tr>
+<tr><td>ui</td><td><code>opt_counted_uploads</code></td><td>Counted</td><td>Uploads and headers</td><td lang=ar dir=rtl>الرفع ورؤوس الطلبات</td></tr>
+<tr><td>ui</td><td><code>opt_counted_stopped</code></td><td>Counted</td><td>Transfers you stopped halfway</td><td lang=ar dir=rtl>التحميلات التي أوقفتها في منتصفها</td></tr>
+<tr><td>ui</td><td><code>opt_counted_private</code></td><td>Counted</td><td>Private windows, when allowed</td><td lang=ar dir=rtl>النوافذ الخاصة، إذا سمحت بها</td></tr>
+<tr><td>ui</td><td><code>opt_not_counted</code></td><td>Heading</td><td>Not counted</td><td lang=ar dir=rtl>لا يُحسب</td></tr>
+<tr><td>ui</td><td><code>opt_nc_other</code></td><td>Not counted</td><td>Other apps and devices</td><td lang=ar dir=rtl>التطبيقات والأجهزة الأخرى</td></tr>
+<tr><td>ui</td><td><code>opt_nc_updates</code></td><td>Not counted</td><td>Browser and add-on updates</td><td lang=ar dir=rtl>تحديثات المتصفح والإضافات</td></tr>
+<tr><td>ui</td><td><code>opt_nc_calls</code></td><td>Not counted</td><td>Video calls and live connections</td><td lang=ar dir=rtl>مكالمات الفيديو والاتصالات المباشرة</td></tr>
+<tr><td>ui</td><td><code>opt_nc_overhead</code></td><td>Not counted</td><td>Encryption and packets</td><td lang=ar dir=rtl>التشفير والحزم</td></tr>
+<tr><td>ui</td><td><code>opt_reads_low</code></td><td>Which way the error goes</td><td>Sip reads low</td><td lang=ar dir=rtl>يقرأ سِب أقل</td></tr>
+<tr><td>ui</td><td><code>opt_overhead_covers</code></td><td>Which way the error goes</td><td>the overhead estimate covers it</td><td lang=ar dir=rtl>يغطيه تقدير الحمل الإضافي</td></tr>
+<tr><td>ui</td><td><code>opt_verdict</code></td><td>Accuracy verdict</td><td>Sip errs on the low side. Your carrier&#x27;s counter is the official one: check it now and then, and enter it under Your plan.</td><td lang=ar dir=rtl>يميل سِب إلى الحساب الأقل. عدّاد مزوّد الخدمة هو المرجع: راجعه من حين لآخر وأدخله في قسم باقتك.</td></tr>
+<tr><td>ui</td><td><code>opt_history</code></td><td>Field</td><td>Usage history</td><td lang=ar dir=rtl>سجلّ الاستهلاك</td></tr>
+<tr><td>ui</td><td><code>opt_history_hint</code></td><td>Field hint</td><td>Two months of daily totals per site, kept on this device. Sip sends nothing anywhere.</td><td lang=ar dir=rtl>إجماليات يومية لكل موقع لمدة شهرين، محفوظة على هذا الجهاز. سِب لا يرسل شيئًا إلى أي مكان.</td></tr>
+<tr><td>ui</td><td><code>opt_delete_history</code></td><td>Button</td><td>Delete history</td><td lang=ar dir=rtl>احذف السجلّ</td></tr>
+<tr><td>ui</td><td><code>opt_footer</code></td><td>Footer</td><td>Sip 1.0 · Free software under the MPL-2.0</td><td lang=ar dir=rtl>سِب 1.0 · برنامج حر بترخيص MPL-2.0</td></tr>
+<tr><td>ui</td><td><code>opt_source</code></td><td>Link</td><td>Source code</td><td lang=ar dir=rtl>الشيفرة المصدرية</td></tr>
+<tr><td>ui</td><td><code>first_title</code></td><td>First-run heading</td><td>Welcome to Sip</td><td lang=ar dir=rtl>مرحبًا بك في سِب</td></tr>
+<tr><td>ui</td><td><code>first_lead</code></td><td>First-run lead</td><td>Sip counts the data this browser uses and saves where it can. A few questions and you&#x27;re set.</td><td lang=ar dir=rtl>يحسب سِب البيانات التي يستهلكها هذا المتصفح ويوفّر حيث يستطيع. بضعة أسئلة وتكون جاهزًا.</td></tr>
+<tr><td>ui</td><td><code>first_budget_hint</code></td><td>Field hint</td><td>Your plan&#x27;s size, or the share this browser may use. Leave it empty for no budget.</td><td lang=ar dir=rtl>حجم باقتك، أو الجزء الذي يمكن أن يستهلكه هذا المتصفح. اتركه فارغًا إن لم تكن لديك باقة محددة.</td></tr>
+<tr><td>ui</td><td><code>first_renews</code></td><td>Field</td><td>It renews on day</td><td lang=ar dir=rtl>تتجدد في يوم</td></tr>
+<tr><td>ui</td><td><code>first_renews_hint</code></td><td>Field hint</td><td>The day of the month your data starts again.</td><td lang=ar dir=rtl>يوم الشهر الذي تبدأ فيه باقتك من جديد.</td></tr>
+<tr><td>ui</td><td><code>first_used</code></td><td>Field</td><td>Used so far this period (optional)</td><td lang=ar dir=rtl>المستهلك حتى الآن في هذه الفترة (اختياري)</td></tr>
+<tr><td>ui</td><td><code>first_used_hint</code></td><td>Field hint</td><td>What your carrier says you&#x27;ve used, so the budget starts right.</td><td lang=ar dir=rtl>ما يقول مزوّد الخدمة إنك استهلكته، لتبدأ الحسبة صحيحة.</td></tr>
+<tr><td>ui</td><td><code>first_button</code></td><td>Note</td><td>Sip&#x27;s button is in the toolbar: click it to see what&#x27;s left.</td><td lang=ar dir=rtl>زر سِب في شريط الأدوات: انقر عليه لترى ما تبقّى.</td></tr>
+<tr><td>ui</td><td><code>first_only_browser</code></td><td>Note</td><td>Sip only sees this browser. Your phone and other apps use data too.</td><td lang=ar dir=rtl>يرى سِب هذا المتصفح فقط. هاتفك والتطبيقات الأخرى تستهلك أيضًا.</td></tr>
+<tr><td>ui</td><td><code>first_done</code></td><td>Button</td><td>Done</td><td lang=ar dir=rtl>تم</td></tr>
+<tr><td>ui</td><td><code>popup_runs_out</code></td><td>Under the bar when the pace is too fast: $1 a date, $2 days</td><td>Runs out ≈ $1, $2 early</td><td lang=ar dir=rtl>تنفد ≈ $1، قبل موعدها بـ $2</td></tr>
+<tr><td>ui</td><td><code>popup_projection</code></td><td>Under the bar: $1 projected use by $2 the renewal date</td><td>≈ $1 by $2</td><td lang=ar dir=rtl>≈ $1 بحلول $2</td></tr>
+<tr><td>ui</td><td><code>popup_blocked (plural)</code></td><td>What Sip saved: $1 requests blocked</td><td><small>one</small> 1 blocked<br><small>other</small> $1 blocked</td><td lang=ar dir=rtl><small>zero</small> لا شيء محجوب<br><small>one</small> طلب واحد محجوب<br><small>two</small> طلبان محجوبان<br><small>few</small> $1 طلبات محجوبة<br><small>many</small> $1 طلبًا محجوبًا<br><small>other</small> $1 طلب محجوب</td></tr>
+</tbody></table></body></html>
