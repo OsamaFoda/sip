@@ -168,6 +168,18 @@ function completed(d) {
   if (!known && !IS_FIREFOX) unsized.set(d.url, { day: dayKey(), site, headerBytes, time: Date.now() });
 }
 
+// The page's preload scanner asks for a script or image, then the parser asks again: a blocked
+// URL seen again in the same tab within a few seconds is one request saved, not two.
+const recentlyBlocked = new Map();
+function seenBlocked(d) {
+  const now = Date.now();
+  if (recentlyBlocked.size > 500) for (const [key, time] of recentlyBlocked) if (now - time > 3000) recentlyBlocked.delete(key);
+  const key = `${d.tabId}|${d.url}`;
+  const seen = now - (recentlyBlocked.get(key) ?? 0) < 3000;
+  recentlyBlocked.set(key, now);
+  return seen;
+}
+
 // A transfer stopped partway (a closed tab, a skipped video) still cost what arrived. A request
 // Sip's own rules blocked counts as saved.
 function failed(d) {
@@ -175,7 +187,7 @@ function failed(d) {
   if (exact) add(siteOf(d, fallbackSite(d)), exact);
   if (d.error !== DNR_BLOCK_ERROR || exact || d.statusCode) return;
   const saver = wouldBlock(d, settings);
-  if (!saver) return;
+  if (!saver || seenBlocked(d)) return;
   const [n, total] = stats[AVG_KIND[saver]] ?? [0, 0];
   add(siteOf(d, fallbackSite(d)), 0, { req: 1, est: n >= MIN_SAMPLES ? Math.round(total / n) : 0 });
 }

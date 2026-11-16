@@ -27,7 +27,7 @@ def one(path):
     spec = importlib.util.spec_from_file_location("case", path)
     case = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(case)
-    ctx = Context(prefs=getattr(case, "PREFS", None), install=getattr(case, "INSTALL", True))
+    ctx = Context(prefs=getattr(case, "PREFS", None), install=getattr(case, "INSTALL", True), first_run=getattr(case, "FIRST_RUN", False))
     try:
         result = case.run(ctx)
     except Exception:

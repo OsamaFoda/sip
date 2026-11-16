@@ -118,7 +118,8 @@ class Server(socketserver.ThreadingMixIn, http.server.HTTPServer):
 
 
 # Hosts the browser itself may ask for in the background; answered 404, never counted as leaks.
-QUIET = ("mozilla.", "firefox.", "mozilla.org", "mozilla.com", "mozilla.net", "detectportal")
+QUIET = ("mozilla.", "firefox.", "mozilla.org", "mozilla.com", "mozilla.net", "detectportal",
+         "update.googleapis.com", "openh264.org")   # the browser's own media plugin updates
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -130,6 +131,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
     def setup(self):
         super().setup()
+        # A small send buffer, so the bytes counted as sent are close to what the browser read.
+        self.connection.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 65536)
         self.wfile = Counter(self.wfile)
 
     def do_CONNECT(self):
@@ -271,6 +274,12 @@ BASE_PREFS = {
     "browser.places.speculativeConnect.enabled": False,
     "browser.urlbar.speculativeConnect.enabled": False,
     "dom.disable_open_during_load": False,
+    "media.gmp-manager.updateEnabled": False,     # no codec plugin downloads
+    "media.gmp-gmpopenh264.autoupdate": False,
+    "media.gmp-widevinecdm.autoupdate": False,
+    "extensions.update.enabled": False,
+    "network.captive-portal-service.enabled": False,
+    "network.connectivity-service.enabled": False,
 }
 
 
@@ -281,7 +290,7 @@ def pref_line(name, value):
 class Context:
     """One browser with Sip in it, plus the server. Cases get one of these."""
 
-    def __init__(self, prefs=None, install=True):
+    def __init__(self, prefs=None, install=True, first_run=False):
         self.server = Server()
         self.profile = tempfile.mkdtemp(prefix="sip-e2e-", dir=os.path.expanduser("~/.cache"))
         self.downloads = os.path.join(self.profile, "downloads")
@@ -303,6 +312,8 @@ class Context:
             self.m.context("chrome")
             if install:
                 self.install(ROOT)
+                if not first_run:   # as if set up, so no first-run tab opens mid-case
+                    self.set_sip_storage({"opt.firstRunDone": True})
         except Exception:
             self.stop()
             raise
